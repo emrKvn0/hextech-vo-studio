@@ -1,0 +1,89 @@
+<!-- ========================================================================= -->
+<!-- 1. LEFT SIDEBAR NAVIGATION (Riot Client Style) -->
+<!-- ========================================================================= -->
+<aside class="w-56 min-w-[14rem] max-w-[14rem] bg-hextech-surface border-r border-hextech-borderSubtle flex flex-col justify-between shrink-0 z-20 shadow-2xl">
+  <div>
+    <!-- Brand Header -->
+    <div class="p-3.5 border-b border-hextech-borderSubtle flex items-center space-x-2.5 bg-gradient-to-r from-hextech-card to-hextech-surface">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-b from-hextech-gold to-hextech-goldDim p-[1px] shadow-lg shrink-0">
+        <div class="w-full h-full bg-hextech-base rounded-[7px] flex items-center justify-center">
+          <i data-lucide="sparkles" class="w-4 h-4 text-hextech-gold"></i>
+        </div>
+      </div>
+      <div class="truncate">
+        <div class="text-[9px] font-heading font-bold text-hextech-cyan uppercase tracking-widest">Hextech Audio</div>
+        <div class="text-xs font-display font-extrabold text-hextech-goldBright tracking-wide truncate">LoL Ses Stüdyosu</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="p-2.5 space-y-1 font-heading text-xs">
+      <button id="nav-voices" onclick="switchTab('voices')" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg font-bold text-hextech-goldBright bg-hextech-cardSelected border border-hextech-gold/70 shadow-md transition-all text-left cursor-pointer">
+        <i data-lucide="mic" class="w-4 h-4 text-hextech-gold shrink-0"></i>
+        <span>Ses & Kostüm Çıkarıcı</span>
+      </button>
+
+      <button id="nav-skinhub" onclick="switchTab('skinhub')" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg font-semibold text-gray-400 hover:text-gray-200 hover:bg-hextech-cardHover border border-transparent transition-all text-left cursor-pointer">
+        <i data-lucide="sparkles" class="w-4 h-4 text-hextech-gold shrink-0"></i>
+        <span>Dinamik Kostüm & PBE</span>
+      </button>
+
+      <button id="nav-competitors" onclick="switchTab('competitors')" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg font-semibold text-gray-400 hover:text-gray-200 hover:bg-hextech-cardHover border border-transparent transition-all text-left cursor-pointer">
+        <i data-lucide="youtube" class="w-4 h-4 text-rose-500 shrink-0"></i>
+        <span>YouTube Rakip Analizi</span>
+      </button>
+
+      <button id="nav-references" onclick="switchTab('references')" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg font-semibold text-gray-400 hover:text-gray-200 hover:bg-hextech-cardHover border border-transparent transition-all text-left cursor-pointer">
+        <i data-lucide="crosshair" class="w-4 h-4 text-hextech-cyan shrink-0"></i>
+        <span>Tersine Atıf & Analiz Hub</span>
+      </button>
+
+      <button id="nav-wallpapers" onclick="switchTab('wallpapers')" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg font-semibold text-gray-400 hover:text-gray-200 hover:bg-hextech-cardHover border border-transparent transition-all text-left cursor-pointer">
+        <i data-lucide="film" class="w-4 h-4 text-amber-400 shrink-0"></i>
+        <span>4K Canlı Duvar Kağıtları</span>
+      </button>
+
+      <button id="nav-static-wallpapers" onclick="switchTab('static-wallpapers')" class="w-full flex items-center space-x-2.5 px-3 py-2 rounded-lg font-semibold text-gray-400 hover:text-gray-200 hover:bg-hextech-cardHover border border-transparent transition-all text-left cursor-pointer">
+        <i data-lucide="image" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+        <span>4K Normal Duvar Kağıdı</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Bottom Actions & Theme/Layout/Zoom Quick Buttons -->
+  <div class="p-3 border-t border-hextech-borderSubtle space-y-2">
+    <!-- Dynamic Zoom Controls -->
+    <div class="flex items-center justify-between bg-hextech-input border border-hextech-borderSubtle rounded-lg px-2.5 py-1 text-xs">
+      <span class="text-[10px] text-gray-400 font-sans flex items-center gap-1 select-none">
+        <i data-lucide="zoom-in" class="w-3 h-3 text-hextech-cyan"></i>
+        <span>Ölçek</span>
+      </span>
+      <div class="flex items-center space-x-1">
+        <button onclick="zoomOut()" class="w-5 h-5 flex items-center justify-center rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-200 hover:text-white border border-hextech-borderSubtle text-xs font-bold cursor-pointer select-none" title="Uzaklaştır (Ctrl -)">−</button>
+        <button onclick="resetZoom()" id="zoom-percentage-badge" class="px-1.5 py-0.5 rounded text-[10px] font-mono text-hextech-gold font-extrabold hover:bg-hextech-surface cursor-pointer select-none" title="Sıfırla (Ctrl 0)">%100</button>
+        <button onclick="zoomIn()" class="w-5 h-5 flex items-center justify-center rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-200 hover:text-white border border-hextech-borderSubtle text-xs font-bold cursor-pointer select-none" title="Yakınlaştır (Ctrl +)">+</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-1.5">
+      <button onclick="openThemeModal()" class="flex items-center justify-center space-x-1 py-1.5 px-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderMedium text-gray-300 hover:text-hextech-gold text-[11px] font-semibold">
+        <i data-lucide="palette" class="w-3 h-3 text-hextech-gold"></i>
+        <span>Temalar</span>
+      </button>
+
+      <button onclick="openLayoutModal()" class="flex items-center justify-center space-x-1 py-1.5 px-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderMedium text-gray-300 hover:text-hextech-cyan text-[11px] font-semibold">
+        <i data-lucide="layout-grid" class="w-3 h-3 text-hextech-cyan"></i>
+        <span>Düzen</span>
+      </button>
+    </div>
+
+    <button onclick="openOutputFolder()" class="w-full flex items-center justify-center space-x-1.5 py-2 px-3 rounded-lg bg-hextech-cyanDark/50 hover:bg-hextech-cyan border border-hextech-cyanBorder hover:border-hextech-cyanNeon text-hextech-cyanNeon hover:text-gray-900 font-bold text-xs shadow-md">
+      <i data-lucide="folder" class="w-3.5 h-3.5"></i>
+      <span>Çıktı Klasörü</span>
+    </button>
+
+    <div class="text-[9px] text-center text-gray-500 font-mono">
+      Wwise HIRC v2024.1 • %100 Deterministik
+    </div>
+  </div>
+</aside>

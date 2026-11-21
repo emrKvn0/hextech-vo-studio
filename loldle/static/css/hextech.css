@@ -1,0 +1,1659 @@
+/* ===================================================================
+   LOLDLE.NET ORİJİNAL & HEXTECH ULTRA TEMASI (LoLdle TR)
+   =================================================================== */
+
+:root {
+  /* Hextech / LoL Renk Paleti */
+  --loldle-bg: #0b1117;
+  --loldle-bg-secondary: #121921;
+  --loldle-card: #162029;
+  --loldle-card-dark: #10161d;
+  --loldle-card-hover: #1f2b37;
+  
+  /* Altın ve Metalik Tonlar */
+  --loldle-gold: #c8aa6e;
+  --loldle-gold-light: #f0e6d2;
+  --loldle-gold-bright: #f3d489;
+  --loldle-gold-dark: #785a28;
+  
+  /* Compatibility aliases */
+  --border-gold: var(--loldle-gold);
+  --border-gold-light: var(--loldle-gold-light);
+  --border-gold-dark: var(--loldle-gold-dark);
+  --hextech-cyan: var(--loldle-cyan);
+  --text-gold: var(--loldle-gold-light);
+  --text-muted: #8c9ba8;
+  --legacy-gold-ref: var(--border-gold);
+
+  /* Hextech Neon Tonları */
+  --loldle-cyan: #0ac8b9;
+  --loldle-cyan-glow: rgba(10, 200, 185, 0.4);
+  --loldle-blue: #1b324a;
+  --loldle-btn: #1a2734;
+  --loldle-btn-hover: #26384a;
+  
+  /* Klasik Karo Eşleşme Renkleri (Orijinal LoLdle Standardı) */
+  --tile-good: #27ae60;
+  --tile-good-border: #ffffff;
+  --tile-partial: #d35400;
+  --tile-partial-border: #ffffff;
+  --tile-bad: #c0392b;
+  --tile-bad-border: #ffffff;
+  --tile-champ-bg: #09232d;
+
+  /* Tipografi */
+  --font-bebas: 'Bebas Neue', 'Cinzel', Impact, sans-serif;
+  --font-cinzel: 'Cinzel', 'Rajdhani', serif;
+  --font-text: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--loldle-bg);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(27, 50, 74, 0.45) 0%, transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(11, 17, 23, 0.8) 0%, transparent 70%),
+    linear-gradient(180deg, #090e13 0%, #0e151c 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: var(--font-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1318;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a4d5f;
+  border-radius: 4px;
+  border: 1px solid var(--loldle-gold);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--loldle-gold);
+}
+
+/* ===================================================================
+   HEADER, LOGO & ÜST KONTROLLER
+   =================================================================== */
+
+.header {
+  width: 100%;
+  max-width: 920px;
+  padding: 16px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+}
+
+.top-left-controls {
+  display: flex;
+  align-items: center;
+}
+
+.type-toggle-container {
+  display: flex;
+  align-items: center;
+  background: #10171e;
+  border: 1.5px solid var(--loldle-gold);
+  border-radius: 20px;
+  padding: 2px;
+  gap: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.type-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #8c9ba8;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+}
+
+.type-toggle-btn:hover {
+  color: #ffffff;
+}
+
+.type-toggle-btn.active {
+  background: linear-gradient(135deg, #c8aa6e 0%, #f3d489 100%);
+  color: #0b1117;
+  font-weight: 800;
+  box-shadow: 0 0 10px rgba(200, 170, 110, 0.5);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.brand:hover {
+  transform: scale(1.02);
+}
+
+.loldle-logo-title {
+  font-family: var(--font-bebas);
+  font-size: 3.4rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(243, 212, 137, 0.3);
+}
+
+.loldle-logo-title span {
+  color: var(--loldle-gold-bright);
+}
+
+.loldle-logo-title .tr-badge {
+  font-size: 1.3rem;
+  background: #c0392b;
+  border: 1.5px solid var(--loldle-gold);
+  color: #ffffff;
+  padding: 2px 7px;
+  border-radius: 4px;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  margin-left: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.loldle-tagline {
+  font-family: var(--font-rajdhani);
+  font-size: 0.82rem;
+  color: #8c9ba8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background: var(--loldle-card);
+  border: 1.5px solid var(--loldle-gold);
+  color: var(--loldle-gold-light);
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.icon-btn:hover {
+  background: var(--loldle-card-hover);
+  border-color: var(--loldle-gold-bright);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 170, 110, 0.3);
+}
+
+/* ===================================================================
+   MOD BUTONLARI (4 KART: KLASİK, REPLİK, YETENEK, EMOJİ)
+   =================================================================== */
+
+.modes-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  width: 100%;
+  max-width: 920px;
+}
+
+.mode-btn {
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.mode-btn:hover {
+  background: var(--loldle-card-hover);
+  border-color: var(--loldle-gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+.mode-btn.active {
+  background: linear-gradient(180deg, #1c3547 0%, #121e28 100%);
+  border-color: var(--loldle-cyan);
+  box-shadow: 0 0 16px var(--loldle-cyan-glow);
+}
+
+.mode-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--loldle-cyan);
+  box-shadow: 0 0 8px var(--loldle-cyan);
+}
+
+.mode-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.mode-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mode-name {
+  font-family: var(--font-bebas);
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.mode-btn.active .mode-name {
+  color: #79ffe4;
+}
+
+.mode-desc {
+  font-size: 0.75rem;
+  color: #8c9ba8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 3px;
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 860px) {
+  .modes-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .modes-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loldle-logo-title {
+    font-size: 2.6rem;
+  }
+  .mode-desc {
+    display: none;
+  }
+  .mode-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===================================================================
+   ANA OYUN ALANI (MAIN CONTENT)
+   =================================================================== */
+
+.main-content {
+  width: 100%;
+  max-width: 920px;
+  padding: 12px 14px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.mode-banner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.which-title {
+  font-family: var(--font-bebas);
+  font-size: 2.3rem;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.which-subtitle {
+  font-size: 0.95rem;
+  color: #8c9ba8;
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================================================
+   ARAMA VE OTOMATİK TAMAMLAMA (GUESSBOX)
+   =================================================================== */
+
+.search-section {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  margin: 2px 0 6px;
+}
+
+.guessbox-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-box-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #141c24;
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease;
+}
+
+.search-box-inner:focus-within {
+  border-color: var(--loldle-cyan);
+  box-shadow: 0 0 16px var(--loldle-cyan-glow);
+}
+
+.search-box {
+  width: 100%;
+  padding: 13px 44px 13px 18px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: var(--font-text);
+  outline: none;
+  font-weight: 600;
+}
+
+.search-box::placeholder {
+  color: #627282;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 14px;
+  color: var(--loldle-gold);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #141c24;
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 10000;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95);
+}
+
+.autocomplete-dropdown.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(200, 170, 110, 0.15);
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover, .dropdown-item.highlighted {
+  background: #202d3a;
+  border-left: 4px solid var(--loldle-cyan);
+}
+
+.dropdown-item img {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  border: 1.5px solid var(--loldle-gold);
+  object-fit: cover;
+}
+
+.dropdown-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.dropdown-item-title {
+  font-size: 0.8rem;
+  color: var(--loldle-gold);
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+}
+
+/* ===================================================================
+   KLASİK MOD - KARE KAROLAR & TABLO DÜZENİ
+   =================================================================== */
+
+.classic-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.classic-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 880px;
+  min-width: 660px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(75px, 1fr));
+  gap: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+.th-col {
+  font-family: var(--font-cinzel);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000000;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--loldle-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.classic-answers-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.guess-row {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(75px, 1fr));
+  gap: 6px;
+  width: 100%;
+}
+
+/* LoLdle Kare Karo Stili */
+.tile {
+  aspect-ratio: 1 / 1;
+  min-height: 84px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px 4px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.25), inset 0 -2px 5px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  position: relative;
+  user-select: none;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.25;
+  opacity: 0;
+  transform: perspective(600px) rotateX(90deg);
+  animation: tileFlip 0.55s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.tile-value {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  max-width: 96%;
+}
+
+/* Birden çok öğe için zarif etiketler (chips) */
+.tile-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.tile-chip {
+  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 95%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Şampiyon Karesi */
+.tile-champion {
+  background: linear-gradient(180deg, #102636 0%, #071520 100%);
+  border: 2px solid var(--loldle-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 10px rgba(200, 170, 110, 0.35);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.champ-tile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.champ-tile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tile-champion:hover .champ-tile-avatar img {
+  transform: scale(1.08);
+}
+
+.champ-tile-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(6, 17, 26, 0.98) 0%, rgba(6, 17, 26, 0.8) 70%, transparent 100%);
+  color: #f3d489;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 5px 2px 3px;
+  text-shadow: 0 1px 4px #000000;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(200, 170, 110, 0.4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Doğru Eşleşme (Yeşil) - Canlı Zümrüt LoL Zafer Teması */
+.tile.exact {
+  background: linear-gradient(180deg, #27ae60 0%, #1e8449 100%);
+  border-color: #a3f7bf;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 12px rgba(39, 174, 96, 0.35);
+}
+
+/* Kısmi Eşleşme (Turuncu / Amber) */
+.tile.partial {
+  background: linear-gradient(180deg, #e67e22 0%, #ba5d09 100%);
+  border-color: #ffd29d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 12px rgba(230, 126, 34, 0.35);
+}
+
+/* Yanlış Eşleşme (Kırmızı) */
+.tile.wrong {
+  background: linear-gradient(180deg, #c0392b 0%, #872015 100%);
+  border-color: #ffa59e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Çıkış Yılı Düzeni */
+.year-tile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.year-number {
+  font-family: var(--font-bebas);
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.year-indicator {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.year-indicator.up {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.year-indicator.down {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+.year-indicator.exact {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid #a3f7bf;
+  color: #a3f7bf;
+}
+
+/* Yıl Gösterge Okları Eski Uyumluluk */
+.arrow-indicator {
+  font-size: 1.3rem;
+  line-height: 1;
+  margin-top: 2px;
+  filter: drop-shadow(0 0 3px #000000);
+  animation: bounceArrow 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes tileFlip {
+  0% {
+    transform: perspective(600px) rotateX(90deg) scale(0.9);
+    opacity: 0;
+    filter: brightness(1.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    transform: perspective(600px) rotateX(-12deg) scale(1.04);
+    filter: brightness(1.15);
+  }
+  82% {
+    transform: perspective(600px) rotateX(5deg) scale(1.01);
+  }
+  100% {
+    transform: perspective(600px) rotateX(0deg) scale(1);
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+@keyframes bounceArrow {
+  from { transform: translateY(0); }
+  to { transform: translateY(-4px); }
+}
+
+@media screen and (max-width: 768px) {
+  .tile {
+    min-height: 65px;
+    font-size: 0.78rem;
+    padding: 3px 2px;
+  }
+  .th-col {
+    font-size: 0.72rem;
+  }
+}
+
+/* ===================================================================
+   REPLİK MODU (QUOTE MODE)
+   =================================================================== */
+
+.quote-box {
+  width: 100%;
+  max-width: 650px;
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.quote-quote-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #10161d;
+  padding: 18px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 170, 110, 0.3);
+  border-left: 4px solid var(--loldle-gold);
+  border-right: 4px solid var(--loldle-gold);
+  width: 100%;
+}
+
+.quote-mark {
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--loldle-gold-bright);
+  font-family: Georgia, serif;
+}
+
+.quote-text-content {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px #000000;
+}
+
+.quote-audio-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quote-audio-btn {
+  background: var(--loldle-btn);
+  border: 2px solid var(--loldle-gold);
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+}
+
+.quote-audio-btn:hover:not(:disabled) {
+  background: var(--loldle-btn-hover);
+  border-color: var(--loldle-gold-bright);
+  transform: scale(1.03);
+}
+
+.quote-audio-btn.locked, .quote-audio-btn:disabled {
+  background: #141b22;
+  border-color: #3b4754;
+  color: #788591;
+  cursor: not-allowed;
+  opacity: 0.75;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.quote-audio-btn.unlocked {
+  background: linear-gradient(180deg, #103328 0%, #1a2734 100%);
+  border-color: var(--loldle-cyan);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 0 12px var(--loldle-cyan-glow);
+  animation: pulseGlow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 6px var(--loldle-cyan-glow); }
+  100% { box-shadow: 0 0 16px rgba(10, 200, 185, 0.6); }
+}
+
+.quote-type-badge {
+  font-family: var(--font-rajdhani);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--loldle-gold-bright);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--loldle-gold);
+  border-radius: 4px;
+  padding: 2px 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.quote-hint-subtext {
+  font-size: 0.8rem;
+  color: #8c9ba8;
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+}
+
+.soundwave {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+}
+
+.soundwave.playing {
+  display: flex;
+}
+
+.soundwave-bar {
+  width: 4px;
+  height: 6px;
+  background: var(--loldle-cyan);
+  border-radius: 2px;
+  transition: height 0.2s ease;
+}
+
+.soundwave.playing .soundwave-bar {
+  animation: waveAnim 0.8s infinite ease-in-out alternate;
+}
+
+.soundwave.playing .soundwave-bar:nth-child(2) { animation-delay: 0.15s; }
+.soundwave.playing .soundwave-bar:nth-child(3) { animation-delay: 0.3s; }
+.soundwave.playing .soundwave-bar:nth-child(4) { animation-delay: 0.45s; }
+.soundwave.playing .soundwave-bar:nth-child(5) { animation-delay: 0.2s; }
+
+@keyframes waveAnim {
+  0% { height: 4px; }
+  100% { height: 22px; }
+}
+
+/* ===================================================================
+   YETENEK MODU (ABILITY MODE)
+   =================================================================== */
+
+.ability-showcase {
+  width: 100%;
+  max-width: 500px;
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.ability-frame {
+  width: 104px;
+  height: 104px;
+  border-radius: 8px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 0 10px rgba(200, 170, 110, 0.4);
+  overflow: hidden;
+  background: #000000;
+}
+
+.ability-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===================================================================
+   EMOJİ MODU (EMOJI MODE)
+   =================================================================== */
+
+.emoji-showcase {
+  width: 100%;
+  max-width: 540px;
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.emojis-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.emoji-slot {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  background: #10161d;
+  border: 2px solid var(--loldle-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  transition: all 0.2s ease;
+}
+
+.emoji-slot.revealed {
+  border-color: #ffffff;
+  background: #202d3a;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  animation: popInEmoji 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.emoji-slot.locked {
+  border-color: #3b4754;
+  background: #0d1217;
+  opacity: 0.5;
+  font-size: 1.4rem;
+}
+
+@keyframes popInEmoji {
+  0% { transform: scale(0.4) rotate(-15deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ===================================================================
+   SPLASH ART MODU (GÖRSEL KESİT VE ZOOM OUT)
+   =================================================================== */
+
+.splash-box {
+  width: 100%;
+  max-width: 580px;
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.splash-showcase {
+  width: 100%;
+  height: 330px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.9), inset 0 0 15px rgba(0, 0, 0, 0.8);
+  background: #060a0f;
+}
+
+.splash-img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#splashTargetImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: 50% 50%;
+  transform: scale(5);
+  transition: transform 0.75s cubic-bezier(0.2, 0.9, 0.3, 1), filter 0.5s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+#splashTargetImg.revealed {
+  transform: scale(1) !important;
+  transform-origin: center center !important;
+  filter: drop-shadow(0 0 15px rgba(10, 200, 185, 0.5));
+}
+
+.splash-zoom-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(11, 17, 23, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1.5px solid var(--loldle-gold);
+  color: var(--loldle-gold-bright);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.splash-hint-text {
+  font-size: 0.85rem;
+  color: #8c9ba8;
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+  text-align: center;
+}
+
+.splash-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--loldle-gold-bright);
+  font-family: var(--font-rajdhani);
+  font-weight: 700;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--loldle-gold);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.splash-skin-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(11, 17, 23, 0.9);
+  backdrop-filter: blur(6px);
+  border: 1.5px solid var(--loldle-cyan);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 16px var(--loldle-cyan-glow);
+  z-index: 6;
+  white-space: nowrap;
+  animation: popInBanner 0.4s ease;
+}
+
+/* ===================================================================
+   INLINE VICTORY BANNER (EKRANI KİLİTLEMEYEN ZAFER KARTI)
+   =================================================================== */
+
+.inline-victory-banner {
+  width: 100%;
+  max-width: 650px;
+  background: linear-gradient(135deg, #102534 0%, #0d1a24 100%);
+  border: 2px solid var(--loldle-gold-bright);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 0 20px rgba(200, 170, 110, 0.35), 0 6px 20px rgba(0, 0, 0, 0.7);
+  animation: popInBanner 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 12px;
+}
+
+@keyframes popInBanner {
+  0% { transform: translateY(-12px) scale(0.96); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.banner-champ-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  border: 2px solid var(--loldle-gold);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.banner-champ-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.banner-headline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.banner-badge {
+  background: #27ae60;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+}
+
+.banner-champ-name {
+  font-family: var(--font-bebas);
+  font-size: 1.4rem;
+  color: var(--loldle-gold-bright);
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.banner-champ-title {
+  font-size: 0.82rem;
+  color: #a09b8c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-guess-info {
+  font-size: 0.8rem;
+  color: #a8ffcc;
+  font-weight: 700;
+  font-family: var(--font-rajdhani);
+  margin-top: 2px;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.banner-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: var(--font-rajdhani);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.banner-btn.share-btn {
+  background: var(--loldle-card);
+  border: 1.5px solid var(--loldle-gold);
+  color: var(--loldle-gold-bright);
+}
+
+.banner-btn.share-btn:hover {
+  background: var(--loldle-card-hover);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.banner-btn.next-btn {
+  background: linear-gradient(180deg, #1e4538 0%, #153229 100%);
+  border: 1.5px solid var(--loldle-cyan);
+  color: #ffffff;
+  box-shadow: 0 0 10px var(--loldle-cyan-glow);
+}
+
+.banner-btn.next-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(10, 200, 185, 0.7);
+}
+
+@media screen and (max-width: 600px) {
+  .inline-victory-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .banner-actions {
+    justify-content: flex-end;
+  }
+}
+
+/* ===================================================================
+   İPUÇLARI (PROGRESSIVE CLUES)
+   =================================================================== */
+
+.clues-container {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.clue-card {
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-left: 5px solid var(--loldle-cyan);
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.clue-label {
+  font-size: 0.75rem;
+  color: var(--loldle-gold-bright);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-rajdhani);
+}
+
+.clue-value {
+  font-size: 1.05rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ===================================================================
+   DİĞER MODLAR İÇİN BASİT GEÇMİŞ LİSTESİ
+   =================================================================== */
+
+.simple-guess-history {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.simple-guess-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.simple-guess-item.wrong {
+  background: rgba(192, 57, 43, 0.35);
+  border: 2px solid var(--tile-bad);
+  color: #ffb8b8;
+}
+
+.simple-guess-item.correct {
+  background: rgba(39, 174, 96, 0.4);
+  border: 2px solid var(--tile-good);
+  color: #a8ffcc;
+}
+
+.simple-guess-item img {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  object-fit: cover;
+}
+
+/* ===================================================================
+   ZAFER VE İSTATİSTİK PENCERELERİ (MODALS)
+   =================================================================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 20000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--loldle-card);
+  border: 2px solid var(--loldle-gold);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.95);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 14px 18px;
+  background: #10161d;
+  border-bottom: 2px solid rgba(200, 170, 110, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-family: var(--font-bebas);
+  color: var(--loldle-gold-bright);
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+}
+
+.modal-close-btn {
+  background: #c0392b;
+  border: 1px solid var(--loldle-gold);
+  color: #ffffff;
+  font-size: 1.2rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.modal-close-btn:hover {
+  background: #e74c3c;
+}
+
+.modal-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Zafer Paneli İçeriği */
+.victory-banner {
+  font-family: var(--font-bebas);
+  text-align: center;
+  color: #56d27f;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 12px rgba(86, 210, 127, 0.5);
+}
+
+.victory-splash-container {
+  width: 100%;
+  height: 220px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--loldle-gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.victory-splash-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.victory-champ-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(11, 17, 23, 0.95) 0%, transparent 100%);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.victory-champ-name {
+  font-family: var(--font-bebas);
+  font-size: 1.9rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.victory-champ-title {
+  font-size: 0.9rem;
+  color: var(--loldle-gold-bright);
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+}
+
+.victory-nav-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.hex-btn-next-mode {
+  background: linear-gradient(180deg, #0d552a 0%, #172720 100%);
+  border: 2px solid #56d27f;
+  color: #ffffff;
+  font-family: var(--font-bebas);
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(86, 210, 127, 0.4);
+  animation: loopGrow 0.7s infinite alternate ease-in-out;
+}
+
+.hex-btn-next-mode:hover {
+  background: linear-gradient(180deg, #13773b 0%, #1e332a 100%);
+}
+
+@keyframes loopGrow {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+.victory-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.hex-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-family: var(--font-rajdhani);
+  letter-spacing: 0.5px;
+}
+
+.hex-btn-primary {
+  background: var(--loldle-btn);
+  border: 2px solid var(--loldle-gold);
+  color: #ffffff;
+}
+
+.hex-btn-primary:hover {
+  background: var(--loldle-btn-hover);
+  border-color: var(--loldle-gold-bright);
+}
+
+.hex-btn-secondary {
+  background: #10161d;
+  border: 1.5px solid var(--loldle-gold);
+  color: var(--loldle-gold-light);
+}
+
+.hex-btn-secondary:hover {
+  background: #1e2833;
+  color: #ffffff;
+}
+
+/* İstatistik Grafiği */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.stat-box {
+  background: #10161d;
+  border: 1.5px solid var(--loldle-gold);
+  padding: 10px 4px;
+  border-radius: 6px;
+}
+
+.stat-value {
+  font-family: var(--font-bebas);
+  font-size: 2.2rem;
+  color: var(--loldle-gold-bright);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #8c9ba8;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-family: var(--font-rajdhani);
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Toast Mesajı */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  background: #141c24;
+  border: 2px solid var(--loldle-gold);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  z-index: 30000;
+  display: none;
+  font-weight: 700;
+  animation: fadeIn 0.3s ease;
+}

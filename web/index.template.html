@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark" style="background-color: #010A13; color-scheme: dark;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>League of Legends • Ses & Medya Stüdyosu</title>
+
+  <!-- Immediate LocalStorage Zoom Restore -->
+  <script>
+    (function() {
+      try {
+        var savedZoom = localStorage.getItem('app_zoom_level');
+        if (savedZoom) {
+          var z = parseFloat(savedZoom);
+          if (!isNaN(z) && z >= 0.5 && z <= 2.5) {
+            document.documentElement.style.zoom = z;
+            window.addEventListener('DOMContentLoaded', function() {
+              document.documentElement.style.zoom = z;
+              setTimeout(function() { window.dispatchEvent(new Event('resize')); }, 50);
+            });
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            heading: ['Rajdhani', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            hextech: {
+              base: 'var(--bg-base, #010A13)',
+              surface: 'var(--bg-surface, #091428)',
+              card: 'var(--bg-card, #0E1B33)',
+              cardHover: 'var(--bg-cardHover, #142749)',
+              cardSelected: 'var(--bg-cardSelected, #19325C)',
+              input: 'var(--bg-input, #050B14)',
+              goldBright: 'var(--accent-goldBright, #F0E6D2)',
+              gold: 'var(--accent-gold, #C89B3C)',
+              goldHover: 'var(--accent-goldHover, #E1C47E)',
+              goldDim: 'var(--accent-goldDim, #785A28)',
+              goldBorder: 'var(--border-gold, #463714)',
+              cyanNeon: 'var(--accent-cyanNeon, #00F2DE)',
+              cyan: 'var(--accent-cyan, #0AC8B9)',
+              cyanHover: 'var(--accent-cyanHover, #36EBDD)',
+              cyanDark: 'var(--accent-cyanDark, #042E38)',
+              cyanBorder: 'var(--border-cyan, #0B4A54)',
+              borderSubtle: 'var(--border-subtle, #14233A)',
+              borderMedium: 'var(--border-medium, #1E3557)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Modular Hextech Themes & Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-hextech-base text-gray-100 font-sans antialiased h-full flex overflow-hidden select-none" style="background-color: #010A13; opacity: 1;">
+
+  <!-- 1. LEFT SIDEBAR NAVIGATION -->
+  <!-- @include "components/sidebar.html" -->
+
+  <!-- 2. MAIN CONTENT AREA -->
+  <main class="flex-1 flex flex-col min-w-0 bg-hextech-base overflow-hidden relative">
+
+    <!-- Top Animated Progress Bar -->
+    <!-- @include "components/progress_bar.html" -->
+
+    <!-- TAB 1: SES & KOSTÜM ÇIKARICI -->
+    <!-- @include "views/voices.html" -->
+
+    <!-- TAB 2: DİNAMİK KOSTÜM & PBE HUB -->
+    <!-- @include "views/skinhub.html" -->
+
+    <!-- TAB 3: YOUTUBE RAKİP & İÇERİK FIRSAT ANALİZİ -->
+    <!-- @include "views/competitors.html" -->
+
+    <!-- TAB 4: TERSİNE ATIF DEDEKTÖRÜ -->
+    <!-- @include "views/references.html" -->
+
+    <!-- TAB 5: CANLI DUVAR KAĞITLARI -->
+    <!-- @include "views/wallpapers.html" -->
+
+    <!-- TAB 6: 4K NORMAL DUVAR KAĞITLARI & KOSTÜM SPLASH STÜDYOSU -->
+    <!-- @include "views/static_wallpapers.html" -->
+
+    <!-- Duvar Kağıdı Önizleme Modalı -->
+    <!-- @include "modals/wallpaper_modal.html" -->
+
+  </main>
+
+  <!-- 3. MODALS -->
+  <!-- @include "modals/skin_modal.html" -->
+  <!-- @include "modals/theme_modal.html" -->
+  <!-- @include "modals/layout_modal.html" -->
+  <!-- @include "modals/confirm_modal.html" -->
+  <!-- @include "modals/davinci_modal.html" -->
+  <!-- @include "modals/base_hub_modal.html" -->
+  <!-- @include "modals/static_wallpaper_modal.html" -->
+
+  <!-- Application Logic & Preloaded Skin Dates (Modular ES6 Scripts) -->
+  <script src="skins_dates.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/voices.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/skinhub.js"></script>
+  <script src="js/competitors.js"></script>
+  <script src="js/references.js"></script>
+  <script src="js/davinci.js"></script>
+  <script src="js/wallpapers.js"></script>
+  <script src="js/static_wallpapers.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

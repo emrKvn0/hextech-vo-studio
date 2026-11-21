@@ -1,0 +1,100 @@
+<!-- ========================================================================= -->
+<!-- 4. THEME SELECTOR MODAL -->
+<!-- ========================================================================= -->
+<div id="theme-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-lg rounded-2xl border border-hextech-borderMedium flex flex-col overflow-hidden shadow-2xl">
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="palette" class="w-5 h-5 text-hextech-gold"></i>
+        <h2 class="text-base font-extrabold text-gray-100">Renk Teması Seçin</h2>
+      </div>
+      <button onclick="closeThemeModal()" class="p-1.5 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <div class="p-4 space-y-2.5">
+      <!-- Theme 1: Hextech Classic -->
+      <button onclick="applyTheme('default')" class="w-full flex items-center justify-between p-3 rounded-xl border border-hextech-borderSubtle hover:border-hextech-gold bg-[#040810] text-left transition group">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#D4AC58] to-[#0AC8B9] p-0.5">
+            <div class="w-full h-full bg-[#040810] rounded-[6px] flex items-center justify-center">
+              <span class="text-xs">⚡</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-extrabold text-gray-100 group-hover:text-hextech-goldBright">🌟 Hextech Klasiği (Piltover & Zaun)</div>
+            <div class="text-[10px] text-gray-400">Obsidyen lacivert, antika altın ve neon camgöbeği</div>
+          </div>
+        </div>
+        <span class="text-xs text-hextech-cyan">Varsayılan</span>
+      </button>
+
+      <!-- Theme 2: Void / Dark Star -->
+      <button onclick="applyTheme('theme-void')" class="w-full flex items-center justify-between p-3 rounded-xl border border-hextech-borderSubtle hover:border-purple-500 bg-[#07030D] text-left transition group">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#A855F7] to-[#F0C872] p-0.5">
+            <div class="w-full h-full bg-[#07030D] rounded-[6px] flex items-center justify-center">
+              <span class="text-xs">🌌</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-extrabold text-gray-100 group-hover:text-purple-300">🟣 Hiçlik & Karanlık Yıldız (Dark Star)</div>
+            <div class="text-[10px] text-gray-400">Kozmik mor, yıldız tozu ve derin uzay karanlığı</div>
+          </div>
+        </div>
+      </button>
+
+      <!-- Theme 3: Noxus Crimson -->
+      <button onclick="applyTheme('theme-noxus')" class="w-full flex items-center justify-between p-3 rounded-xl border border-hextech-borderSubtle hover:border-red-500 bg-[#090305] text-left transition group">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#EF4444] to-[#F59E0B] p-0.5">
+            <div class="w-full h-full bg-[#090305] rounded-[6px] flex items-center justify-center">
+              <span class="text-xs">🩸</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-extrabold text-gray-100 group-hover:text-red-400">🩸 Noxus Kanı & Obsidyen</div>
+            <div class="text-[10px] text-gray-400">Kızıl yakut, köz sarısı ve savaşçı obsidyen</div>
+          </div>
+        </div>
+      </button>
+
+      <!-- Theme 4: Spirit Blossom -->
+      <button onclick="applyTheme('theme-spirit')" class="w-full flex items-center justify-between p-3 rounded-xl border border-hextech-borderSubtle hover:border-teal-400 bg-[#030C10] text-left transition group">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#14B8A6] to-[#F472B6] p-0.5">
+            <div class="w-full h-full bg-[#030C10] rounded-[6px] flex items-center justify-center">
+              <span class="text-xs">🌸</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-extrabold text-gray-100 group-hover:text-teal-300">🌿 Ruh Çiçeği & Ionia (Spirit Blossom)</div>
+            <div class="text-[10px] text-gray-400">Huzurlu turkuaz, sakura pembesi ve Ionia dinginliği</div>
+          </div>
+        </div>
+      </button>
+
+      <!-- Theme 5: Shadow Isles -->
+      <button onclick="applyTheme('theme-shadow')" class="w-full flex items-center justify-between p-3 rounded-xl border border-hextech-borderSubtle hover:border-emerald-400 bg-[#020C0A] text-left transition group">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[#10B981] to-[#06B6D4] p-0.5">
+            <div class="w-full h-full bg-[#020C0A] rounded-[6px] flex items-center justify-center">
+              <span class="text-xs">👻</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs font-extrabold text-gray-100 group-hover:text-emerald-300">🌑 Gölge Adalar & Spektral Zümrüt</div>
+            <div class="text-[10px] text-gray-400">Sis yeşili, tayf parıltısı ve hayalet karanlığı</div>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <div class="p-3 border-t border-hextech-borderSubtle bg-hextech-surface/90 flex justify-end">
+      <button onclick="closeThemeModal()" class="px-4 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-200 text-xs font-semibold cursor-pointer">
+        Kapat
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<!-- ======================================================================= -->
+<!-- WALLPAPER VIDEO PREVIEW & POSITIONING MODAL -->
+<!-- ======================================================================= -->
+<div id="wallpaper-preview-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-5xl rounded-2xl border border-hextech-borderMedium flex flex-col overflow-hidden shadow-2xl">
+    <!-- Modal Header -->
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90 shrink-0">
+      <div class="flex items-center space-x-3">
+        <span id="wp-modal-badge" class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-hextech-goldBorder text-hextech-goldBright border border-hextech-goldDim uppercase">
+          4K UHD
+        </span>
+        <div>
+          <h2 id="wp-modal-title" class="text-sm font-extrabold text-gray-100 truncate max-w-md">Yone Canlı Duvar Kağıdı</h2>
+          <div id="wp-modal-source" class="text-xs text-hextech-cyan">Kaynak: DesktopHut</div>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <button id="wp-modal-btn-download" onclick="downloadCurrentPreviewWallpaper()" class="lol-btn-gold px-4 py-1.5 rounded-lg text-xs font-bold flex items-center space-x-1.5 cursor-pointer shadow-md">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>4K İndir</span>
+        </button>
+        <button id="wp-modal-btn-champ" onclick="downloadCurrentPreviewToChampFolder()" class="px-3.5 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-cyan/50 text-hextech-cyanNeon text-xs font-bold flex items-center space-x-1.5 cursor-pointer shadow-md" title="Seçili Şampiyonun Klasörüne Konumlandır">
+          <i data-lucide="folder-plus" class="w-3.5 h-3.5"></i>
+          <span>Şampiyon Klasörüne Aktar</span>
+        </button>
+        <button onclick="closeWallpaperPreviewModal()" class="p-1.5 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Video Display & Positioning Area -->
+    <div id="wp-player-container" class="relative bg-black aspect-video flex items-center justify-center overflow-hidden transition-all duration-300">
+      <video id="wp-video-player" controls autoplay loop class="w-full h-full object-contain transition-all duration-300">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+      <iframe id="wp-youtube-player" class="w-full h-full hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+      <!-- On-Screen Positioning Controls (Bottom-Left Float) -->
+      <div class="absolute bottom-4 left-4 z-20 flex items-center space-x-1.5 bg-black/80 backdrop-blur-md p-1.5 rounded-xl border border-white/15 text-[11px] shadow-2xl">
+        <span class="text-[10px] text-gray-400 font-bold uppercase px-1.5">Konumlandırma:</span>
+        <button onclick="setVideoFitMode('contain')" id="wp-fit-contain" class="px-2.5 py-1 rounded-lg bg-hextech-cyan text-gray-950 font-bold cursor-pointer">Tam Sığdır (16:9)</button>
+        <button onclick="setVideoFitMode('cover')" id="wp-fit-cover" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white cursor-pointer">Tam Ekran Doldur (Cover)</button>
+        <button onclick="setVideoFitMode('center')" id="wp-fit-center" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white cursor-pointer">Merkeze Odakla</button>
+        <button onclick="setVideoFitMode('vertical')" id="wp-fit-vertical" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white cursor-pointer">Mobil (9:16)</button>
+      </div>
+
+      <!-- Desktop Live Wallpaper Helper Button (Bottom-Right Float) -->
+      <div class="absolute bottom-4 right-4 z-20">
+        <button onclick="applyDesktopWallpaperGuide()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-[#0a1428]/90 hover:bg-[#0f2042] border border-hextech-gold/60 text-hextech-goldBright text-[11px] font-bold shadow-2xl cursor-pointer backdrop-blur-md">
+          <i data-lucide="monitor" class="w-3.5 h-3.5 text-hextech-gold"></i>
+          <span>Masaüstü Canlı Duvar Kağıdı Yap</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Positioning Details Bar -->
+    <div class="p-3 bg-hextech-surface/80 border-t border-hextech-borderSubtle flex items-center justify-between text-xs text-gray-400">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="info" class="w-4 h-4 text-hextech-cyan"></i>
+        <span id="wp-pos-hint">Konumlandırma Modu: <b>Tam Sığdır (Orijinal 16:9 Oran)</b></span>
+      </div>
+      <div class="text-[11px] text-gray-500 font-mono">
+        60 FPS • Seamless Loop • Donanım Hızlandırmalı
+      </div>
+    </div>
+  </div>
+</div>

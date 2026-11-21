@@ -1,0 +1,293 @@
+<!-- ======================================================================= -->
+<!-- TAB 1: SES & KOSTÜM ÇIKARICI (VOICE EXTRACTOR) -->
+<!-- ======================================================================= -->
+<section id="view-voices" class="flex-1 flex flex-col p-4 overflow-hidden">
+  
+  <!-- Top Action Bar -->
+  <header class="flex items-center justify-between pb-3 border-b border-hextech-borderSubtle shrink-0">
+    <div>
+      <h1 class="text-lg font-display font-black text-hextech-goldBright flex items-center space-x-2 tracking-wider">
+        <span>🎙️ Şampiyon Ses & Kostüm Çıkarıcı</span>
+      </h1>
+      <p class="text-[11px] text-gray-400 mt-0.5 font-sans">Riot Wwise Event motoruyla tüm VO dublajları ve SFX ses efektlerini 0.02 saniyede çözün.</p>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <button id="btn-open-base-hub-modal" onclick="openBaseHubModal()" class="flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-gold/70 text-hextech-goldBright font-extrabold text-xs shadow-md cursor-pointer transition">
+        <i data-lucide="package" class="w-3.5 h-3.5 text-hextech-gold"></i>
+        <span>📦 A-Z Tüm Varsayılanlar & DaVinci XML</span>
+      </button>
+
+      <button id="btn-extract-selected" onclick="extractSelectedSkin()" class="lol-btn-gold flex items-center space-x-1.5 px-3.5 py-2 rounded-lg text-xs cursor-pointer disabled:opacity-50">
+        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+        <span>Seçili Kostümü Çıkar</span>
+      </button>
+
+      <button id="btn-extract-all" onclick="extractAllSkins()" class="lol-btn-blue flex items-center space-x-1.5 px-3.5 py-2 rounded-lg text-xs cursor-pointer disabled:opacity-50">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-hextech-cyanNeon"></i>
+        <span>Tüm Kostümleri Çıkar</span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- 3-Column Content-Aware Layout: Compact Side Columns (2-8-2 Max Center Area) -->
+  <div id="voices-layout-grid" class="flex-1 grid grid-cols-12 gap-3 mt-3 overflow-hidden min-h-0">
+    
+    <!-- COLUMN 1: DEDICATED COMPACT CHAMPIONS LIST (2 cols) -->
+    <div id="panel-col-1" class="col-span-12 lg:col-span-2 glass-panel rounded-xl flex flex-col p-2.5 overflow-hidden border border-hextech-borderSubtle">
+      <div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-hextech-borderSubtle shrink-0">
+        <div class="text-[11px] font-heading font-bold text-hextech-gold uppercase tracking-wider flex items-center gap-1">
+          <i data-lucide="shield" class="w-3.5 h-3.5 text-hextech-gold"></i>
+          <span>Şampiyonlar</span>
+        </div>
+        <span id="champ-count" class="text-gray-400 font-mono text-[10px] bg-hextech-surface px-1.5 py-0.2 rounded border border-hextech-borderSubtle">0</span>
+      </div>
+
+      <!-- Search Box -->
+      <div class="relative mb-2 shrink-0">
+        <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-2 text-gray-400"></i>
+        <input type="text" id="champ-search" oninput="filterChampions(this.value)" placeholder="Ara (Garen)..." class="w-full bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-gold rounded-lg pl-7 pr-2 py-1.5 text-[11px] text-gray-200 outline-none placeholder-gray-500 font-sans transition-all">
+      </div>
+
+      <!-- Full-Height Champions List -->
+      <div id="champions-list" class="flex-1 overflow-y-auto space-y-0.5 pr-0.5 font-sans">
+        <!-- Dynamic Champions -->
+      </div>
+    </div>
+
+    <!-- COLUMN 2: MAXIMIZED SKIN SELECTOR & EXTRACTED VOICE EXPLORER (8 cols) -->
+    <div id="panel-col-2" class="col-span-12 lg:col-span-8 flex flex-col space-y-3 overflow-hidden">
+      
+      <!-- TOP SECTION: MULTI-CARD SKIN SELECTOR -->
+      <div class="glass-panel rounded-xl p-3 flex flex-col overflow-hidden border border-hextech-borderSubtle shrink-0 min-h-[390px] max-h-[450px]">
+        <!-- Header Row -->
+        <div class="flex items-center justify-between pb-2 border-b border-hextech-borderSubtle mb-2 shrink-0">
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="text-sm">🎭</span>
+            <div class="min-w-0">
+              <span id="skin-selected-champ-title" class="block font-heading font-extrabold text-xs text-hextech-goldBright uppercase tracking-wider truncate">Kostüm & Dublaj Seçimi</span>
+              <span id="skin-selection-summary" class="block text-[10px] text-gray-500 font-sans truncate">Bir şampiyon seçerek kostümleri karşılaştırın.</span>
+            </div>
+            <span id="skin-count" class="text-gray-400 font-mono text-[11px] shrink-0">(0)</span>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <button id="btn-check-skin-vo" onclick="checkSelectedChampionVO()" class="flex items-center space-x-1 px-2 py-1 rounded bg-hextech-surface border border-hextech-gold/50 text-hextech-goldBright hover:bg-hextech-gold hover:text-gray-950 text-[10px] font-heading font-bold tracking-wider uppercase transition-all cursor-pointer shadow">
+              <i data-lucide="scan-line" class="w-3 h-3 text-hextech-gold"></i>
+              <span>Wwise Analiz</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter Pills & Search/Sort Row -->
+        <div class="flex items-center justify-between gap-2 mb-2 shrink-0 flex-wrap">
+          <!-- Filter Pills -->
+          <div class="flex items-center gap-1 overflow-x-auto pb-1 scrollbar-thin text-[10px] font-heading font-semibold flex-1 min-w-[240px]">
+            <button onclick="setSkinRarityFilter('all')" id="skin-filter-all" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-hextech-gold text-gray-950 font-bold border border-hextech-gold cursor-pointer transition-all whitespace-nowrap shadow-sm">Tümü</button>
+            <button onclick="setSkinRarityFilter('unique_vo')" id="skin-filter-unique_vo" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-emerald-950/70 text-emerald-300 border border-emerald-500/40 hover:border-emerald-400 cursor-pointer transition-all whitespace-nowrap">👑 Özel Dublajlı</button>
+            <button onclick="setSkinRarityFilter('filtered_vo')" id="skin-filter-filtered_vo" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-cyan-950/60 text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 cursor-pointer transition-all whitespace-nowrap">🎛️ Vokal Filtreli</button>
+            <button onclick="setSkinRarityFilter('no_custom_vo')" id="skin-filter-no_custom_vo" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-gray-900/80 text-gray-400 border border-gray-700 hover:border-gray-500 cursor-pointer transition-all whitespace-nowrap">❌ Özel Dublajsız</button>
+            <button onclick="setSkinRarityFilter('legendary')" id="skin-filter-legendary" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-yellow-950/50 text-yellow-300 border border-yellow-500/30 hover:border-yellow-400 cursor-pointer transition-all whitespace-nowrap">👑 Efsanevi</button>
+            <button onclick="setSkinRarityFilter('mythic')" id="skin-filter-mythic" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-purple-950/50 text-purple-300 border border-purple-500/30 hover:border-purple-400 cursor-pointer transition-all whitespace-nowrap">✨ İhtişamlı</button>
+            <button onclick="setSkinRarityFilter('epic')" id="skin-filter-epic" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-blue-950/50 text-blue-300 border border-blue-500/30 hover:border-blue-400 cursor-pointer transition-all whitespace-nowrap">🔷 Destansı</button>
+            <button onclick="setSkinRarityFilter('standard')" id="skin-filter-standard" class="skin-filter-pill px-2.5 py-0.5 rounded-full bg-gray-900/60 text-gray-400 border border-gray-700 hover:border-gray-500 cursor-pointer transition-all whitespace-nowrap">🛡️ Standart</button>
+          </div>
+
+          <!-- Quick Search & Sort -->
+          <div class="flex items-center gap-1.5 shrink-0">
+            <input type="text" id="skin-search-input" oninput="onSkinSearchInput(this.value)" placeholder="Kostüm / VO ara..." class="w-32 bg-hextech-surface border border-hextech-borderSubtle focus:border-hextech-gold rounded-lg px-2.5 py-1 text-[10px] text-gray-200 outline-none placeholder-gray-500 font-sans transition-all">
+            <select id="skin-sort-select" onchange="onSkinSortChange(this.value)" class="bg-hextech-surface border border-hextech-borderSubtle focus:border-hextech-gold rounded-lg px-2 py-1 text-[10px] text-gray-300 outline-none font-sans cursor-pointer transition-all">
+              <option value="recommended">🔥 Tavsiye Edilen (Özel Dublajlı)</option>
+              <option value="vo_count">🎙️ Replik Sayısı</option>
+              <option value="rarity">💎 Nadirlik</option>
+              <option value="date_desc">📅 En Yeniler</option>
+              <option value="num_asc">🔢 Kostüm No</option>
+              <option value="name_asc">🔤 A-Z</option>
+            </select>
+            <button type="button" onclick="clearSkinFilters()" class="px-2 py-1 rounded-lg bg-hextech-surface border border-hextech-borderSubtle hover:border-hextech-gold text-[10px] text-gray-400 hover:text-hextech-goldBright font-semibold transition-all cursor-pointer" title="Arama ve filtreleri temizle">Temizle</button>
+          </div>
+        </div>
+
+        <!-- Scrollable multi-column cards: substantially more skins remain visible at once. -->
+        <div id="skins-list" class="skin-selection-grid grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2 overflow-y-auto pr-1 pb-1 font-sans flex-1 min-h-0" aria-live="polite">
+          <!-- Dynamic selectable skin cards -->
+        </div>
+      </div>
+
+      <!-- BOTTOM SECTION: EXTRACTED VOICE EXPLORER & BATCH QUEUE -->
+      <div class="flex-1 glass-panel rounded-xl p-3 flex flex-col overflow-hidden border border-hextech-borderSubtle">
+        <!-- Header with folder count, DaVinci Resolve Export & Explorer button -->
+        <div class="flex items-center justify-between mb-2 pb-2 border-b border-hextech-borderSubtle shrink-0 flex-wrap gap-2">
+          <div class="text-xs font-heading font-bold text-hextech-goldBright flex items-center space-x-2 uppercase tracking-wider">
+            <i data-lucide="folder-tree" class="w-4 h-4 text-hextech-gold"></i>
+            <span>Çıkarılan Ses Kütüphanesi</span>
+          </div>
+          <div class="flex items-center space-x-1.5">
+            <!-- DaVinci Resolve Export Dynamic Controls -->
+            <div class="flex items-center bg-hextech-surface border border-amber-500/60 hover:border-amber-400 rounded-lg p-0.5 shadow-md">
+              <div class="flex items-center px-2 py-0.5 space-x-1.5 border-r border-hextech-borderSubtle">
+                <span class="text-xs font-bold text-gray-300 font-sans select-none">Boşluk:</span>
+                <input type="number" id="davinci-gap-input" value="0.2" step="0.05" min="0" max="10" 
+                       class="w-14 bg-hextech-input border border-hextech-borderMedium focus:border-amber-400 rounded px-1 py-0.5 text-center font-mono text-xs text-amber-300 font-extrabold outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                       title="Klipler arasındaki boşluk süresi (saniye)">
+                <span class="text-xs font-mono text-gray-400 font-bold select-none">sn</span>
+              </div>
+              <button id="btn-export-davinci" onclick="exportToDaVinciTimeline()" 
+                      class="px-3 py-1 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white rounded-md text-xs font-heading font-black tracking-wider uppercase flex items-center gap-1.5 cursor-pointer shadow transition-all hover:scale-105 active:scale-95" 
+                      title="DaVinci Resolve için boşluklu FCPXML/XML Timeline oluştur">
+                <i data-lucide="film" class="w-3.5 h-3.5 text-amber-200"></i>
+                <span>DaVinci Timeline</span>
+              </button>
+            </div>
+
+            <button onclick="openExtractedFolder()" class="px-2.5 py-1 bg-hextech-surface hover:bg-hextech-cardHover rounded text-[10px] text-gray-300 hover:text-hextech-gold border border-hextech-borderSubtle font-sans flex items-center gap-1 cursor-pointer" title="Windows Gezgini'nde Aç">
+              <i data-lucide="external-link" class="w-3 h-3 text-hextech-gold"></i>
+              <span>Klasörü Aç</span>
+            </button>
+            <button onclick="refreshExtractedTree()" class="p-1 hover:bg-hextech-cardHover rounded text-gray-400 hover:text-hextech-gold cursor-pointer" title="Yenile">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search in Tree & Batch Action Toolbar -->
+        <div class="flex items-center gap-2 mb-2 shrink-0">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-2 text-gray-400"></i>
+            <input type="text" id="tree-search-input" oninput="onTreeSearchInput(this.value)" placeholder="Ses filtrele (katletme, ulti, q, şaka)..." class="w-full bg-hextech-surface border border-hextech-borderSubtle focus:border-hextech-gold rounded-lg pl-8 pr-2 py-1.5 text-[11px] text-gray-200 outline-none placeholder-gray-500 font-sans transition-all">
+          </div>
+          <div class="flex items-center gap-1.5 p-1 px-2 rounded-lg bg-hextech-surface border border-hextech-borderSubtle shrink-0">
+            <label class="flex items-center gap-1 text-[10px] text-gray-300 font-sans cursor-pointer select-none">
+              <input type="checkbox" id="cb-select-all-audio" onchange="toggleSelectAllAudio(this.checked)" class="rounded bg-gray-900 border-gray-700 text-hextech-gold focus:ring-0 cursor-pointer">
+              <span>Tümü</span>
+            </label>
+            <span id="selected-audio-badge" class="px-1.5 py-0.2 rounded text-[9px] font-mono bg-hextech-card text-hextech-gold border border-hextech-borderSubtle">0 ses</span>
+            <button id="btn-batch-play" onclick="toggleBatchPlayQueue()" class="flex items-center gap-1 px-2 py-0.5 rounded bg-gradient-to-r from-hextech-gold to-amber-500 hover:from-hextech-goldBright hover:to-amber-400 text-gray-950 font-heading font-extrabold text-[9px] uppercase tracking-wider transition-all cursor-pointer shadow">
+              <i id="batch-play-icon" data-lucide="play" class="w-2.5 h-2.5"></i>
+              <span id="batch-play-text">Sıralı Çal</span>
+            </button>
+            <button onclick="clearAudioSelection()" class="p-0.5 rounded hover:bg-hextech-card text-gray-400 hover:text-rose-400 cursor-pointer" title="Seçimi Temizle">
+              <i data-lucide="trash-2" class="w-3 h-3"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Explorer Tree Container -->
+        <div id="extracted-tree" class="flex-1 overflow-y-auto pr-1 space-y-2 font-sans">
+          <div class="text-center py-12 text-gray-500 text-xs">Bir şampiyon seçin veya çıkarın.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMN 3: COMPACT AUDIO HUB & LIVE QUEUE / TERMINAL CONSOLE (2 cols) -->
+    <div id="panel-col-3" class="col-span-12 lg:col-span-2 flex flex-col space-y-2.5 overflow-hidden">
+      
+      <!-- HEXTECH AUDIO PLAYER CARD -->
+      <div class="glass-card rounded-xl p-2.5 border border-hextech-goldBorder/60 shadow-2xl relative overflow-hidden shrink-0">
+        <!-- Top Status Row -->
+        <div class="flex items-center justify-between mb-1.5">
+          <span id="player-badge" class="px-1.5 py-0.5 rounded text-[8.5px] font-heading font-extrabold bg-amber-950/80 text-hextech-goldBright border border-hextech-gold/40 uppercase tracking-wider flex items-center gap-1">
+            <i data-lucide="volume-2" class="w-2.5 h-2.5 text-hextech-gold"></i>
+            <span id="player-status-text">SES OYNATICI</span>
+          </span>
+          <span id="player-time" class="text-[10px] font-mono text-hextech-gold font-bold">00:00/00:00</span>
+        </div>
+
+        <!-- Filename Title -->
+        <div id="player-title" class="text-[11px] font-heading font-bold text-gray-100 truncate mb-0.5" title="Dinlemek için listeden bir sese tıklayın">
+          Dinlemek için bir sese tıklayın
+        </div>
+
+        <!-- Subtitle Text -->
+        <div id="player-subtitle" class="text-[10px] text-hextech-goldBright/90 italic font-sans truncate min-h-[14px] mb-1.5">
+          Hazır
+        </div>
+
+        <!-- Timeline Slider -->
+        <div class="mb-2">
+          <input type="range" id="audio-seek" value="0" min="0" max="100" class="w-full cursor-pointer" oninput="onSeekChange(this.value)">
+        </div>
+
+        <!-- Controls Row -->
+        <div class="flex items-center justify-between gap-1 flex-wrap">
+          <div class="flex items-center space-x-1">
+            <!-- Prev Button -->
+            <button onclick="playPrevQueueAudio()" class="p-1 rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-300 hover:text-hextech-gold border border-hextech-borderSubtle cursor-pointer" title="Önceki Ses">
+              <i data-lucide="skip-back" class="w-3 h-3"></i>
+            </button>
+
+            <!-- Play/Pause Button -->
+            <button id="btn-play" onclick="togglePlay()" class="lol-btn-gold px-2.5 py-1 rounded text-xs flex items-center space-x-1 cursor-pointer font-heading font-bold">
+              <i id="play-icon" data-lucide="play" class="w-3 h-3"></i>
+              <span id="play-text">Oynat</span>
+            </button>
+
+            <!-- Next Button -->
+            <button onclick="playNextQueueAudio()" class="p-1 rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-300 hover:text-hextech-gold border border-hextech-borderSubtle cursor-pointer" title="Sonraki Ses">
+              <i data-lucide="skip-forward" class="w-3 h-3"></i>
+            </button>
+
+            <!-- Stop Button -->
+            <button onclick="stopAudio()" class="p-1 rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-400 hover:text-rose-400 border border-hextech-borderSubtle cursor-pointer" title="Durdur">
+              <i data-lucide="square" class="w-3 h-3"></i>
+            </button>
+          </div>
+
+          <!-- Autoplay Toggle -->
+          <button id="btn-toggle-autoplay" onclick="toggleAutoplayMode()" class="px-1.5 py-0.5 rounded text-[9px] font-sans font-bold bg-hextech-surface hover:bg-hextech-cardHover text-hextech-cyan border border-hextech-cyan/40 cursor-pointer flex items-center gap-0.5" title="Otomatik Sonrakine Geç">
+            <i data-lucide="repeat" class="w-2.5 h-2.5"></i>
+            <span id="autoplay-text">Sıralı: AÇIK</span>
+          </button>
+        </div>
+
+        <!-- Volume Control Row -->
+        <div class="flex items-center justify-end space-x-1.5 mt-1.5 pt-1 border-t border-hextech-borderSubtle/40">
+          <i data-lucide="volume-2" class="w-3 h-3 text-gray-400"></i>
+          <input type="range" id="audio-volume" min="0" max="100" value="85" class="w-16" oninput="setVolume(this.value)">
+        </div>
+
+        <!-- Audio Element -->
+        <audio id="html5-audio" class="hidden"></audio>
+      </div>
+
+      <!-- PLAYLIST QUEUE CONTAINER -->
+      <div id="playlist-queue-panel" class="glass-panel rounded-xl p-2 flex flex-col border border-hextech-borderSubtle max-h-32 overflow-hidden shrink-0">
+        <div class="flex items-center justify-between pb-1 mb-1 border-b border-hextech-borderSubtle text-[9px] font-heading font-bold text-gray-300 uppercase tracking-wider">
+          <span class="flex items-center gap-1 text-hextech-gold">
+            <i data-lucide="list-music" class="w-2.5 h-2.5"></i>
+            <span>Kuyruk</span>
+            <span id="queue-count-badge" class="font-mono text-gray-400">(0)</span>
+          </span>
+          <button onclick="clearAudioQueue()" class="text-[8.5px] text-gray-400 hover:text-rose-300 cursor-pointer">Temizle</button>
+        </div>
+        <div id="playlist-queue-list" class="flex-1 overflow-y-auto space-y-0.5 font-mono text-[9px] pr-0.5">
+          <div class="text-center py-2 text-gray-500 text-[9px]">Kuyruk boş.</div>
+        </div>
+      </div>
+
+      <!-- HEXTECH LIVE TERMINAL CONSOLE -->
+      <div id="panel-console" class="flex-1 glass-panel rounded-xl p-2 flex flex-col overflow-hidden border border-hextech-borderSubtle min-h-[90px]">
+        <div class="flex items-center justify-between pb-1 border-b border-hextech-borderSubtle mb-1 shrink-0">
+          <div class="text-[9px] font-heading font-bold text-hextech-gold flex items-center space-x-1 uppercase tracking-wider">
+            <i data-lucide="terminal" class="w-2.5 h-2.5 text-hextech-gold"></i>
+            <span>İşlem Konsolu</span>
+          </div>
+          <div class="flex items-center space-x-1">
+            <button id="btn-copy-console" onclick="copyConsoleLogs()" class="flex items-center space-x-1 text-[8.5px] px-1.5 py-0.5 rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-300 hover:text-hextech-gold border border-hextech-borderSubtle transition cursor-pointer font-sans" title="Logları Kopyala">
+              <i data-lucide="copy" class="w-2 h-2 text-hextech-gold"></i>
+              <span>Kopya</span>
+            </button>
+            <button id="btn-clear-console" onclick="clearConsoleLogs()" class="text-[8.5px] px-1.5 py-0.5 rounded bg-hextech-surface hover:bg-hextech-cardHover text-gray-300 hover:text-rose-400 border border-hextech-borderSubtle transition cursor-pointer font-sans" title="Temizle">
+              <span>Sil</span>
+            </button>
+          </div>
+        </div>
+        <div id="console-logs" class="flex-1 overflow-y-auto font-mono text-[9px] space-y-0.5 text-gray-300 pr-0.5 leading-tight">
+          <div class="text-gray-500 font-sans italic text-[9px]">⚡ Hextech Stüdyosu hazır.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

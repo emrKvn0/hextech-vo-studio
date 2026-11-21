@@ -1,0 +1,52 @@
+<!-- ========================================================================= -->
+<!-- 5. LAYOUT CUSTOMIZER MODAL -->
+<!-- ========================================================================= -->
+<div id="layout-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-md rounded-2xl border border-hextech-borderMedium flex flex-col overflow-hidden shadow-2xl">
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="layout-grid" class="w-5 h-5 text-hextech-gold"></i>
+        <h2 class="text-base font-heading font-bold text-gray-100">Panel Düzenini Özelleştir</h2>
+      </div>
+      <button onclick="closeLayoutModal()" class="p-1.5 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <div class="p-4 space-y-4 text-xs">
+      <div>
+        <label class="font-heading font-bold text-hextech-gold block mb-2 uppercase tracking-wider">Sütun Oranları / Görünüm Modu:</label>
+        <div class="grid grid-cols-3 gap-2 font-heading">
+          <button onclick="setLayoutPreset('balanced')" id="layout-preset-balanced" class="p-2.5 rounded-lg border border-hextech-gold bg-hextech-cardSelected text-hextech-goldBright font-bold text-center cursor-pointer shadow">
+            Maksimum Kostüm (2:8:2)
+          </button>
+          <button onclick="setLayoutPreset('wide-explorer')" id="layout-preset-wide-explorer" class="p-2.5 rounded-lg border border-hextech-borderSubtle hover:border-hextech-gold bg-hextech-card text-gray-300 font-semibold text-center cursor-pointer">
+            Geniş Kütüphane (2:8:2)
+          </button>
+          <button onclick="setLayoutPreset('compact')" id="layout-preset-compact" class="p-2.5 rounded-lg border border-hextech-borderSubtle hover:border-hextech-gold bg-hextech-card text-gray-300 font-semibold text-center cursor-pointer">
+            Geniş Oynatıcı (2:7:3)
+          </button>
+        </div>
+      </div>
+
+      <div class="border-t border-hextech-borderSubtle pt-3 space-y-3">
+        <label class="font-heading font-bold text-hextech-gold block uppercase tracking-wider">Panel Görünürlüğü:</label>
+        
+        <div class="flex items-center justify-between font-sans">
+          <span class="text-gray-300">Canlı İşlem Konsolunu Göster</span>
+          <input type="checkbox" id="toggle-console" checked onchange="toggleConsoleVisibility(this.checked)" class="w-4 h-4 rounded accent-amber-500 cursor-pointer">
+        </div>
+      </div>
+
+      <div class="bg-hextech-input p-3 rounded-lg border border-hextech-borderSubtle text-[11px] text-gray-400 font-sans">
+        💡 <strong>İpucu:</strong> Sol ve sağ paneller içeriklerine göre kompakt tutularak orta kostüm & ses kütüphanesi alanı maksimum genişliğe ulaştırılmıştır.
+      </div>
+    </div>
+
+    <div class="p-3 border-t border-hextech-borderSubtle bg-hextech-surface/90 flex justify-end">
+      <button onclick="closeLayoutModal()" class="lol-btn-gold px-5 py-2 rounded-lg text-xs cursor-pointer shadow">
+        Tamam
+      </button>
+    </div>
+  </div>
+</div>

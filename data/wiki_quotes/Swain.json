@@ -1,0 +1,2216 @@
+[
+  {
+    "ogg": "Swain_Select.ogg",
+    "event_key": "Swain_Select",
+    "speaker": "Swain",
+    "english_quote": "Fear the power you do not see."
+  },
+  {
+    "ogg": "Swain_Ban.ogg",
+    "event_key": "Swain_Ban",
+    "speaker": "Swain",
+    "english_quote": "Do not confuse cowardice for wisdom."
+  },
+  {
+    "ogg": "Swain_Original_MoveFirst_1.ogg",
+    "event_key": "MoveFirst_1",
+    "speaker": "Swain",
+    "english_quote": "I have seen this place... A vision... A battle."
+  },
+  {
+    "ogg": "Swain_Original_MoveFirst_2.ogg",
+    "event_key": "MoveFirst_2",
+    "speaker": "Swain",
+    "english_quote": "The outcome was decided when they brought an army; and I brought a demon."
+  },
+  {
+    "ogg": "Swain_Original_MoveFirst_3.ogg",
+    "event_key": "MoveFirst_3",
+    "speaker": "Swain",
+    "english_quote": "If they already call me a villain, what will they call me when I succeed?"
+  },
+  {
+    "ogg": "Swain_Original_MoveFirst_4.ogg",
+    "event_key": "MoveFirst_4",
+    "speaker": "Swain",
+    "english_quote": "It is just as the spies described... A pity I had them executed."
+  },
+  {
+    "ogg": "Swain_Tyrant_MoveFirst_0.ogg",
+    "event_key": "MoveFirst_0",
+    "speaker": "Swain",
+    "english_quote": "I look out upon humanity, and see only a feast."
+  },
+  {
+    "ogg": "Swain_Tyrant_MoveFirst_2.ogg",
+    "event_key": "MoveFirst_2",
+    "speaker": "Swain",
+    "english_quote": "Dispatch these worms."
+  },
+  {
+    "ogg": "Swain_Tyrant_MoveFirst_1.ogg",
+    "event_key": "MoveFirst_1",
+    "speaker": "Swain",
+    "english_quote": "Men are too weak to rule (laughs) but I am no man."
+  },
+  {
+    "ogg": "Swain_DragonMaster_MoveFirst_0.ogg",
+    "event_key": "MoveFirst_0",
+    "speaker": "Swain",
+    "english_quote": "I fought the dragons once... Now I have become one!"
+  },
+  {
+    "ogg": "Swain_DragonMaster_MoveFirst_2.ogg",
+    "event_key": "MoveFirst_2",
+    "speaker": "Swain",
+    "english_quote": "To end the world with fire. To rule with flame."
+  },
+  {
+    "ogg": "Swain_Original_MoveFirstAllyBilgewater_2.ogg",
+    "event_key": "MoveFirstAllyBilgewater_2",
+    "speaker": "Swain",
+    "english_quote": "Dead men tell tales that only I can hear."
+  },
+  {
+    "ogg": "Swain_Original_MoveFirstEnemyLeblanc.ogg",
+    "event_key": "MoveFirstEnemyLeblanc",
+    "speaker": "Swain",
+    "english_quote": "An assassin is due at any moment. It is how I know LeBlanc cares."
+  },
+  {
+    "ogg": "Swain_Original_Move_11.ogg",
+    "event_key": "Move_11",
+    "speaker": "Swain",
+    "english_quote": "Destiny marches—like any man."
+  },
+  {
+    "ogg": "Swain_Original_Move_12.ogg",
+    "event_key": "Move_12",
+    "speaker": "Swain",
+    "english_quote": "There is always a choice. The truth is no exception."
+  },
+  {
+    "ogg": "Swain_Original_Move_19.ogg",
+    "event_key": "Move_19",
+    "speaker": "Swain",
+    "english_quote": "A calculated risk is no risk at all."
+  },
+  {
+    "ogg": "Swain_Original_Move_3.ogg",
+    "event_key": "Move_3",
+    "speaker": "Swain",
+    "english_quote": "Decisions have consequences. This I know well."
+  },
+  {
+    "ogg": "Swain_Original_Move_7.ogg",
+    "event_key": "Move_7",
+    "speaker": "Swain",
+    "english_quote": "One can read the future in battle lines, assuming one can read."
+  },
+  {
+    "ogg": "Swain_Original_Move_23.ogg",
+    "event_key": "Move_23",
+    "speaker": "Swain",
+    "english_quote": "We are at war. Do not forget it."
+  },
+  {
+    "ogg": "Swain_Original_Move_34.ogg",
+    "event_key": "Move_34",
+    "speaker": "Swain",
+    "english_quote": "The mud on our boots will hide the bloodstains."
+  },
+  {
+    "ogg": "Swain_Original_Move_18.ogg",
+    "event_key": "Move_18",
+    "speaker": "Swain",
+    "english_quote": "A Noxian knows who he is. And what he must do."
+  },
+  {
+    "ogg": "Swain_Original_Move_33.ogg",
+    "event_key": "Move_33",
+    "speaker": "Swain",
+    "english_quote": "The few, for the many."
+  },
+  {
+    "ogg": "Swain_Original_Move_22.ogg",
+    "event_key": "Move_22",
+    "speaker": "Swain",
+    "english_quote": "Is it not enough for Noxus to be strong?"
+  },
+  {
+    "ogg": "Swain_Original_Move_17.ogg",
+    "event_key": "Move_17",
+    "speaker": "Swain",
+    "english_quote": "To redraw the map, the blood of soldiers must be the ink."
+  },
+  {
+    "ogg": "Swain_Original_Move_20.ogg",
+    "event_key": "Move_20",
+    "speaker": "Swain",
+    "english_quote": "I cannot lead if I allow fools to stumble about before me."
+  },
+  {
+    "ogg": "Swain_Original_Move_27.ogg",
+    "event_key": "Move_27",
+    "speaker": "Swain",
+    "english_quote": "I suppose I should be grateful they have the decency to fear me."
+  },
+  {
+    "ogg": "Swain_Original_Move_26.ogg",
+    "event_key": "Move_26",
+    "speaker": "Swain",
+    "english_quote": "When their lives flash before their eyes, so do their secrets."
+  },
+  {
+    "ogg": "Swain_Original_Move_4.ogg",
+    "event_key": "Move_4",
+    "speaker": "Swain",
+    "english_quote": "I could kill them all. But it would be far crueler to show them that I am right."
+  },
+  {
+    "ogg": "Swain_Original_Move_25.ogg",
+    "event_key": "Move_25",
+    "speaker": "Swain",
+    "english_quote": "They are blind to the cold logic of this world."
+  },
+  {
+    "ogg": "Swain_Original_Move_9.ogg",
+    "event_key": "Move_9",
+    "speaker": "Swain",
+    "english_quote": "I have killed more men with words than by my own hand. Not for lack of trying."
+  },
+  {
+    "ogg": "Swain_Original_Move_5.ogg",
+    "event_key": "Move_5",
+    "speaker": "Swain",
+    "english_quote": "A new vantage, is all the advantage I need."
+  },
+  {
+    "ogg": "Swain_Original_Move_1.ogg",
+    "event_key": "Move_1",
+    "speaker": "Swain",
+    "english_quote": "The more they try to kill me, the more they reveal I am on the right path."
+  },
+  {
+    "ogg": "Swain_Original_Move_21.ogg",
+    "event_key": "Move_21",
+    "speaker": "Swain",
+    "english_quote": "They are five steps from realizing: I am ten steps ahead."
+  },
+  {
+    "ogg": "Swain_Original_Move_14.ogg",
+    "event_key": "Move_14",
+    "speaker": "Swain",
+    "english_quote": "Would they even struggle to survive, if they knew what was to come?"
+  },
+  {
+    "ogg": "Swain_Original_Move_24.ogg",
+    "event_key": "Move_24",
+    "speaker": "Swain",
+    "english_quote": "I was born a patrician. I became a soldier."
+  },
+  {
+    "ogg": "Swain_Original_Move_15.ogg",
+    "event_key": "Move_15",
+    "speaker": "Swain",
+    "english_quote": "Never make a bargain with a demon... that you intend to keep."
+  },
+  {
+    "ogg": "Swain_Original_Move_28.ogg",
+    "event_key": "Move_28",
+    "speaker": "Swain",
+    "english_quote": "It is not the visions that haunt me—but what I do not see."
+  },
+  {
+    "ogg": "Swain_Original_Move_32.ogg",
+    "event_key": "Move_32",
+    "speaker": "Swain",
+    "english_quote": "What is one more demon, when I already have so many?"
+  },
+  {
+    "ogg": "Swain_Original_Move_16.ogg",
+    "event_key": "Move_16",
+    "speaker": "Swain",
+    "english_quote": "I peer through the darkness others fear."
+  },
+  {
+    "ogg": "Swain_Original_Move_8.ogg",
+    "event_key": "Move_8",
+    "speaker": "Swain",
+    "english_quote": "A riddle wrapped in a mystery, hidden within us all."
+  },
+  {
+    "ogg": "Swain_Original_Move_30.ogg",
+    "event_key": "Move_30",
+    "speaker": "Swain",
+    "english_quote": "A voice whispers in the shadows. Though few can hear it."
+  },
+  {
+    "ogg": "Swain_Original_Move_2.ogg",
+    "event_key": "Move_2",
+    "speaker": "Swain",
+    "english_quote": "The old wounds ache. They are reminders."
+  },
+  {
+    "ogg": "Swain_Original_Move_10.ogg",
+    "event_key": "Move_10",
+    "speaker": "Swain",
+    "english_quote": "Hmph... I do so enjoy explaining things to idiots."
+  },
+  {
+    "ogg": "Swain_Original_Move_13.ogg",
+    "event_key": "Move_13",
+    "speaker": "Swain",
+    "english_quote": "After the battle, the ravens feast."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamAhead_6.ogg",
+    "event_key": "RallyTeamAhead_6",
+    "speaker": "Swain",
+    "english_quote": "Drive them from the battlefield!"
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamAhead_5.ogg",
+    "event_key": "RallyTeamAhead_5",
+    "speaker": "Swain",
+    "english_quote": "We have the momentum."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamAhead_2.ogg",
+    "event_key": "RallyTeamAhead_2",
+    "speaker": "Swain",
+    "english_quote": "Leave the survivors to their officers."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamAhead_0.ogg",
+    "event_key": "RallyTeamAhead_0",
+    "speaker": "Swain",
+    "english_quote": "They flee Noxus on the roads we built!"
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamAhead_4.ogg",
+    "event_key": "RallyTeamAhead_4",
+    "speaker": "Swain",
+    "english_quote": "One more push, and they will break."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamAhead_0.ogg",
+    "event_key": "RallyTeamAhead_0",
+    "speaker": "Swain",
+    "english_quote": "Master fear, to master the dragon."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamAhead_1.ogg",
+    "event_key": "RallyTeamAhead_1",
+    "speaker": "Swain",
+    "english_quote": "Dragons cannot inherit the earth... If it is already theirs."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamAhead_2.ogg",
+    "event_key": "RallyTeamAhead_2",
+    "speaker": "Swain",
+    "english_quote": "They falter before my dragons."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamBehind_5.ogg",
+    "event_key": "RallyTeamBehind_5",
+    "speaker": "Swain",
+    "english_quote": "Every moment we do not kill them, their advantage grows."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamBehind_1.ogg",
+    "event_key": "RallyTeamBehind_1",
+    "speaker": "Swain",
+    "english_quote": "They move swiftly, for all the coins weighing them down."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamBehind_3.ogg",
+    "event_key": "RallyTeamBehind_3",
+    "speaker": "Swain",
+    "english_quote": "The dagger is at our throats. But their hands quiver."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamBehind_4.ogg",
+    "event_key": "RallyTeamBehind_4",
+    "speaker": "Swain",
+    "english_quote": "They think they have won. Prove them wrong."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamBehind_2.ogg",
+    "event_key": "RallyTeamBehind_2",
+    "speaker": "Swain",
+    "english_quote": "Are you not children of Noxus?"
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamBehind_0.ogg",
+    "event_key": "RallyTeamBehind_0",
+    "speaker": "Swain",
+    "english_quote": "Do not fight for conquest, fight to survive!"
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamBehind_0.ogg",
+    "event_key": "RallyTeamBehind_0",
+    "speaker": "Swain",
+    "english_quote": "I too refuse to kneel... But it is only a matter of time."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamBehind_1.ogg",
+    "event_key": "RallyTeamBehind_1",
+    "speaker": "Swain",
+    "english_quote": "Know when to die!"
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamBehind_2.ogg",
+    "event_key": "RallyTeamBehind_2",
+    "speaker": "Swain",
+    "english_quote": "They will not break. Perhaps they will burn."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamEven_5.ogg",
+    "event_key": "RallyTeamEven_5",
+    "speaker": "Swain",
+    "english_quote": "The battle is yet to be decided."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamEven_4.ogg",
+    "event_key": "RallyTeamEven_4",
+    "speaker": "Swain",
+    "english_quote": "Patience is a virtue, but it has its limits."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamEven_0.ogg",
+    "event_key": "RallyTeamEven_0",
+    "speaker": "Swain",
+    "english_quote": "The advantage is ours, if we take it."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamEven_1.ogg",
+    "event_key": "RallyTeamEven_1",
+    "speaker": "Swain",
+    "english_quote": "A stalemate. How quaint."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamEven_3.ogg",
+    "event_key": "RallyTeamEven_3",
+    "speaker": "Swain",
+    "english_quote": "Not losing is not winning either."
+  },
+  {
+    "ogg": "Swain_Original_RallyTeamEven_2.ogg",
+    "event_key": "RallyTeamEven_2",
+    "speaker": "Swain",
+    "english_quote": "A truce in all but name."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamEven_0.ogg",
+    "event_key": "RallyTeamEven_0",
+    "speaker": "Swain",
+    "english_quote": "It is wise to fear the future. It belongs to them."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamEven_1.ogg",
+    "event_key": "RallyTeamEven_1",
+    "speaker": "Swain",
+    "english_quote": "Humankind. Dragonkind. Both hang in the balance."
+  },
+  {
+    "ogg": "Swain_DragonMaster_RallyTeamEven_2.ogg",
+    "event_key": "RallyTeamEven_2",
+    "speaker": "Swain",
+    "english_quote": "A standstill. One would never know the world burns around us..."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterAhri.ogg",
+    "event_key": "FirstEncounterAhri",
+    "speaker": "Swain",
+    "english_quote": "It is better to be feared than loved, Vastaya."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterCassiopeia.ogg",
+    "event_key": "FirstEncounterCassiopeia",
+    "speaker": "Swain",
+    "english_quote": "Ah yes, Cassiopeia. I admire your commitment to... metaphor."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDarius_1.ogg",
+    "event_key": "FirstEncounterDarius_1",
+    "speaker": "Swain",
+    "english_quote": "Your trust may be misplaced, old friend. But it is appreciated."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDarius_0.ogg",
+    "event_key": "FirstEncounterDarius_0",
+    "speaker": "Swain",
+    "english_quote": "It was only a matter of time, Darius. Do what you must."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDraven_1.ogg",
+    "event_key": "FirstEncounterDraven_1",
+    "speaker": "Swain",
+    "english_quote": "You stood by me when I was outcast, so I stood by you when you were drunk. In spite of the stench."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDraven_0.ogg",
+    "event_key": "FirstEncounterDraven_0",
+    "speaker": "Swain",
+    "english_quote": "Fame has gone to your head, and found ample room within."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterIrelia.ogg",
+    "event_key": "FirstEncounterIrelia",
+    "speaker": "Swain",
+    "english_quote": "Am I to seek revenge for my poor departed arm? If anything girl, you did me a favor."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterJax.ogg",
+    "event_key": "FirstEncounterJax",
+    "speaker": "Swain",
+    "english_quote": "The mind is the weapon. You are unarmed."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterKatarina.ogg",
+    "event_key": "FirstEncounterKatarina",
+    "speaker": "Swain",
+    "english_quote": "Do they know who killed your father, or do they still blame me?"
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterKindred.ogg",
+    "event_key": "FirstEncounterKindred",
+    "speaker": "Swain",
+    "english_quote": "If you take me, you will leave Noxus with something far worse."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterLeBlanc_2.ogg",
+    "event_key": "FirstEncounterLeBlanc_2",
+    "speaker": "Swain",
+    "english_quote": "Life would be boring without surprises. You, certainly keep things... interesting."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterLeBlanc_3.ogg",
+    "event_key": "FirstEncounterLeBlanc_3",
+    "speaker": "Swain",
+    "english_quote": "I suppose this makes us enemies with benefits."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterPoppy.ogg",
+    "event_key": "FirstEncounterPoppy",
+    "speaker": "Swain",
+    "english_quote": "People often ask for a hero, when a villain is what they truly need."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterRakan.ogg",
+    "event_key": "FirstEncounterRakan",
+    "speaker": "Swain",
+    "english_quote": "The Vastaya blood is not in my veins. It is on my hands."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterRiven.ogg",
+    "event_key": "FirstEncounterRiven",
+    "speaker": "Swain",
+    "english_quote": "The best armor is being forgotten; and you my dear... are quite forgettable."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterShen.ogg",
+    "event_key": "FirstEncounterShen",
+    "speaker": "Swain",
+    "english_quote": "There can be no balance with a hand on the scale."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterUrgot.ogg",
+    "event_key": "FirstEncounterUrgot",
+    "speaker": "Swain",
+    "english_quote": "Your message is your power. You have learned nothing."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterBlackRose.ogg",
+    "event_key": "FirstEncounterBlackRose",
+    "speaker": "Swain",
+    "english_quote": "Thorns in my side, but your flower is truly something to behold."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDemacia_0.ogg",
+    "event_key": "FirstEncounterDemacia_0",
+    "speaker": "Swain",
+    "english_quote": "All roads lead to Noxus—but all visions, to Demacia."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDemacia_1.ogg",
+    "event_key": "FirstEncounterDemacia_1",
+    "speaker": "Swain",
+    "english_quote": "There is nothing noteworthy about Demacia, but that in itself is worth noting."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterDemon.ogg",
+    "event_key": "FirstEncounterDemon",
+    "speaker": "Swain",
+    "english_quote": "You will find this delicate morsel, quite capable of fighting back."
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterNoxus.ogg",
+    "event_key": "FirstEncounterNoxus",
+    "speaker": "Swain",
+    "english_quote": "The world may fall to darkness. But Noxus, will remain."
+  },
+  {
+    "ogg": "Swain_Original_Taunt_0.ogg",
+    "event_key": "Taunt_0",
+    "speaker": "Swain",
+    "english_quote": "I would not ask of anyone what I would not do myself."
+  },
+  {
+    "ogg": "Swain_Original_Taunt_1.ogg",
+    "event_key": "Taunt_1",
+    "speaker": "Swain",
+    "english_quote": "Every day I rule, Noxus becomes a more perfect expression of my will."
+  },
+  {
+    "ogg": "Swain_Original_Taunt_2.ogg",
+    "event_key": "Taunt_2",
+    "speaker": "Swain",
+    "english_quote": "The demon is always in the details."
+  },
+  {
+    "ogg": "Swain_Original_Taunt_3.ogg",
+    "event_key": "Taunt_3",
+    "speaker": "Swain",
+    "english_quote": "There can be no unity without purpose; and there is one all men are born to."
+  },
+  {
+    "ogg": "Swain_Original_TauntResponse_0.ogg",
+    "event_key": "TauntResponse_0",
+    "speaker": "Swain",
+    "english_quote": "Not another word!"
+  },
+  {
+    "ogg": "Swain_Original_TauntResponse_1.ogg",
+    "event_key": "TauntResponse_1",
+    "speaker": "Swain",
+    "english_quote": "When you run out of insults, try steel."
+  },
+  {
+    "ogg": "Swain_Original_TauntResponseSionUrgot.ogg",
+    "event_key": "TauntResponseSionUrgot",
+    "speaker": "Swain",
+    "english_quote": "If you plan on listing my crimes, mind you do not die of asphyxiation."
+  },
+  {
+    "ogg": "Swain_Original_Joke_2.ogg",
+    "event_key": "Joke_2",
+    "speaker": "Swain",
+    "english_quote": "I have to know who has a crush on whom."
+  },
+  {
+    "ogg": "Swain_Original_Joke_0.ogg",
+    "event_key": "Joke_0",
+    "speaker": "Swain",
+    "english_quote": "Caw caw caw caw caw. There, are you satisfied?"
+  },
+  {
+    "ogg": "Swain_Original_Joke_1.ogg",
+    "event_key": "Joke_1",
+    "speaker": "Swain",
+    "english_quote": "My birds are hungry."
+  },
+  {
+    "ogg": "Swain_Original_JokeResponse_1.ogg",
+    "event_key": "JokeResponse_1",
+    "speaker": "Swain",
+    "english_quote": "I am not smiling, I am threatening to smile. It is still a threat."
+  },
+  {
+    "ogg": "Swain_Original_JokeResponse_0.ogg",
+    "event_key": "JokeResponse_0",
+    "speaker": "Swain",
+    "english_quote": "I own birds cleverer than you."
+  },
+  {
+    "ogg": "Swain_Original_Laugh_0.ogg",
+    "event_key": "Laugh_0",
+    "speaker": "Swain",
+    "english_quote": "Swain laughs heartily."
+  },
+  {
+    "ogg": "Swain_Original_Laugh_1.ogg",
+    "event_key": "Laugh_1",
+    "speaker": "Swain",
+    "english_quote": "Swain laughs heartily."
+  },
+  {
+    "ogg": "Swain_Original_Laugh_2.ogg",
+    "event_key": "Laugh_2",
+    "speaker": "Swain",
+    "english_quote": "Swain laughs heartily."
+  },
+  {
+    "ogg": "Swain_Original_BasicAttack_0.ogg",
+    "event_key": "BasicAttack_0",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_BasicAttack_1.ogg",
+    "event_key": "BasicAttack_1",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_BasicAttack_2.ogg",
+    "event_key": "BasicAttack_2",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_BasicAttack_3.ogg",
+    "event_key": "BasicAttack_3",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_BasicAttack_4.ogg",
+    "event_key": "BasicAttack_4",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_BasicAttack_5.ogg",
+    "event_key": "BasicAttack_5",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_Attack_1.ogg",
+    "event_key": "Attack_1",
+    "speaker": "Swain",
+    "english_quote": "The right to rule, held, in my hand."
+  },
+  {
+    "ogg": "Swain_Original_Attack_2.ogg",
+    "event_key": "Attack_2",
+    "speaker": "Swain",
+    "english_quote": "Pity stays the hand of the merciful, but not mine."
+  },
+  {
+    "ogg": "Swain_Original_Attack_3.ogg",
+    "event_key": "Attack_3",
+    "speaker": "Swain",
+    "english_quote": "You dare oppose Noxus?"
+  },
+  {
+    "ogg": "Swain_Original_Attack_4.ogg",
+    "event_key": "Attack_4",
+    "speaker": "Swain",
+    "english_quote": "Weak of body; weak of mind."
+  },
+  {
+    "ogg": "Swain_Original_Attack_5.ogg",
+    "event_key": "Attack_5",
+    "speaker": "Swain",
+    "english_quote": "This is the least of my crimes."
+  },
+  {
+    "ogg": "Swain_Original_Attack_6.ogg",
+    "event_key": "Attack_6",
+    "speaker": "Swain",
+    "english_quote": "The ends of war are death."
+  },
+  {
+    "ogg": "Swain_Original_Attack_7.ogg",
+    "event_key": "Attack_7",
+    "speaker": "Swain",
+    "english_quote": "Diplomacy is a subtle art."
+  },
+  {
+    "ogg": "Swain_Original_Attack_9.ogg",
+    "event_key": "Attack_9",
+    "speaker": "Swain",
+    "english_quote": "Incompetence surrounds me."
+  },
+  {
+    "ogg": "Swain_Original_Attack_10.ogg",
+    "event_key": "Attack_10",
+    "speaker": "Swain",
+    "english_quote": "Try to die with dignity."
+  },
+  {
+    "ogg": "Swain_Original_Attack_11.ogg",
+    "event_key": "Attack_11",
+    "speaker": "Swain",
+    "english_quote": "How tedious."
+  },
+  {
+    "ogg": "Swain_Original_Attack_12.ogg",
+    "event_key": "Attack_12",
+    "speaker": "Swain",
+    "english_quote": "Strength is the only teacher."
+  },
+  {
+    "ogg": "Swain_Original_Attack_13.ogg",
+    "event_key": "Attack_13",
+    "speaker": "Swain",
+    "english_quote": "Do not try my patience."
+  },
+  {
+    "ogg": "Swain_Original_Attack_14.ogg",
+    "event_key": "Attack_14",
+    "speaker": "Swain",
+    "english_quote": "If you insist on dying."
+  },
+  {
+    "ogg": "Swain_Original_Attack_15.ogg",
+    "event_key": "Attack_15",
+    "speaker": "Swain",
+    "english_quote": "A conquered nation, is a loyal one."
+  },
+  {
+    "ogg": "Swain_Original_Attack_16.ogg",
+    "event_key": "Attack_16",
+    "speaker": "Swain",
+    "english_quote": "We must remind them of their place."
+  },
+  {
+    "ogg": "Swain_Original_Attack_17.ogg",
+    "event_key": "Attack_17",
+    "speaker": "Swain",
+    "english_quote": "You lack discipline."
+  },
+  {
+    "ogg": "Swain_Original_Attack_18.ogg",
+    "event_key": "Attack_18",
+    "speaker": "Swain",
+    "english_quote": "A petty squabble for pettier men."
+  },
+  {
+    "ogg": "Swain_Original_Attack_19.ogg",
+    "event_key": "Attack_19",
+    "speaker": "Swain",
+    "english_quote": "Empire above all."
+  },
+  {
+    "ogg": "Swain_Original_Attack_20.ogg",
+    "event_key": "Attack_20",
+    "speaker": "Swain",
+    "english_quote": "Submit."
+  },
+  {
+    "ogg": "Swain_Original_Attack_21.ogg",
+    "event_key": "Attack_21",
+    "speaker": "Swain",
+    "english_quote": "I will not tolerate interference!"
+  },
+  {
+    "ogg": "Swain_Original_Attack_22.ogg",
+    "event_key": "Attack_22",
+    "speaker": "Swain",
+    "english_quote": "This will be my offering."
+  },
+  {
+    "ogg": "Swain_Original_Attack_23.ogg",
+    "event_key": "Attack_23",
+    "speaker": "Swain",
+    "english_quote": "Sacrifices must be made."
+  },
+  {
+    "ogg": "Swain_Original_Attack_0.ogg",
+    "event_key": "Attack_0",
+    "speaker": "Swain",
+    "english_quote": "You would do well to die, before my ravens find you."
+  },
+  {
+    "ogg": "Swain_Original_P_4.ogg",
+    "event_key": "P_4",
+    "speaker": "Swain",
+    "english_quote": "Forfeit your life."
+  },
+  {
+    "ogg": "Swain_Original_P_5.ogg",
+    "event_key": "P_5",
+    "speaker": "Swain",
+    "english_quote": "In death, the veil is lifted."
+  },
+  {
+    "ogg": "Swain_Original_P_3.ogg",
+    "event_key": "P_3",
+    "speaker": "Swain",
+    "english_quote": "Their whispers itch at the back of my mind."
+  },
+  {
+    "ogg": "Swain_Original_P_2.ogg",
+    "event_key": "P_2",
+    "speaker": "Swain",
+    "english_quote": "What have the ravens brought me?"
+  },
+  {
+    "ogg": "Swain_Original_P_0.ogg",
+    "event_key": "P_0",
+    "speaker": "Swain",
+    "english_quote": "I am not done with you yet."
+  },
+  {
+    "ogg": "Swain_Original_P_6.ogg",
+    "event_key": "P_6",
+    "speaker": "Swain",
+    "english_quote": "Your soul was already mine."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_0.ogg",
+    "event_key": "P_0",
+    "speaker": "Swain",
+    "english_quote": "The fire of conquest."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_1.ogg",
+    "event_key": "P_1",
+    "speaker": "Swain",
+    "english_quote": "Obey."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_2.ogg",
+    "event_key": "P_2",
+    "speaker": "Swain",
+    "english_quote": "Their memories burn away."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_3.ogg",
+    "event_key": "P_3",
+    "speaker": "Swain",
+    "english_quote": "An echo in flames."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_4.ogg",
+    "event_key": "P_4",
+    "speaker": "Swain",
+    "english_quote": "Conflagration."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_5.ogg",
+    "event_key": "P_5",
+    "speaker": "Swain",
+    "english_quote": "Fellfire within us."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_6.ogg",
+    "event_key": "P_6",
+    "speaker": "Swain",
+    "english_quote": "Snuffed out."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_7.ogg",
+    "event_key": "P_7",
+    "speaker": "Swain",
+    "english_quote": "Mere flame remains."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_8.ogg",
+    "event_key": "P_8",
+    "speaker": "Swain",
+    "english_quote": "Bring me their spark."
+  },
+  {
+    "ogg": "Swain_DragonMaster_P_9.ogg",
+    "event_key": "P_9",
+    "speaker": "Swain",
+    "english_quote": "Souls, flame."
+  },
+  {
+    "ogg": "Swain_Original_P_AurelionSol.ogg",
+    "event_key": "P_AurelionSol",
+    "speaker": "Swain",
+    "english_quote": "What is this about... siblings?"
+  },
+  {
+    "ogg": "Swain_Original_P_Camille.ogg",
+    "event_key": "P_Camille",
+    "speaker": "Swain",
+    "english_quote": "My my, does your dear grandniece know what C has been up to?"
+  },
+  {
+    "ogg": "Swain_Original_P_Cassiopeia.ogg",
+    "event_key": "P_Cassiopeia",
+    "speaker": "Swain",
+    "english_quote": "The payment for her suffering in Shurima: a black rose."
+  },
+  {
+    "ogg": "Swain_Original_P_Darius.ogg",
+    "event_key": "P_Darius",
+    "speaker": "Swain",
+    "english_quote": "No daughters. Only soldiers."
+  },
+  {
+    "ogg": "Swain_Original_P_Ekko.ogg",
+    "event_key": "P_Ekko",
+    "speaker": "Swain",
+    "english_quote": "A glimpse, mere seconds into the future."
+  },
+  {
+    "ogg": "Swain_Original_P_Elise.ogg",
+    "event_key": "P_Elise",
+    "speaker": "Swain",
+    "english_quote": "A vault empty of relics, but filled with corpses."
+  },
+  {
+    "ogg": "Swain_Original_P_Galio.ogg",
+    "event_key": "P_Galio",
+    "speaker": "Swain",
+    "english_quote": "His secrets died with his sculptor."
+  },
+  {
+    "ogg": "Swain_Original_P_Garen.ogg",
+    "event_key": "P_Garen",
+    "speaker": "Swain",
+    "english_quote": "Ignorant of the very magic you carry into battle. How Demacian."
+  },
+  {
+    "ogg": "Swain_Original_P_JarvanIV.ogg",
+    "event_key": "P_JarvanIV",
+    "speaker": "Swain",
+    "english_quote": "His blood is the only useful thing about him."
+  },
+  {
+    "ogg": "Swain_Original_P_Jinx.ogg",
+    "event_key": "P_Jinx",
+    "speaker": "Swain",
+    "english_quote": "Faces fading in the flames. It was all her fault."
+  },
+  {
+    "ogg": "Swain_Original_P_Kayn.ogg",
+    "event_key": "P_Kayn",
+    "speaker": "Swain",
+    "english_quote": "A child who had known only hate, confuses it for love."
+  },
+  {
+    "ogg": "Swain_Original_P_Lux.ogg",
+    "event_key": "P_Lux",
+    "speaker": "Swain",
+    "english_quote": "Which is the greater tragedy, that she fell in battle, or that she fell in line?"
+  },
+  {
+    "ogg": "Swain_Original_P_Poppy.ogg",
+    "event_key": "P_Poppy",
+    "speaker": "Swain",
+    "english_quote": "So many obsessed with the hero. Tell me of the hammer."
+  },
+  {
+    "ogg": "Swain_Original_P_Quinn.ogg",
+    "event_key": "P_Quinn",
+    "speaker": "Swain",
+    "english_quote": "Her arch-rival, a tuskvore? How undignified."
+  },
+  {
+    "ogg": "Swain_Original_P_Riven.ogg",
+    "event_key": "P_Riven",
+    "speaker": "Swain",
+    "english_quote": "She held their hands as they died, hoping they would drag her with them."
+  },
+  {
+    "ogg": "Swain_Original_P_Sion.ogg",
+    "event_key": "P_Sion",
+    "speaker": "Swain",
+    "english_quote": "The echo of a soul... Only pain brings it back."
+  },
+  {
+    "ogg": "Swain_Original_P_Swain.ogg",
+    "event_key": "P_Swain",
+    "speaker": "Swain",
+    "english_quote": "I already knew that."
+  },
+  {
+    "ogg": "Swain_Original_P_TahmKench.ogg",
+    "event_key": "P_TahmKench",
+    "speaker": "Swain",
+    "english_quote": "Your eloquence: seasoning for a repetitive feast."
+  },
+  {
+    "ogg": "Swain_Original_P_Taliyah.ogg",
+    "event_key": "P_Taliyah",
+    "speaker": "Swain",
+    "english_quote": "She feared what she could not understand: herself."
+  },
+  {
+    "ogg": "Swain_Original_P_Warwick.ogg",
+    "event_key": "P_Warwick",
+    "speaker": "Swain",
+    "english_quote": "She was closer than he realized."
+  },
+  {
+    "ogg": "Swain_Original_P_Bilgewater.ogg",
+    "event_key": "P_Bilgewater",
+    "speaker": "Swain",
+    "english_quote": "They fight the mist above the seas, never looking beneath."
+  },
+  {
+    "ogg": "Swain_Original_P_BlackRose.ogg",
+    "event_key": "P_BlackRose",
+    "speaker": "Swain",
+    "english_quote": "An empire, built atop centuries of murder."
+  },
+  {
+    "ogg": "Swain_Original_P_Darkin.ogg",
+    "event_key": "P_Darkin",
+    "speaker": "Swain",
+    "english_quote": "Creatures of darkness that grant power to their hosts? How original."
+  },
+  {
+    "ogg": "Swain_Original_P_Demon.ogg",
+    "event_key": "P_Demon",
+    "speaker": "Swain",
+    "english_quote": "Shaped by humanity, a reflection."
+  },
+  {
+    "ogg": "Swain_Original_P_Freljord.ogg",
+    "event_key": "P_Freljord",
+    "speaker": "Swain",
+    "english_quote": "They squabble as the winds howl, and the wards fade."
+  },
+  {
+    "ogg": "Swain_Original_P_Ionia.ogg",
+    "event_key": "P_Ionia",
+    "speaker": "Swain",
+    "english_quote": "Magic spills from their land like blood from a wound."
+  },
+  {
+    "ogg": "Swain_Original_P_Piltover.ogg",
+    "event_key": "P_Piltover",
+    "speaker": "Swain",
+    "english_quote": "The truth beneath the gilding. Only war can bring profit."
+  },
+  {
+    "ogg": "Swain_Original_P_ShadowIsles.ogg",
+    "event_key": "P_ShadowIsles",
+    "speaker": "Swain",
+    "english_quote": "A king remains in the mist, and another marches."
+  },
+  {
+    "ogg": "Swain_Original_P_Vastaya.ogg",
+    "event_key": "P_Vastaya",
+    "speaker": "Swain",
+    "english_quote": "Those born of magic rarely realize its curse, until it is too late."
+  },
+  {
+    "ogg": "Swain_Original_P_Void.ogg",
+    "event_key": "P_Void",
+    "speaker": "Swain",
+    "english_quote": "A pattern, spreading... It has learnt to be alive."
+  },
+  {
+    "ogg": "Swain_Original_P_Zaun.ogg",
+    "event_key": "P_Zaun",
+    "speaker": "Swain",
+    "english_quote": "Suffering pools in the depths where children play."
+  },
+  {
+    "ogg": "Swain_Original_Q_0.ogg",
+    "event_key": "Q_0",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_Q_1.ogg",
+    "event_key": "Q_1",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_Q_2.ogg",
+    "event_key": "Q_2",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_W_demon_0.ogg",
+    "event_key": "W_demon_0",
+    "speaker": "Swain",
+    "english_quote": "Nefa..."
+  },
+  {
+    "ogg": "Swain_Original_W_demon_1.ogg",
+    "event_key": "W_demon_1",
+    "speaker": "Swain",
+    "english_quote": "Fah-la..."
+  },
+  {
+    "ogg": "Swain_Original_W_demon_2.ogg",
+    "event_key": "W_demon_2",
+    "speaker": "Swain",
+    "english_quote": "Nas..."
+  },
+  {
+    "ogg": "Swain_Original_W_demon_3.ogg",
+    "event_key": "W_demon_3",
+    "speaker": "Swain",
+    "english_quote": "Krah..."
+  },
+  {
+    "ogg": "Swain_Original_W_demon_4.ogg",
+    "event_key": "W_demon_4",
+    "speaker": "Swain",
+    "english_quote": "Do..."
+  },
+  {
+    "ogg": "Swain_Original_E1_Cast_2.ogg",
+    "event_key": "E1_Cast_2",
+    "speaker": "Swain",
+    "english_quote": "Swain shouts in effort."
+  },
+  {
+    "ogg": "Swain_Original_E1_Cast_0.ogg",
+    "event_key": "E1_Cast_0",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts loudly."
+  },
+  {
+    "ogg": "Swain_Original_E1_Cast_1.ogg",
+    "event_key": "E1_Cast_1",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts loudly."
+  },
+  {
+    "ogg": "Swain_Original_E1_Return_0.ogg",
+    "event_key": "E1_Return_0",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_E1_Return_2.ogg",
+    "event_key": "E1_Return_2",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_E1_Return_1.ogg",
+    "event_key": "E1_Return_1",
+    "speaker": "Swain",
+    "english_quote": "Swain huffs."
+  },
+  {
+    "ogg": "Swain_Original_E2_0.ogg",
+    "event_key": "E2_0",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_E2_1.ogg",
+    "event_key": "E2_1",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_E2_2.ogg",
+    "event_key": "E2_2",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts."
+  },
+  {
+    "ogg": "Swain_Original_REnd_0.ogg",
+    "event_key": "REnd_0",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts in great effort."
+  },
+  {
+    "ogg": "Swain_Original_REnd_1.ogg",
+    "event_key": "REnd_1",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts in great effort."
+  },
+  {
+    "ogg": "Swain_Original_REnd_2.ogg",
+    "event_key": "REnd_2",
+    "speaker": "Swain",
+    "english_quote": "Swain grunts in great effort."
+  },
+  {
+    "ogg": "Swain_Original_Kill_0.ogg",
+    "event_key": "Kill_0",
+    "speaker": "Swain",
+    "english_quote": "That, is one way to surrender."
+  },
+  {
+    "ogg": "Swain_Original_Kill_2.ogg",
+    "event_key": "Kill_2",
+    "speaker": "Swain",
+    "english_quote": "Victory awaits."
+  },
+  {
+    "ogg": "Swain_Original_Kill_3.ogg",
+    "event_key": "Kill_3",
+    "speaker": "Swain",
+    "english_quote": "Another piece cleared from the board."
+  },
+  {
+    "ogg": "Swain_Original_Kill_4.ogg",
+    "event_key": "Kill_4",
+    "speaker": "Swain",
+    "english_quote": "Death is its own prophecy."
+  },
+  {
+    "ogg": "Swain_Original_Kill_5.ogg",
+    "event_key": "Kill_5",
+    "speaker": "Swain",
+    "english_quote": "Another disappointment."
+  },
+  {
+    "ogg": "Swain_Original_Kill_1.ogg",
+    "event_key": "Kill_1",
+    "speaker": "Swain",
+    "english_quote": "The raven was a portent. Their time had come."
+  },
+  {
+    "ogg": "Swain_Original_Kill_6.ogg",
+    "event_key": "Kill_6",
+    "speaker": "Swain",
+    "english_quote": "The sooner we kill them all, the sooner we can leave these forsaken wastes."
+  },
+  {
+    "ogg": "Swain_Original_KillGangplank.ogg",
+    "event_key": "KillGangplank",
+    "speaker": "Swain",
+    "english_quote": "The Leviathan belongs to me!"
+  },
+  {
+    "ogg": "Swain_Original_KillBilgewater.ogg",
+    "event_key": "KillBilgewater",
+    "speaker": "Swain",
+    "english_quote": "Their lives are the plunder."
+  },
+  {
+    "ogg": "Swain_Original_KillDemacia_1.ogg",
+    "event_key": "KillDemacia_1",
+    "speaker": "Swain",
+    "english_quote": "Predictable, as always."
+  },
+  {
+    "ogg": "Swain_Original_KillNoxus_0.ogg",
+    "event_key": "KillNoxus_0",
+    "speaker": "Swain",
+    "english_quote": "One less enemy within."
+  },
+  {
+    "ogg": "Swain_Original_KillNoxus_1.ogg",
+    "event_key": "KillNoxus_1",
+    "speaker": "Swain",
+    "english_quote": "You were no longer useful."
+  },
+  {
+    "ogg": "Swain_Original_KillNoxus_2.ogg",
+    "event_key": "KillNoxus_2",
+    "speaker": "Swain",
+    "english_quote": "In death, you will kneel."
+  },
+  {
+    "ogg": "Swain_Original_KillPenta.ogg",
+    "event_key": "KillPenta",
+    "speaker": "Swain",
+    "english_quote": "This is not even my final form."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_0.ogg",
+    "event_key": "KillTurret_0",
+    "speaker": "Swain",
+    "english_quote": "Let us end the siege."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_10.ogg",
+    "event_key": "KillTurret_10",
+    "speaker": "Swain",
+    "english_quote": "One less place to hide."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_4.ogg",
+    "event_key": "KillTurret_4",
+    "speaker": "Swain",
+    "english_quote": "Their defences crumble."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_2.ogg",
+    "event_key": "KillTurret_2",
+    "speaker": "Swain",
+    "english_quote": "Stone is not strength."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_11.ogg",
+    "event_key": "KillTurret_11",
+    "speaker": "Swain",
+    "english_quote": "What Noxus takes, it will defend."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_5.ogg",
+    "event_key": "KillTurret_5",
+    "speaker": "Swain",
+    "english_quote": "Let them find hope in the rubble."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_6.ogg",
+    "event_key": "KillTurret_6",
+    "speaker": "Swain",
+    "english_quote": "Prepare, and victory is inevitable."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_9.ogg",
+    "event_key": "KillTurret_9",
+    "speaker": "Swain",
+    "english_quote": "All according to plan."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_1.ogg",
+    "event_key": "KillTurret_1",
+    "speaker": "Swain",
+    "english_quote": "A one-armed man needs all the help he can get."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_3.ogg",
+    "event_key": "KillTurret_3",
+    "speaker": "Swain",
+    "english_quote": "More important than heroes, are deeds."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_12.ogg",
+    "event_key": "KillTurret_12",
+    "speaker": "Swain",
+    "english_quote": "Witness the strength of Noxus!"
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_8.ogg",
+    "event_key": "KillTurret_8",
+    "speaker": "Swain",
+    "english_quote": "Worth its weight in lives."
+  },
+  {
+    "ogg": "Swain_Original_KillTurret_7.ogg",
+    "event_key": "KillTurret_7",
+    "speaker": "Swain",
+    "english_quote": "A monument to our victory."
+  },
+  {
+    "ogg": "Swain_DragonMaster_KillTurret_4.ogg",
+    "event_key": "KillTurret_4",
+    "speaker": "Swain",
+    "english_quote": "Only ashes remain."
+  },
+  {
+    "ogg": "Swain_DragonMaster_KillTurret_5.ogg",
+    "event_key": "KillTurret_5",
+    "speaker": "Swain",
+    "english_quote": "Dragon claimed!"
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_0.ogg",
+    "event_key": "KillDragon_0",
+    "speaker": "Swain",
+    "english_quote": "We have civilized the beast."
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_1.ogg",
+    "event_key": "KillDragon_1",
+    "speaker": "Swain",
+    "english_quote": "More than men must kneel to Noxus."
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_2.ogg",
+    "event_key": "KillDragon_2",
+    "speaker": "Swain",
+    "english_quote": "Its strength is ours."
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_3.ogg",
+    "event_key": "KillDragon_3",
+    "speaker": "Swain",
+    "english_quote": "Death comes to even the most fierce."
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_4.ogg",
+    "event_key": "KillDragon_4",
+    "speaker": "Swain",
+    "english_quote": "I almost pity the brute."
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_5.ogg",
+    "event_key": "KillDragon_5",
+    "speaker": "Swain",
+    "english_quote": "A savage roar, silenced."
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_8.ogg",
+    "event_key": "KillDragon_8",
+    "speaker": "Swain",
+    "english_quote": "Perhaps a promotion is in order. How would you like your own warband?"
+  },
+  {
+    "ogg": "Swain_Original_KillDragon_9.ogg",
+    "event_key": "KillDragon_9",
+    "speaker": "Swain",
+    "english_quote": "I owe you a debt. ...That is not as ominous as it sounds."
+  },
+  {
+    "ogg": "Swain_Original_UseItemWard_0.ogg",
+    "event_key": "UseItemWard_0",
+    "speaker": "Swain",
+    "english_quote": "Gathering intelligence."
+  },
+  {
+    "ogg": "Swain_Original_UseItemWard_1.ogg",
+    "event_key": "UseItemWard_1",
+    "speaker": "Swain",
+    "english_quote": "I never stop planning."
+  },
+  {
+    "ogg": "Swain_Original_Recall_3.ogg",
+    "event_key": "Recall_3",
+    "speaker": "Swain",
+    "english_quote": "More than what we do not understand, we fear being understood."
+  },
+  {
+    "ogg": "Swain_Original_Recall_1.ogg",
+    "event_key": "Recall_1",
+    "speaker": "Swain",
+    "english_quote": "Some say the darkness stares back... because they cannot see me."
+  },
+  {
+    "ogg": "Swain_Original_Recall_4.ogg",
+    "event_key": "Recall_4",
+    "speaker": "Swain",
+    "english_quote": "The more I see, the more I realize how much remains hidden."
+  },
+  {
+    "ogg": "Swain_Original_Recall_2.ogg",
+    "event_key": "Recall_2",
+    "speaker": "Swain",
+    "english_quote": "Secrets whispered in the shadow... have a way of reaching my ears."
+  },
+  {
+    "ogg": "Swain_Original_Recall_0.ogg",
+    "event_key": "Recall_0",
+    "speaker": "Swain",
+    "english_quote": "I often kill in my visions, when I close my eyes. Do not come near."
+  },
+  {
+    "ogg": "Swain_FriedChickenKing_SFX_Recall.ogg",
+    "event_key": "SFX_Recall",
+    "speaker": "Swain",
+    "english_quote": "Swain dances to a tune."
+  },
+  {
+    "ogg": "Swain_Original_Death_3.ogg",
+    "event_key": "Death_3",
+    "speaker": "Swain",
+    "english_quote": "Only this, and nothing more..."
+  },
+  {
+    "ogg": "Swain_Original_Death_0.ogg",
+    "event_key": "Death_0",
+    "speaker": "Swain",
+    "english_quote": "Swain gasps and exhales."
+  },
+  {
+    "ogg": "Swain_Original_Death_1.ogg",
+    "event_key": "Death_1",
+    "speaker": "Swain",
+    "english_quote": "Swain gasps and exhales."
+  },
+  {
+    "ogg": "Swain_Original_Death_2.ogg",
+    "event_key": "Death_2",
+    "speaker": "Swain",
+    "english_quote": "Swain gasps and exhales."
+  },
+  {
+    "ogg": "Swain_Original_Respawn_1.ogg",
+    "event_key": "Respawn_1",
+    "speaker": "Swain",
+    "english_quote": "I have already walked the halls of death, in the Immortal Bastion."
+  },
+  {
+    "ogg": "Swain_Original_Respawn_4.ogg",
+    "event_key": "Respawn_4",
+    "speaker": "Swain",
+    "english_quote": "They think they have won? Pathetic."
+  },
+  {
+    "ogg": "Swain_Original_Respawn_3.ogg",
+    "event_key": "Respawn_3",
+    "speaker": "Swain",
+    "english_quote": "A minor setback; nothing more."
+  },
+  {
+    "ogg": "Swain_Original_Respawn_2.ogg",
+    "event_key": "Respawn_2",
+    "speaker": "Swain",
+    "english_quote": "Am I reborn? The truth is rarely so simple."
+  },
+  {
+    "ogg": "Swain_Original_Respawn_0.ogg",
+    "event_key": "Respawn_0",
+    "speaker": "Swain",
+    "english_quote": "It is still watching."
+  },
+  {
+    "ogg": "Swain_Original_Respawn_5.ogg",
+    "event_key": "Respawn_5",
+    "speaker": "Swain",
+    "english_quote": "It is there in the silence after battle. It is there in me."
+  },
+  {
+    "ogg": "Swain_Original_SFX_Music_FirstMove.ogg",
+    "event_key": "SFX_Music_FirstMove",
+    "speaker": "Swain",
+    "english_quote": "Spawn Music SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Taunt.ogg",
+    "event_key": "SFX_Taunt",
+    "speaker": "Swain",
+    "english_quote": "Taunt SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Joke_cast.ogg",
+    "event_key": "SFX_Joke_cast",
+    "speaker": "Swain",
+    "english_quote": "Joke Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Joke_loop_0.ogg",
+    "event_key": "SFX_Joke_loop_0",
+    "speaker": "Swain",
+    "english_quote": "Joke Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Joke_loop_1.ogg",
+    "event_key": "SFX_Joke_loop_1",
+    "speaker": "Swain",
+    "english_quote": "Joke Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Joke_loop_2.ogg",
+    "event_key": "SFX_Joke_loop_2",
+    "speaker": "Swain",
+    "english_quote": "Joke Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Laugh.ogg",
+    "event_key": "SFX_Laugh",
+    "speaker": "Swain",
+    "english_quote": "Laugh SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_cast_1.ogg",
+    "event_key": "SFX_Dance_cast_1",
+    "speaker": "Swain",
+    "english_quote": "Dance Whistle Intro SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_loop_1_0.ogg",
+    "event_key": "SFX_Dance_loop_1_0",
+    "speaker": "Swain",
+    "english_quote": "Dance Whistle Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_loop_1_1.ogg",
+    "event_key": "SFX_Dance_loop_1_1",
+    "speaker": "Swain",
+    "english_quote": "Dance Whistle Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_loop_1_2.ogg",
+    "event_key": "SFX_Dance_loop_1_2",
+    "speaker": "Swain",
+    "english_quote": "Dance Whistle Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_loop_1_3.ogg",
+    "event_key": "SFX_Dance_loop_1_3",
+    "speaker": "Swain",
+    "english_quote": "Dance Whistle Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_cast_0.ogg",
+    "event_key": "SFX_Dance_cast_0",
+    "speaker": "Swain",
+    "english_quote": "Dance Foley Intro SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Dance_loop_0.ogg",
+    "event_key": "SFX_Dance_loop_0",
+    "speaker": "Swain",
+    "english_quote": "Dance Foley Loop SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnCast_0.ogg",
+    "event_key": "SFX_BasicAttack_OnCast_0",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnCast_1.ogg",
+    "event_key": "SFX_BasicAttack_OnCast_1",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnCast_2.ogg",
+    "event_key": "SFX_BasicAttack_OnCast_2",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnMissileLaunch_0.ogg",
+    "event_key": "SFX_BasicAttack_OnMissileLaunch_0",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnMissileLaunch_1.ogg",
+    "event_key": "SFX_BasicAttack_OnMissileLaunch_1",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnMissileLaunch_2.ogg",
+    "event_key": "SFX_BasicAttack_OnMissileLaunch_2",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnMissileLaunch_3.ogg",
+    "event_key": "SFX_BasicAttack_OnMissileLaunch_3",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnMissileLaunch_4.ogg",
+    "event_key": "SFX_BasicAttack_OnMissileLaunch_4",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnHit_0.ogg",
+    "event_key": "SFX_BasicAttack_OnHit_0",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnHit_1.ogg",
+    "event_key": "SFX_BasicAttack_OnHit_1",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnHit_2.ogg",
+    "event_key": "SFX_BasicAttack_OnHit_2",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnHit_3.ogg",
+    "event_key": "SFX_BasicAttack_OnHit_3",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_BasicAttack_OnHit_4.ogg",
+    "event_key": "SFX_BasicAttack_OnHit_4",
+    "speaker": "Swain",
+    "english_quote": "Basic Attack Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_0.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_0",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_1.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_1",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_2.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_2",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_3.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_3",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_target_0.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_target_0",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX (Target)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_target_1.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_target_1",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX (Target)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_target_2.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_target_2",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX (Target)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_DisplacementCheck_buffactivate_target_3.ogg",
+    "event_key": "SFX_P_DisplacementCheck_buffactivate_target_3",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Displacement Check Buff Activate SFX (Target)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_SoulCollect_missilelaunch_0.ogg",
+    "event_key": "SFX_P_SoulCollect_missilelaunch_0",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Soul Collect Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_SoulCollect_missilelaunch_1.ogg",
+    "event_key": "SFX_P_SoulCollect_missilelaunch_1",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Soul Collect Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_Secrets_hit_0.ogg",
+    "event_key": "SFX_P_Secrets_hit_0",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Secrets SFX (Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_Secrets_hit_1.ogg",
+    "event_key": "SFX_P_Secrets_hit_1",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Secrets SFX (Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_Secrets_hit_2.ogg",
+    "event_key": "SFX_P_Secrets_hit_2",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Secrets SFX (Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_Secrets_hit_3.ogg",
+    "event_key": "SFX_P_Secrets_hit_3",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Secrets SFX (Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_Secrets_hit_4.ogg",
+    "event_key": "SFX_P_Secrets_hit_4",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Secrets SFX (Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_SoulCollect_hit_0.ogg",
+    "event_key": "SFX_P_SoulCollect_hit_0",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Soul Collected SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_SoulCollect_hit_1.ogg",
+    "event_key": "SFX_P_SoulCollect_hit_1",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Soul Collected SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_P_SoulCollect_hit_2.ogg",
+    "event_key": "SFX_P_SoulCollect_hit_2",
+    "speaker": "Swain",
+    "english_quote": "Ravenous Flock Soul Collected SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hitlocation_0.ogg",
+    "event_key": "SFX_W_hitlocation_0",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hitlocation_1.ogg",
+    "event_key": "SFX_W_hitlocation_1",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Cast SFX (Demonic Eye rises)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hitlocation_2_0.ogg",
+    "event_key": "SFX_W_hitlocation_2_0",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit Location SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hitlocation_2_1.ogg",
+    "event_key": "SFX_W_hitlocation_2_1",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit Location SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hitlocation_2_2.ogg",
+    "event_key": "SFX_W_hitlocation_2_2",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit Location SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hitlocation_2_3.ogg",
+    "event_key": "SFX_W_hitlocation_2_3",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit Location SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hit_0.ogg",
+    "event_key": "SFX_W_hit_0",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hit_1.ogg",
+    "event_key": "SFX_W_hit_1",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_W_hit_2.ogg",
+    "event_key": "SFX_W_hit_2",
+    "speaker": "Swain",
+    "english_quote": "Vision of Empire Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnCast_0.ogg",
+    "event_key": "SFX_E_OnCast_0",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnCast_1.ogg",
+    "event_key": "SFX_E_OnCast_1",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnCast_2.ogg",
+    "event_key": "SFX_E_OnCast_2",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnCast_3.ogg",
+    "event_key": "SFX_E_OnCast_3",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileCast_0.ogg",
+    "event_key": "SFX_E_OnMissileCast_0",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileCast_1.ogg",
+    "event_key": "SFX_E_OnMissileCast_1",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileCast_2.ogg",
+    "event_key": "SFX_E_OnMissileCast_2",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileCast_3.ogg",
+    "event_key": "SFX_E_OnMissileCast_3",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileLaunch_0.ogg",
+    "event_key": "SFX_E_OnMissileLaunch_0",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileLaunch_1.ogg",
+    "event_key": "SFX_E_OnMissileLaunch_1",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_OnMissileLaunch_2.ogg",
+    "event_key": "SFX_E_OnMissileLaunch_2",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_ReturnMissile_OnMissileLaunch_0.ogg",
+    "event_key": "SFX_E_ReturnMissile_OnMissileLaunch_0",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Return Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_ReturnMissile_OnMissileLaunch_1.ogg",
+    "event_key": "SFX_E_ReturnMissile_OnMissileLaunch_1",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Return Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_ReturnMissile_OnMissileLaunch_2.ogg",
+    "event_key": "SFX_E_ReturnMissile_OnMissileLaunch_2",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Return Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_ReturnMissile_OnMissileLaunch_3.ogg",
+    "event_key": "SFX_E_ReturnMissile_OnMissileLaunch_3",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Return Missile Launch SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_hit_0.ogg",
+    "event_key": "SFX_E_hit_0",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_hit_1.ogg",
+    "event_key": "SFX_E_hit_1",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_hit_2.ogg",
+    "event_key": "SFX_E_hit_2",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_hit_3.ogg",
+    "event_key": "SFX_E_hit_3",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_Root_hit_0.ogg",
+    "event_key": "SFX_E_Root_hit_0",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Root Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_E_Root_hit_1.ogg",
+    "event_key": "SFX_E_Root_hit_1",
+    "speaker": "Swain",
+    "english_quote": "Nevermove Root Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_cast_0.ogg",
+    "event_key": "SFX_R_cast_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Cast SFX (riser, self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_cast_1.ogg",
+    "event_key": "SFX_R_cast_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Cast SFX (transformation, self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_OnCast.ogg",
+    "event_key": "SFX_R_OnCast",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Cast SFX (others)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_lightning_0.ogg",
+    "event_key": "SFX_R_lightning_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Lightning SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_lightning_1.ogg",
+    "event_key": "SFX_R_lightning_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Lightning SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_lightning_2.ogg",
+    "event_key": "SFX_R_lightning_2",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Lightning SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_lightning_3.ogg",
+    "event_key": "SFX_R_lightning_3",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Lightning SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_buffactivate.ogg",
+    "event_key": "SFX_R_buffactivate",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Background SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulBurn_buffcast_0.ogg",
+    "event_key": "SFX_R_SoulBurn_buffcast_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Burn SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulBurn_buffcast_1.ogg",
+    "event_key": "SFX_R_SoulBurn_buffcast_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Burn SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulBurn_buffcast_2.ogg",
+    "event_key": "SFX_R_SoulBurn_buffcast_2",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Burn SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulBurn_buffactivate_0.ogg",
+    "event_key": "SFX_R_SoulBurn_buffactivate_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Burn SFX (Target &amp; Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulBurn_buffactivate_1.ogg",
+    "event_key": "SFX_R_SoulBurn_buffactivate_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Burn SFX (Target &amp; Self)"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_fullcharge_1.ogg",
+    "event_key": "SFX_R_SoulFlare_fullcharge_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Burn Background SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_fullcharge_0.ogg",
+    "event_key": "SFX_R_SoulFlare_fullcharge_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Full Charge SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_fullcharge_2_0.ogg",
+    "event_key": "SFX_R_SoulFlare_fullcharge_2_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Full Charge SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_fullcharge_2_1.ogg",
+    "event_key": "SFX_R_SoulFlare_fullcharge_2_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Full Charge SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_fullcharge_2_2.ogg",
+    "event_key": "SFX_R_SoulFlare_fullcharge_2_2",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Full Charge SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_fullcharge_2_3.ogg",
+    "event_key": "SFX_R_SoulFlare_fullcharge_2_3",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Full Charge SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_buffdeactivate_1.ogg",
+    "event_key": "SFX_R_SoulFlare_buffdeactivate_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Cast SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_hit_0.ogg",
+    "event_key": "SFX_R_SoulFlare_hit_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_hit_1.ogg",
+    "event_key": "SFX_R_SoulFlare_hit_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_hit_2.ogg",
+    "event_key": "SFX_R_SoulFlare_hit_2",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_hit_3.ogg",
+    "event_key": "SFX_R_SoulFlare_hit_3",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Hit SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_endtimer.ogg",
+    "event_key": "SFX_R_endtimer",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension End Timer SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_buffdeactivate_0.ogg",
+    "event_key": "SFX_R_buffdeactivate_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Deactivation SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_buffdeactivate_1.ogg",
+    "event_key": "SFX_R_buffdeactivate_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Deactivation SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_buffdeactivate_2.ogg",
+    "event_key": "SFX_R_buffdeactivate_2",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Deactivation SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_buffdeactivate_0_0.ogg",
+    "event_key": "SFX_R_SoulFlare_buffdeactivate_0_0",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Deactivation SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_R_SoulFlare_buffdeactivate_0_1.ogg",
+    "event_key": "SFX_R_SoulFlare_buffdeactivate_0_1",
+    "speaker": "Swain",
+    "english_quote": "Demonic Ascension Soul Flare Deactivation SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Recall_buffactivate.ogg",
+    "event_key": "SFX_Recall_buffactivate",
+    "speaker": "Swain",
+    "english_quote": "Recall SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Recall_buffdeactivate.ogg",
+    "event_key": "SFX_Recall_buffdeactivate",
+    "speaker": "Swain",
+    "english_quote": "Winddown SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Death.ogg",
+    "event_key": "SFX_Death",
+    "speaker": "Swain",
+    "english_quote": "Death SFX"
+  },
+  {
+    "ogg": "Swain_Original_SFX_Respawn.ogg",
+    "event_key": "SFX_Respawn",
+    "speaker": "Swain",
+    "english_quote": "Respawn SFX"
+  },
+  {
+    "ogg": "Swain_Original_FirstEncounterAhri.ogg",
+    "event_key": "FirstEncounterAhri",
+    "speaker": "Swain",
+    "english_quote": "It is far safer to be feared than loved."
+  },
+  {
+    "ogg": "Swain_Select_old.ogg",
+    "event_key": "old",
+    "speaker": "Swain",
+    "english_quote": "The early bird gets the worm."
+  }
+]

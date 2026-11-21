@@ -1,0 +1,1431 @@
+{
+  "1": {
+    "id": 1,
+    "alias": "Annie",
+    "name": "Annie",
+    "skins": {}
+  },
+  "2": {
+    "id": 2,
+    "alias": "Olaf",
+    "name": "Olaf",
+    "skins": {}
+  },
+  "3": {
+    "id": 3,
+    "alias": "Galio",
+    "name": "Galio",
+    "skins": {}
+  },
+  "4": {
+    "id": 4,
+    "alias": "TwistedFate",
+    "name": "Twisted Fate",
+    "skins": {}
+  },
+  "5": {
+    "id": 5,
+    "alias": "XinZhao",
+    "name": "Xin Zhao",
+    "skins": {}
+  },
+  "6": {
+    "id": 6,
+    "alias": "Urgot",
+    "name": "Urgot",
+    "skins": {}
+  },
+  "7": {
+    "id": 7,
+    "alias": "Leblanc",
+    "name": "LeBlanc",
+    "skins": {}
+  },
+  "8": {
+    "id": 8,
+    "alias": "Vladimir",
+    "name": "Vladimir",
+    "skins": {}
+  },
+  "9": {
+    "id": 9,
+    "alias": "FiddleSticks",
+    "name": "Fiddlesticks",
+    "skins": {}
+  },
+  "10": {
+    "id": 10,
+    "alias": "Kayle",
+    "name": "Kayle",
+    "skins": {}
+  },
+  "11": {
+    "id": 11,
+    "alias": "MasterYi",
+    "name": "Master Yi",
+    "skins": {}
+  },
+  "12": {
+    "id": 12,
+    "alias": "Alistar",
+    "name": "Alistar",
+    "skins": {}
+  },
+  "13": {
+    "id": 13,
+    "alias": "Ryze",
+    "name": "Ryze",
+    "skins": {}
+  },
+  "14": {
+    "id": 14,
+    "alias": "Sion",
+    "name": "Sion",
+    "skins": {}
+  },
+  "15": {
+    "id": 15,
+    "alias": "Sivir",
+    "name": "Sivir",
+    "skins": {}
+  },
+  "16": {
+    "id": 16,
+    "alias": "Soraka",
+    "name": "Soraka",
+    "skins": {}
+  },
+  "17": {
+    "id": 17,
+    "alias": "Teemo",
+    "name": "Teemo",
+    "skins": {}
+  },
+  "18": {
+    "id": 18,
+    "alias": "Tristana",
+    "name": "Tristana",
+    "skins": {}
+  },
+  "19": {
+    "id": 19,
+    "alias": "Warwick",
+    "name": "Warwick",
+    "skins": {}
+  },
+  "20": {
+    "id": 20,
+    "alias": "Nunu",
+    "name": "Nunu ve Willump",
+    "skins": {}
+  },
+  "21": {
+    "id": 21,
+    "alias": "MissFortune",
+    "name": "Miss Fortune",
+    "skins": {}
+  },
+  "22": {
+    "id": 22,
+    "alias": "Ashe",
+    "name": "Ashe",
+    "skins": {}
+  },
+  "23": {
+    "id": 23,
+    "alias": "Tryndamere",
+    "name": "Tryndamere",
+    "skins": {}
+  },
+  "24": {
+    "id": 24,
+    "alias": "Jax",
+    "name": "Jax",
+    "skins": {}
+  },
+  "25": {
+    "id": 25,
+    "alias": "Morgana",
+    "name": "Morgana",
+    "skins": {}
+  },
+  "26": {
+    "id": 26,
+    "alias": "Zilean",
+    "name": "Zilean",
+    "skins": {}
+  },
+  "27": {
+    "id": 27,
+    "alias": "Singed",
+    "name": "Singed",
+    "skins": {}
+  },
+  "28": {
+    "id": 28,
+    "alias": "Evelynn",
+    "name": "Evelynn",
+    "skins": {}
+  },
+  "29": {
+    "id": 29,
+    "alias": "Twitch",
+    "name": "Twitch",
+    "skins": {}
+  },
+  "30": {
+    "id": 30,
+    "alias": "Karthus",
+    "name": "Karthus",
+    "skins": {}
+  },
+  "31": {
+    "id": 31,
+    "alias": "Chogath",
+    "name": "Cho'Gath",
+    "skins": {}
+  },
+  "32": {
+    "id": 32,
+    "alias": "Amumu",
+    "name": "Amumu",
+    "skins": {}
+  },
+  "33": {
+    "id": 33,
+    "alias": "Rammus",
+    "name": "Rammus",
+    "skins": {}
+  },
+  "34": {
+    "id": 34,
+    "alias": "Anivia",
+    "name": "Anivia",
+    "skins": {}
+  },
+  "35": {
+    "id": 35,
+    "alias": "Shaco",
+    "name": "Shaco",
+    "skins": {}
+  },
+  "36": {
+    "id": 36,
+    "alias": "DrMundo",
+    "name": "Dr. Mundo",
+    "skins": {}
+  },
+  "37": {
+    "id": 37,
+    "alias": "Sona",
+    "name": "Sona",
+    "skins": {}
+  },
+  "38": {
+    "id": 38,
+    "alias": "Kassadin",
+    "name": "Kassadin",
+    "skins": {}
+  },
+  "39": {
+    "id": 39,
+    "alias": "Irelia",
+    "name": "Irelia",
+    "skins": {}
+  },
+  "40": {
+    "id": 40,
+    "alias": "Janna",
+    "name": "Janna",
+    "skins": {}
+  },
+  "41": {
+    "id": 41,
+    "alias": "Gangplank",
+    "name": "Gangplank",
+    "skins": {}
+  },
+  "42": {
+    "id": 42,
+    "alias": "Corki",
+    "name": "Corki",
+    "skins": {}
+  },
+  "43": {
+    "id": 43,
+    "alias": "Karma",
+    "name": "Karma",
+    "skins": {}
+  },
+  "44": {
+    "id": 44,
+    "alias": "Taric",
+    "name": "Taric",
+    "skins": {}
+  },
+  "45": {
+    "id": 45,
+    "alias": "Veigar",
+    "name": "Veigar",
+    "skins": {}
+  },
+  "48": {
+    "id": 48,
+    "alias": "Trundle",
+    "name": "Trundle",
+    "skins": {}
+  },
+  "50": {
+    "id": 50,
+    "alias": "Swain",
+    "name": "Swain",
+    "skins": {}
+  },
+  "51": {
+    "id": 51,
+    "alias": "Caitlyn",
+    "name": "Caitlyn",
+    "skins": {}
+  },
+  "53": {
+    "id": 53,
+    "alias": "Blitzcrank",
+    "name": "Blitzcrank",
+    "skins": {}
+  },
+  "54": {
+    "id": 54,
+    "alias": "Malphite",
+    "name": "Malphite",
+    "skins": {}
+  },
+  "55": {
+    "id": 55,
+    "alias": "Katarina",
+    "name": "Katarina",
+    "skins": {}
+  },
+  "56": {
+    "id": 56,
+    "alias": "Nocturne",
+    "name": "Nocturne",
+    "skins": {}
+  },
+  "57": {
+    "id": 57,
+    "alias": "Maokai",
+    "name": "Maokai",
+    "skins": {}
+  },
+  "58": {
+    "id": 58,
+    "alias": "Renekton",
+    "name": "Renekton",
+    "skins": {}
+  },
+  "59": {
+    "id": 59,
+    "alias": "JarvanIV",
+    "name": "Jarvan IV",
+    "skins": {}
+  },
+  "60": {
+    "id": 60,
+    "alias": "Elise",
+    "name": "Elise",
+    "skins": {}
+  },
+  "61": {
+    "id": 61,
+    "alias": "Orianna",
+    "name": "Orianna",
+    "skins": {}
+  },
+  "62": {
+    "id": 62,
+    "alias": "MonkeyKing",
+    "name": "Wukong",
+    "skins": {}
+  },
+  "63": {
+    "id": 63,
+    "alias": "Brand",
+    "name": "Brand",
+    "skins": {}
+  },
+  "64": {
+    "id": 64,
+    "alias": "LeeSin",
+    "name": "Lee Sin",
+    "skins": {}
+  },
+  "67": {
+    "id": 67,
+    "alias": "Vayne",
+    "name": "Vayne",
+    "skins": {}
+  },
+  "68": {
+    "id": 68,
+    "alias": "Rumble",
+    "name": "Rumble",
+    "skins": {}
+  },
+  "69": {
+    "id": 69,
+    "alias": "Cassiopeia",
+    "name": "Cassiopeia",
+    "skins": {}
+  },
+  "72": {
+    "id": 72,
+    "alias": "Skarner",
+    "name": "Skarner",
+    "skins": {}
+  },
+  "74": {
+    "id": 74,
+    "alias": "Heimerdinger",
+    "name": "Heimerdinger",
+    "skins": {}
+  },
+  "75": {
+    "id": 75,
+    "alias": "Nasus",
+    "name": "Nasus",
+    "skins": {}
+  },
+  "76": {
+    "id": 76,
+    "alias": "Nidalee",
+    "name": "Nidalee",
+    "skins": {}
+  },
+  "77": {
+    "id": 77,
+    "alias": "Udyr",
+    "name": "Udyr",
+    "skins": {}
+  },
+  "78": {
+    "id": 78,
+    "alias": "Poppy",
+    "name": "Poppy",
+    "skins": {}
+  },
+  "79": {
+    "id": 79,
+    "alias": "Gragas",
+    "name": "Gragas",
+    "skins": {}
+  },
+  "80": {
+    "id": 80,
+    "alias": "Pantheon",
+    "name": "Pantheon",
+    "skins": {}
+  },
+  "81": {
+    "id": 81,
+    "alias": "Ezreal",
+    "name": "Ezreal",
+    "skins": {}
+  },
+  "82": {
+    "id": 82,
+    "alias": "Mordekaiser",
+    "name": "Mordekaiser",
+    "skins": {}
+  },
+  "83": {
+    "id": 83,
+    "alias": "Yorick",
+    "name": "Yorick",
+    "skins": {}
+  },
+  "84": {
+    "id": 84,
+    "alias": "Akali",
+    "name": "Akali",
+    "skins": {}
+  },
+  "85": {
+    "id": 85,
+    "alias": "Kennen",
+    "name": "Kennen",
+    "skins": {}
+  },
+  "86": {
+    "id": 86,
+    "alias": "Garen",
+    "name": "Garen",
+    "skins": {}
+  },
+  "89": {
+    "id": 89,
+    "alias": "Leona",
+    "name": "Leona",
+    "skins": {}
+  },
+  "90": {
+    "id": 90,
+    "alias": "Malzahar",
+    "name": "Malzahar",
+    "skins": {}
+  },
+  "91": {
+    "id": 91,
+    "alias": "Talon",
+    "name": "Talon",
+    "skins": {}
+  },
+  "92": {
+    "id": 92,
+    "alias": "Riven",
+    "name": "Riven",
+    "skins": {}
+  },
+  "96": {
+    "id": 96,
+    "alias": "KogMaw",
+    "name": "Kog'Maw",
+    "skins": {}
+  },
+  "98": {
+    "id": 98,
+    "alias": "Shen",
+    "name": "Shen",
+    "skins": {}
+  },
+  "99": {
+    "id": 99,
+    "alias": "Lux",
+    "name": "Lux",
+    "skins": {}
+  },
+  "101": {
+    "id": 101,
+    "alias": "Xerath",
+    "name": "Xerath",
+    "skins": {}
+  },
+  "102": {
+    "id": 102,
+    "alias": "Shyvana",
+    "name": "Shyvana",
+    "skins": {}
+  },
+  "103": {
+    "id": 103,
+    "alias": "Ahri",
+    "name": "Ahri",
+    "skins": {}
+  },
+  "104": {
+    "id": 104,
+    "alias": "Graves",
+    "name": "Graves",
+    "skins": {}
+  },
+  "105": {
+    "id": 105,
+    "alias": "Fizz",
+    "name": "Fizz",
+    "skins": {}
+  },
+  "106": {
+    "id": 106,
+    "alias": "Volibear",
+    "name": "Volibear",
+    "skins": {}
+  },
+  "107": {
+    "id": 107,
+    "alias": "Rengar",
+    "name": "Rengar",
+    "skins": {}
+  },
+  "110": {
+    "id": 110,
+    "alias": "Varus",
+    "name": "Varus",
+    "skins": {}
+  },
+  "111": {
+    "id": 111,
+    "alias": "Nautilus",
+    "name": "Nautilus",
+    "skins": {}
+  },
+  "112": {
+    "id": 112,
+    "alias": "Viktor",
+    "name": "Viktor",
+    "skins": {}
+  },
+  "113": {
+    "id": 113,
+    "alias": "Sejuani",
+    "name": "Sejuani",
+    "skins": {}
+  },
+  "114": {
+    "id": 114,
+    "alias": "Fiora",
+    "name": "Fiora",
+    "skins": {}
+  },
+  "115": {
+    "id": 115,
+    "alias": "Ziggs",
+    "name": "Ziggs",
+    "skins": {}
+  },
+  "117": {
+    "id": 117,
+    "alias": "Lulu",
+    "name": "Lulu",
+    "skins": {}
+  },
+  "119": {
+    "id": 119,
+    "alias": "Draven",
+    "name": "Draven",
+    "skins": {}
+  },
+  "120": {
+    "id": 120,
+    "alias": "Hecarim",
+    "name": "Hecarim",
+    "skins": {}
+  },
+  "121": {
+    "id": 121,
+    "alias": "Khazix",
+    "name": "Kha'Zix",
+    "skins": {}
+  },
+  "122": {
+    "id": 122,
+    "alias": "Darius",
+    "name": "Darius",
+    "skins": {}
+  },
+  "126": {
+    "id": 126,
+    "alias": "Jayce",
+    "name": "Jayce",
+    "skins": {}
+  },
+  "127": {
+    "id": 127,
+    "alias": "Lissandra",
+    "name": "Lissandra",
+    "skins": {}
+  },
+  "131": {
+    "id": 131,
+    "alias": "Diana",
+    "name": "Diana",
+    "skins": {}
+  },
+  "133": {
+    "id": 133,
+    "alias": "Quinn",
+    "name": "Quinn",
+    "skins": {}
+  },
+  "134": {
+    "id": 134,
+    "alias": "Syndra",
+    "name": "Syndra",
+    "skins": {}
+  },
+  "136": {
+    "id": 136,
+    "alias": "AurelionSol",
+    "name": "Aurelion Sol",
+    "skins": {}
+  },
+  "141": {
+    "id": 141,
+    "alias": "Kayn",
+    "name": "Kayn",
+    "skins": {}
+  },
+  "142": {
+    "id": 142,
+    "alias": "Zoe",
+    "name": "Zoe",
+    "skins": {}
+  },
+  "143": {
+    "id": 143,
+    "alias": "Zyra",
+    "name": "Zyra",
+    "skins": {}
+  },
+  "145": {
+    "id": 145,
+    "alias": "Kaisa",
+    "name": "Kai'Sa",
+    "skins": {}
+  },
+  "147": {
+    "id": 147,
+    "alias": "Seraphine",
+    "name": "Seraphine",
+    "skins": {}
+  },
+  "150": {
+    "id": 150,
+    "alias": "Gnar",
+    "name": "Gnar",
+    "skins": {}
+  },
+  "154": {
+    "id": 154,
+    "alias": "Zac",
+    "name": "Zac",
+    "skins": {}
+  },
+  "157": {
+    "id": 157,
+    "alias": "Yasuo",
+    "name": "Yasuo",
+    "skins": {}
+  },
+  "161": {
+    "id": 161,
+    "alias": "Velkoz",
+    "name": "Vel'Koz",
+    "skins": {}
+  },
+  "163": {
+    "id": 163,
+    "alias": "Taliyah",
+    "name": "Taliyah",
+    "skins": {}
+  },
+  "164": {
+    "id": 164,
+    "alias": "Camille",
+    "name": "Camille",
+    "skins": {}
+  },
+  "166": {
+    "id": 166,
+    "alias": "Akshan",
+    "name": "Akshan",
+    "skins": {}
+  },
+  "200": {
+    "id": 200,
+    "alias": "Belveth",
+    "name": "Bel'Veth",
+    "skins": {}
+  },
+  "201": {
+    "id": 201,
+    "alias": "Braum",
+    "name": "Braum",
+    "skins": {}
+  },
+  "202": {
+    "id": 202,
+    "alias": "Jhin",
+    "name": "Jhin",
+    "skins": {}
+  },
+  "203": {
+    "id": 203,
+    "alias": "Kindred",
+    "name": "Kindred",
+    "skins": {}
+  },
+  "221": {
+    "id": 221,
+    "alias": "Zeri",
+    "name": "Zeri",
+    "skins": {}
+  },
+  "222": {
+    "id": 222,
+    "alias": "Jinx",
+    "name": "Jinx",
+    "skins": {}
+  },
+  "223": {
+    "id": 223,
+    "alias": "TahmKench",
+    "name": "Tahm Kench",
+    "skins": {}
+  },
+  "233": {
+    "id": 233,
+    "alias": "Briar",
+    "name": "Briar",
+    "skins": {}
+  },
+  "234": {
+    "id": 234,
+    "alias": "Viego",
+    "name": "Viego",
+    "skins": {}
+  },
+  "235": {
+    "id": 235,
+    "alias": "Senna",
+    "name": "Senna",
+    "skins": {}
+  },
+  "236": {
+    "id": 236,
+    "alias": "Lucian",
+    "name": "Lucian",
+    "skins": {}
+  },
+  "238": {
+    "id": 238,
+    "alias": "Zed",
+    "name": "Zed",
+    "skins": {}
+  },
+  "240": {
+    "id": 240,
+    "alias": "Kled",
+    "name": "Kled",
+    "skins": {}
+  },
+  "245": {
+    "id": 245,
+    "alias": "Ekko",
+    "name": "Ekko",
+    "skins": {}
+  },
+  "246": {
+    "id": 246,
+    "alias": "Qiyana",
+    "name": "Qiyana",
+    "skins": {}
+  },
+  "254": {
+    "id": 254,
+    "alias": "Vi",
+    "name": "Vi",
+    "skins": {}
+  },
+  "266": {
+    "id": 266,
+    "alias": "Aatrox",
+    "name": "Aatrox",
+    "skins": {}
+  },
+  "267": {
+    "id": 267,
+    "alias": "Nami",
+    "name": "Nami",
+    "skins": {}
+  },
+  "268": {
+    "id": 268,
+    "alias": "Azir",
+    "name": "Azir",
+    "skins": {}
+  },
+  "350": {
+    "id": 350,
+    "alias": "Yuumi",
+    "name": "Yuumi",
+    "skins": {}
+  },
+  "360": {
+    "id": 360,
+    "alias": "Samira",
+    "name": "Samira",
+    "skins": {}
+  },
+  "412": {
+    "id": 412,
+    "alias": "Thresh",
+    "name": "Thresh",
+    "skins": {}
+  },
+  "420": {
+    "id": 420,
+    "alias": "Illaoi",
+    "name": "Illaoi",
+    "skins": {}
+  },
+  "421": {
+    "id": 421,
+    "alias": "RekSai",
+    "name": "Rek'Sai",
+    "skins": {}
+  },
+  "427": {
+    "id": 427,
+    "alias": "Ivern",
+    "name": "Ivern",
+    "skins": {}
+  },
+  "429": {
+    "id": 429,
+    "alias": "Kalista",
+    "name": "Kalista",
+    "skins": {}
+  },
+  "432": {
+    "id": 432,
+    "alias": "Bard",
+    "name": "Bard",
+    "skins": {}
+  },
+  "497": {
+    "id": 497,
+    "alias": "Rakan",
+    "name": "Rakan",
+    "skins": {}
+  },
+  "498": {
+    "id": 498,
+    "alias": "Xayah",
+    "name": "Xayah",
+    "skins": {}
+  },
+  "516": {
+    "id": 516,
+    "alias": "Ornn",
+    "name": "Ornn",
+    "skins": {}
+  },
+  "517": {
+    "id": 517,
+    "alias": "Sylas",
+    "name": "Sylas",
+    "skins": {}
+  },
+  "518": {
+    "id": 518,
+    "alias": "Neeko",
+    "name": "Neeko",
+    "skins": {}
+  },
+  "523": {
+    "id": 523,
+    "alias": "Aphelios",
+    "name": "Aphelios",
+    "skins": {}
+  },
+  "526": {
+    "id": 526,
+    "alias": "Rell",
+    "name": "Rell",
+    "skins": {}
+  },
+  "555": {
+    "id": 555,
+    "alias": "Pyke",
+    "name": "Pyke",
+    "skins": {}
+  },
+  "711": {
+    "id": 711,
+    "alias": "Vex",
+    "name": "Vex",
+    "skins": {}
+  },
+  "777": {
+    "id": 777,
+    "alias": "Yone",
+    "name": "Yone",
+    "skins": {}
+  },
+  "799": {
+    "id": 799,
+    "alias": "Ambessa",
+    "name": "Ambessa",
+    "skins": {}
+  },
+  "800": {
+    "id": 800,
+    "alias": "Mel",
+    "name": "Mel",
+    "skins": {}
+  },
+  "804": {
+    "id": 804,
+    "alias": "Yunara",
+    "name": "Yunara",
+    "skins": {}
+  },
+  "805": {
+    "id": 805,
+    "alias": "Locke",
+    "name": "Locke",
+    "skins": {}
+  },
+  "875": {
+    "id": 875,
+    "alias": "Sett",
+    "name": "Sett",
+    "skins": {}
+  },
+  "876": {
+    "id": 876,
+    "alias": "Lillia",
+    "name": "Lillia",
+    "skins": {}
+  },
+  "887": {
+    "id": 887,
+    "alias": "Gwen",
+    "name": "Gwen",
+    "skins": {}
+  },
+  "888": {
+    "id": 888,
+    "alias": "Renata",
+    "name": "Renata Glasc",
+    "skins": {}
+  },
+  "893": {
+    "id": 893,
+    "alias": "Aurora",
+    "name": "Aurora",
+    "skins": {}
+  },
+  "895": {
+    "id": 895,
+    "alias": "Nilah",
+    "name": "Nilah",
+    "skins": {}
+  },
+  "897": {
+    "id": 897,
+    "alias": "KSante",
+    "name": "K'Sante",
+    "skins": {}
+  },
+  "901": {
+    "id": 901,
+    "alias": "Smolder",
+    "name": "Smolder",
+    "skins": {}
+  },
+  "902": {
+    "id": 902,
+    "alias": "Milio",
+    "name": "Milio",
+    "skins": {}
+  },
+  "904": {
+    "id": 904,
+    "alias": "Zaahen",
+    "name": "Zaahen",
+    "skins": {}
+  },
+  "910": {
+    "id": 910,
+    "alias": "Hwei",
+    "name": "Hwei",
+    "skins": {}
+  },
+  "950": {
+    "id": 950,
+    "alias": "Naafiri",
+    "name": "Naafiri",
+    "skins": {}
+  },
+  "60001": {
+    "id": 60001,
+    "alias": "Jade_Annie",
+    "name": "Annie",
+    "skins": {}
+  },
+  "60002": {
+    "id": 60002,
+    "alias": "Jade_Olaf",
+    "name": "Olaf",
+    "skins": {}
+  },
+  "60004": {
+    "id": 60004,
+    "alias": "Jade_TwistedFate",
+    "name": "Twisted Fate",
+    "skins": {}
+  },
+  "60009": {
+    "id": 60009,
+    "alias": "Jade_Fiddlesticks",
+    "name": "Fiddlesticks",
+    "skins": {}
+  },
+  "60010": {
+    "id": 60010,
+    "alias": "Jade_Kayle",
+    "name": "Kayle",
+    "skins": {}
+  },
+  "60011": {
+    "id": 60011,
+    "alias": "Jade_MasterYi",
+    "name": "Master Yi",
+    "skins": {}
+  },
+  "60012": {
+    "id": 60012,
+    "alias": "Jade_Alistar",
+    "name": "Alistar",
+    "skins": {}
+  },
+  "60013": {
+    "id": 60013,
+    "alias": "Jade_Ryze",
+    "name": "Ryze",
+    "skins": {}
+  },
+  "60014": {
+    "id": 60014,
+    "alias": "Jade_Sion",
+    "name": "Sion",
+    "skins": {}
+  },
+  "60015": {
+    "id": 60015,
+    "alias": "Jade_Sivir",
+    "name": "Sivir",
+    "skins": {}
+  },
+  "60016": {
+    "id": 60016,
+    "alias": "Jade_Soraka",
+    "name": "Soraka",
+    "skins": {}
+  },
+  "60017": {
+    "id": 60017,
+    "alias": "Jade_Teemo",
+    "name": "Teemo",
+    "skins": {}
+  },
+  "60018": {
+    "id": 60018,
+    "alias": "Jade_Tristana",
+    "name": "Tristana",
+    "skins": {}
+  },
+  "60019": {
+    "id": 60019,
+    "alias": "Jade_Warwick",
+    "name": "Warwick",
+    "skins": {}
+  },
+  "60020": {
+    "id": 60020,
+    "alias": "Jade_Nunu",
+    "name": "Nunu ve Willump",
+    "skins": {}
+  },
+  "60021": {
+    "id": 60021,
+    "alias": "Jade_MissFortune",
+    "name": "Miss Fortune",
+    "skins": {}
+  },
+  "60022": {
+    "id": 60022,
+    "alias": "Jade_Ashe",
+    "name": "Ashe",
+    "skins": {}
+  },
+  "60023": {
+    "id": 60023,
+    "alias": "Jade_Tryndamere",
+    "name": "Tryndamere",
+    "skins": {}
+  },
+  "60024": {
+    "id": 60024,
+    "alias": "Jade_Jax",
+    "name": "Jax",
+    "skins": {}
+  },
+  "60025": {
+    "id": 60025,
+    "alias": "Jade_Morgana",
+    "name": "Morgana",
+    "skins": {}
+  },
+  "60026": {
+    "id": 60026,
+    "alias": "Jade_Zilean",
+    "name": "Zilean",
+    "skins": {}
+  },
+  "60027": {
+    "id": 60027,
+    "alias": "Jade_Singed",
+    "name": "Singed",
+    "skins": {}
+  },
+  "60028": {
+    "id": 60028,
+    "alias": "Jade_Evelynn",
+    "name": "Evelynn",
+    "skins": {}
+  },
+  "60029": {
+    "id": 60029,
+    "alias": "Jade_Twitch",
+    "name": "Twitch",
+    "skins": {}
+  },
+  "60030": {
+    "id": 60030,
+    "alias": "Jade_Karthus",
+    "name": "Karthus",
+    "skins": {}
+  },
+  "60031": {
+    "id": 60031,
+    "alias": "Jade_Chogath",
+    "name": "Cho'Gath",
+    "skins": {}
+  },
+  "60032": {
+    "id": 60032,
+    "alias": "Jade_Amumu",
+    "name": "Amumu",
+    "skins": {}
+  },
+  "60033": {
+    "id": 60033,
+    "alias": "Jade_Rammus",
+    "name": "Rammus",
+    "skins": {}
+  },
+  "60034": {
+    "id": 60034,
+    "alias": "Jade_Anivia",
+    "name": "Anivia",
+    "skins": {}
+  },
+  "60035": {
+    "id": 60035,
+    "alias": "Jade_Shaco",
+    "name": "Shaco",
+    "skins": {}
+  },
+  "60036": {
+    "id": 60036,
+    "alias": "Jade_DrMundo",
+    "name": "Dr. Mundo",
+    "skins": {}
+  },
+  "60037": {
+    "id": 60037,
+    "alias": "Jade_Sona",
+    "name": "Sona",
+    "skins": {}
+  },
+  "60038": {
+    "id": 60038,
+    "alias": "Jade_Kassadin",
+    "name": "Kassadin",
+    "skins": {}
+  },
+  "60040": {
+    "id": 60040,
+    "alias": "Jade_Janna",
+    "name": "Janna",
+    "skins": {}
+  },
+  "60041": {
+    "id": 60041,
+    "alias": "Jade_Gangplank",
+    "name": "Gangplank",
+    "skins": {}
+  },
+  "60042": {
+    "id": 60042,
+    "alias": "Jade_Corki",
+    "name": "Corki",
+    "skins": {}
+  },
+  "60044": {
+    "id": 60044,
+    "alias": "Jade_Taric",
+    "name": "Taric",
+    "skins": {}
+  },
+  "60045": {
+    "id": 60045,
+    "alias": "Jade_Veigar",
+    "name": "Veigar",
+    "skins": {}
+  },
+  "60053": {
+    "id": 60053,
+    "alias": "Jade_Blitzcrank",
+    "name": "Blitzcrank",
+    "skins": {}
+  },
+  "60054": {
+    "id": 60054,
+    "alias": "Jade_Malphite",
+    "name": "Malphite",
+    "skins": {}
+  },
+  "60055": {
+    "id": 60055,
+    "alias": "Jade_Katarina",
+    "name": "Katarina",
+    "skins": {}
+  },
+  "60059": {
+    "id": 60059,
+    "alias": "Jade_JarvanIV",
+    "name": "Jarvan IV",
+    "skins": {}
+  },
+  "60062": {
+    "id": 60062,
+    "alias": "Jade_Wukong",
+    "name": "Wukong",
+    "skins": {}
+  },
+  "60063": {
+    "id": 60063,
+    "alias": "Jade_Brand",
+    "name": "Brand",
+    "skins": {}
+  },
+  "60064": {
+    "id": 60064,
+    "alias": "Jade_LeeSin",
+    "name": "Lee Sin",
+    "skins": {}
+  },
+  "60067": {
+    "id": 60067,
+    "alias": "Jade_Vayne",
+    "name": "Vayne",
+    "skins": {}
+  },
+  "60072": {
+    "id": 60072,
+    "alias": "Jade_Skarner",
+    "name": "Skarner",
+    "skins": {}
+  },
+  "60074": {
+    "id": 60074,
+    "alias": "Jade_Heimerdinger",
+    "name": "Heimerdinger",
+    "skins": {}
+  },
+  "60075": {
+    "id": 60075,
+    "alias": "Jade_Nasus",
+    "name": "Nasus",
+    "skins": {}
+  },
+  "60076": {
+    "id": 60076,
+    "alias": "Jade_Nidalee",
+    "name": "Nidalee",
+    "skins": {}
+  },
+  "60079": {
+    "id": 60079,
+    "alias": "Jade_Gragas",
+    "name": "Gragas",
+    "skins": {}
+  },
+  "60080": {
+    "id": 60080,
+    "alias": "Jade_Pantheon",
+    "name": "Pantheon",
+    "skins": {}
+  },
+  "60081": {
+    "id": 60081,
+    "alias": "Jade_Ezreal",
+    "name": "Ezreal",
+    "skins": {}
+  },
+  "60086": {
+    "id": 60086,
+    "alias": "Jade_Garen",
+    "name": "Garen",
+    "skins": {
+      "skin00": "Varsayilan_Garen",
+      "Skin00": "Varsayilan_Garen",
+      "skin0": "Varsayilan_Garen",
+      "Skin0": "Varsayilan_Garen",
+      "0": "Varsayilan_Garen",
+      "base": "Varsayilan_Garen",
+      "Base": "Varsayilan_Garen",
+      "skin05": "Çetin_Ceviz_Garen",
+      "Skin05": "Çetin_Ceviz_Garen",
+      "skin5": "Çetin_Ceviz_Garen",
+      "Skin5": "Çetin_Ceviz_Garen",
+      "5": "Çetin_Ceviz_Garen",
+      "skin13": "Yüce_Kral_Garen",
+      "Skin13": "Yüce_Kral_Garen",
+      "13": "Yüce_Kral_Garen",
+      "skin14": "Demacia_Vice_Garen",
+      "Skin14": "Demacia_Vice_Garen",
+      "14": "Demacia_Vice_Garen",
+      "skin22": "Meka_Krallıkları_Garen",
+      "Skin22": "Meka_Krallıkları_Garen",
+      "22": "Meka_Krallıkları_Garen",
+      "skin23": "Prestij_Meka_Krallıkları_Garen",
+      "Skin23": "Prestij_Meka_Krallıkları_Garen",
+      "23": "Prestij_Meka_Krallıkları_Garen",
+      "skin44": "Yitmiş_Yüce_Kral_Garen",
+      "Skin44": "Yitmiş_Yüce_Kral_Garen",
+      "44": "Yitmiş_Yüce_Kral_Garen",
+      "skin301": "Klasik_Garen",
+      "Skin301": "Klasik_Garen",
+      "301": "Klasik_Garen"
+    }
+  },
+  "60089": {
+    "id": 60089,
+    "alias": "Jade_Leona",
+    "name": "Leona",
+    "skins": {}
+  },
+  "60090": {
+    "id": 60090,
+    "alias": "Jade_Malzahar",
+    "name": "Malzahar",
+    "skins": {}
+  },
+  "60096": {
+    "id": 60096,
+    "alias": "Jade_KogMaw",
+    "name": "Kog'Maw",
+    "skins": {}
+  },
+  "60099": {
+    "id": 60099,
+    "alias": "Jade_Lux",
+    "name": "Lux",
+    "skins": {}
+  },
+  "60103": {
+    "id": 60103,
+    "alias": "Jade_Ahri",
+    "name": "Ahri",
+    "skins": {}
+  },
+  "60117": {
+    "id": 60117,
+    "alias": "Jade_Lulu",
+    "name": "Lulu",
+    "skins": {}
+  }
+}

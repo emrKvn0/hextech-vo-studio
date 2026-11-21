@@ -1,0 +1,134 @@
+<!-- ========================================================================= -->
+<!-- 7. DAVINCI RESOLVE EXPORT SUCCESS & PYTHON API MODAL -->
+<!-- ========================================================================= -->
+<div id="davinci-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-lg rounded-2xl border border-amber-500/60 flex flex-col overflow-hidden shadow-2xl">
+    <!-- Modal Header -->
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 p-0.5 shadow-md">
+          <div class="w-full h-full bg-[#050B14] rounded-[7px] flex items-center justify-center">
+            <i data-lucide="film" class="w-5 h-5 text-amber-300"></i>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-sm font-heading font-extrabold text-gray-100">DaVinci Resolve Timeline & Text+ Stüdyosu</h2>
+          <div id="davinci-status-badge" class="text-[11px] text-amber-400 font-medium flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Fusion Text+ & Auto Fade (1.5s In / 0.5s Out) Hazır</span>
+          </div>
+        </div>
+      </div>
+      <button onclick="closeDaVinciModal()" class="p-1.5 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white transition cursor-pointer">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-5 space-y-3.5 max-h-[75vh] overflow-y-auto">
+      <!-- Fusion Typewriter Text+ (Clipboard) Banner -->
+      <div id="davinci-clipboard-banner" class="bg-gradient-to-r from-amber-950/70 via-orange-950/60 to-amber-900/50 border border-amber-500/60 p-3.5 rounded-xl space-y-1.5 shadow-lg">
+        <div class="flex items-center justify-between">
+          <span class="flex items-center gap-1.5 font-bold text-xs text-amber-300">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+            <span>✨ Daktilo Animasyonlu Text+ (Panoya Kopyalandı!)</span>
+          </span>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-mono font-bold">KOPYALANDI</span>
+        </div>
+        <p class="text-[11px] text-gray-200 leading-relaxed">
+          Replikler, harf harf açılan <strong>Text+ (Write-On)</strong> animasyonuyla panonuza hazır kopyalandı! 
+          DaVinci'de seslerin üst kanalına tek bir boş <strong>Fusion Composition</strong> atıp, Fusion sayfasında <kbd class="px-1.5 py-0.5 bg-black/70 rounded text-amber-300 font-mono font-bold border border-amber-500/50">Ctrl + V</kbd> yapın ve ucunu <code class="text-amber-300 font-mono">MediaOut1</code>'e bağlayın.
+        </p>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="glass-card rounded-xl p-3.5 border border-hextech-borderSubtle space-y-2 bg-[#01060D]/80">
+        <div class="flex justify-between items-center text-xs">
+          <span class="text-gray-400">Dosya Adı:</span>
+          <span id="davinci-res-filename" class="font-mono text-amber-300 font-bold truncate max-w-[260px]" title="">timeline.xml</span>
+        </div>
+        <div class="flex justify-between items-center text-xs">
+          <span class="text-gray-400">Klip Sayısı:</span>
+          <span id="davinci-res-count" class="font-mono text-gray-200 font-bold">0 ses</span>
+        </div>
+        <div class="flex justify-between items-center text-xs">
+          <span class="text-gray-400">Klipler Arası Boşluk:</span>
+          <span id="davinci-res-gap" class="font-mono text-hextech-cyanNeon font-bold">0.20 sn</span>
+        </div>
+        <div class="flex justify-between items-center text-xs">
+          <span class="text-gray-400">Toplam Timeline Süresi:</span>
+          <span id="davinci-res-duration" class="font-mono text-hextech-goldBright font-bold">00:00</span>
+        </div>
+      </div>
+
+      <!-- Fade Duration Config Box -->
+      <div class="glass-card rounded-xl p-3 border border-hextech-borderSubtle/80 bg-hextech-surface/50 space-y-2">
+        <div class="text-[11px] font-bold text-hextech-gold flex items-center justify-between">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="sliders" class="w-3.5 h-3.5 text-amber-300"></i>
+            <span>Text+ Animasyon & Fade Süreleri (Procedural Anim Curves)</span>
+          </span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="bg-hextech-input p-2 rounded-lg border border-hextech-borderSubtle flex items-center justify-between">
+            <span class="text-gray-400 text-[11px] font-semibold">Fade In (Giriş):</span>
+            <div class="flex items-center gap-1">
+              <input type="number" id="davinci-fade-in-input" value="1.5" step="0.1" min="0" max="5.0" class="w-12 bg-transparent text-amber-300 font-mono font-bold text-center outline-none">
+              <span class="text-[10px] text-gray-500 font-mono">sn</span>
+            </div>
+          </div>
+          <div class="bg-hextech-input p-2 rounded-lg border border-hextech-borderSubtle flex items-center justify-between">
+            <span class="text-gray-400 text-[11px] font-semibold">Fade Out (Çıkış):</span>
+            <div class="flex items-center gap-1">
+              <input type="number" id="davinci-fade-out-input" value="0.5" step="0.1" min="0" max="5.0" class="w-12 bg-transparent text-amber-300 font-mono font-bold text-center outline-none">
+              <span class="text-[10px] text-gray-500 font-mono">sn</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-[10px] text-gray-400 leading-tight">💡 Kliplerin süresi ne olursa olsun, metin ilk 1.5 saniyede karararak açılır, son 0.5 saniyede karararak kapanır.</p>
+      </div>
+
+      <!-- Python API Direct Actions -->
+      <div class="space-y-2">
+        <div class="text-[11px] font-bold text-gray-300 uppercase tracking-wide flex items-center gap-1.5">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-hextech-cyanNeon"></i>
+          <span>DaVinci Resolve Python Scripting API Eylemleri</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <button id="btn-davinci-direct-push" onclick="directPushToDaVinci()" class="p-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-gray-950 font-extrabold text-xs shadow-md cursor-pointer flex items-center justify-center space-x-1.5 transition">
+            <i data-lucide="play-circle" class="w-4 h-4"></i>
+            <span>⚡ DaVinci'ye Doğrudan Aktar</span>
+          </button>
+          <button id="btn-davinci-convert-text" onclick="convertActiveTimelineTextPlus()" class="p-2.5 rounded-xl bg-hextech-card hover:bg-hextech-cardHover text-hextech-cyanNeon border border-hextech-cyan/50 font-bold text-xs shadow-md cursor-pointer flex items-center justify-center space-x-1.5 transition">
+            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+            <span>🔄 Açık Metinleri Text+'a Çevir</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- How To Use / XML Instructions -->
+      <div class="bg-amber-950/40 border border-amber-500/30 p-3 rounded-xl space-y-1 text-[11px] text-amber-200/90 font-sans">
+        <div class="font-bold flex items-center gap-1 text-amber-300">
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>
+          <span>FCPXML / XML İle Klasik İçe Aktarma</span>
+        </div>
+        <p class="leading-relaxed text-gray-300">
+          DaVinci Resolve'da <strong>File &gt; Import &gt; Timeline...</strong> (<kbd class="px-1 py-0.2 bg-gray-800 rounded text-amber-300 font-mono text-[9px]">Ctrl+Shift+I</kbd>) seçip oluşturulan <strong>.fcpxml</strong> veya <strong>.xml</strong> dosyasını seçebilirsiniz.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="p-3.5 border-t border-hextech-borderSubtle bg-hextech-surface/90 flex items-center justify-between flex-wrap gap-2">
+      <button id="btn-davinci-open-file" onclick="openDaVinciFileLocation()" class="flex items-center space-x-1.5 px-3.5 py-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-amber-500/50 text-amber-300 text-xs font-bold transition cursor-pointer shadow">
+        <i data-lucide="folder-open" class="w-3.5 h-3.5"></i>
+        <span>Dosya Konumunu Aç</span>
+      </button>
+      <button id="btn-davinci-install-script" onclick="installDaVinciMenuScripts()" class="flex items-center space-x-1.5 px-3 py-2 rounded-lg bg-hextech-surface hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-white text-xs font-bold transition cursor-pointer" title="DaVinci Workspace Menüsüne Eklentiyi Yükle">
+        <i data-lucide="download" class="w-3.5 h-3.5 text-hextech-gold"></i>
+        <span>DaVinci Menü Eklentisini Kur</span>
+      </button>
+    </div>
+  </div>
+</div>

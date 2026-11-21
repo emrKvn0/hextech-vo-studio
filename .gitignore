@@ -1,0 +1,108 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# PyInstaller / Build outputs
+build/
+dist/
+*.manifest
+*.spec.bak
+
+# Node / Submodule dependencies
+node_modules/
+lol_vo_extract_repo/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Desktop App Runtime & Webview Storage / Local State
+.app_storage/
+window_state.json
+app_settings.json
+
+# AI Models & Cache (Faster-Whisper / HuggingFace)
+.cache/
+models/
+*.bin
+*.pt
+*.safetensors
+*.onnx
+
+# Geçici ve Çalışma Dosyaları (Temporary & Scratch files)
+temp_*
+*.tmp
+*.wem
+*.wav.tmp
+_make_shortcut.vbs
+_make_shortcut.ps1
+scratch/
+
+# IDE / Editor Settings / OS Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Log Files
+*.log
+
+# Büyük Ses ve Medya Çıktıları (Champions)
+# NOT: Champions klasöründeki ayıklanmış sesler ~2.5 GB tutmaktadır.
+# GitHub'a pushlamayı hafif ve anlık yapmak için ses çıktıları hariç tutulmuştur.
+# Kodlar ve sistem yeni PC'de 'LoL Ses Stüdyosu' üzerinden tek tıkla yeniden üretilebilir.
+# (Eğer bu 2.5 GB ses arşivini de Git ile aktarmak isterseniz alttaki satırın başına # ekleyin)
+Champions/
+Duvar Kağıtları/
+Indirilen_Sesler/
+DaVinci_Exports/
+DaVinci_Test_Projesi/
+cache/
+PBE_Cache/
+.scratch_opencaptions/
+.agents/
+tools/
+vgmstream/
+
+# Ses, Medya, Oyun Arşivi ve Derlenmiş Araçlar
+*.wav
+*.ogg
+*.mp3
+*.bnk
+*.wad
+*.exe
+*.dll
+*.fcpxml
+
+# Büyük JSON Çıktıları ve Test/Log Dosyaları
+lol_matrix_data.json
+fast_zed_events.json
+davinci_script_log.txt
+test_*.jpg
+test_frame.setting
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Web Build Outputs
+.next/
+out/

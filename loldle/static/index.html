@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoLdle TR - League of Legends Türkçe Şampiyon Tahmin Oyunu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600;700;800;900&family=Rajdhani:wght@600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/hextech.css">
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico">
+</head>
+<body>
+
+    <!-- Header & Navigation (LoLdle.net Style) -->
+    <header class="header">
+        <div class="top-bar">
+            <!-- Top Controls (Daily/Endless, Stats, How to play) -->
+            <div class="top-left-controls">
+                <div class="type-toggle-container">
+                    <button class="type-toggle-btn active" data-type="daily">📅 Günlük</button>
+                    <button class="type-toggle-btn" data-type="endless">♾️ Sonsuz</button>
+                </div>
+            </div>
+
+            <div class="brand" onclick="window.location.reload()">
+                <h1 class="loldle-logo-title">LoL<span>dle</span> <span class="tr-badge">TR</span></h1>
+                <span class="loldle-tagline">League of Legends Şampiyon Tahmin Oyunu</span>
+            </div>
+
+            <div class="header-controls">
+                <button class="icon-btn" id="statsBtn" title="İstatistikler">📊</button>
+                <button class="icon-btn" id="rulesBtn" title="Nasıl Oynanır?">❓</button>
+            </div>
+        </div>
+
+        <!-- Mode Switcher (Iconic LoLdle 4 Game Cards) -->
+        <nav class="modes-bar">
+            <button class="mode-btn active" data-mode="classic">
+                <span class="mode-icon">🎯</span>
+                <div class="mode-info">
+                    <span class="mode-name">KLASİK</span>
+                    <span class="mode-desc">Özelliklere göre tahmin</span>
+                </div>
+            </button>
+            <button class="mode-btn" data-mode="quote">
+                <span class="mode-icon">💬</span>
+                <div class="mode-info">
+                    <span class="mode-name">REPLİK</span>
+                    <span class="mode-desc">Türkçe replik ile tahmin</span>
+                </div>
+            </button>
+            <button class="mode-btn" data-mode="ability">
+                <span class="mode-icon">⚡</span>
+                <div class="mode-info">
+                    <span class="mode-name">YETENEK</span>
+                    <span class="mode-desc">Yetenek ikonuyla tahmin</span>
+                </div>
+            </button>
+            <button class="mode-btn" data-mode="emoji">
+                <span class="mode-icon">😃</span>
+                <div class="mode-info">
+                    <span class="mode-name">EMOJİ</span>
+                    <span class="mode-desc">Emojileri çöz</span>
+                </div>
+            </button>
+            <button class="mode-btn" data-mode="splash">
+                <span class="mode-icon">🖼️</span>
+                <div class="mode-info">
+                    <span class="mode-name">SPLASH</span>
+                    <span class="mode-desc">Resimden tahmin</span>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Game Container -->
+    <main class="main-content">
+        <!-- Dynamic Mode Title & Instruction -->
+        <div class="mode-banner">
+            <h2 id="modeTitle" class="which-title">Hangi Şampiyon?</h2>
+            <p id="modeSubtitle" class="which-subtitle">Şampiyonu bulmak için herhangi bir şampiyon yazarak başla</p>
+        </div>
+
+        <!-- Mode 2: Replik Modu Panel -->
+        <div id="quotePanel" class="quote-box" style="display: none;">
+            <div class="quote-type-badge" id="quoteTypeBadge">🎙️ REPLİK İPUCU</div>
+            <div class="quote-quote-wrapper">
+                <span class="quote-mark">“</span>
+                <p id="quoteTextDisplay" class="quote-text-content">Repliği okuyarak şampiyonu tahmin et!</p>
+                <span class="quote-mark">”</span>
+            </div>
+            <div class="quote-audio-container">
+                <button class="quote-audio-btn locked" id="quotePlayBtn" title="5 Yanlış Tahminde Açılır" disabled>
+                    <span id="quotePlayIcon">🔒</span>
+                    <span id="quotePlayLabel">Ses İpucu (5 Yanlış Tahminde Açılır - 0/5)</span>
+                </button>
+                <div class="soundwave" id="soundwaveAnim">
+                    <div class="soundwave-bar"></div>
+                    <div class="soundwave-bar"></div>
+                    <div class="soundwave-bar"></div>
+                    <div class="soundwave-bar"></div>
+                    <div class="soundwave-bar"></div>
+                </div>
+            </div>
+            <p class="quote-hint-subtext" id="quoteHintSubtext">🔒 Sesli replik ipucu 5 yanlış tahmin sonrasında dinlenebilir.</p>
+        </div>
+
+        <!-- Mode 3: Yetenek Modu Panel -->
+        <div id="abilityPanel" class="ability-showcase" style="display: none;">
+            <div class="ability-frame">
+                <img id="abilityIconImg" src="" alt="Yetenek İkonu">
+            </div>
+        </div>
+
+        <!-- Mode 4: Emoji Modu Panel -->
+        <div id="emojiPanel" class="emoji-showcase" style="display: none;">
+            <div class="emojis-row" id="emojisRow">
+                <!-- Emojis will be inserted here dynamically with lock/reveal states -->
+            </div>
+        </div>
+
+        <!-- Mode 5: Splash Art Modu Panel -->
+        <div id="splashPanel" class="splash-box" style="display: none;">
+            <div class="splash-showcase">
+                <div class="splash-img-wrapper">
+                    <img id="splashTargetImg" src="" alt="">
+                    <div id="splashLoadingSpinner" class="splash-spinner">⏳ Yükleniyor...</div>
+                </div>
+                <div class="splash-zoom-badge" id="splashZoomBadge">🔍 Büyütme: 5.0x</div>
+                <div class="splash-skin-badge" id="splashSkinBadge" style="display: none;"></div>
+            </div>
+            <p class="splash-hint-text">💡 2.100+ kostüm arasından rastgele! Yanlış tahmin yaptıkça kamera uzaklaşır.</p>
+        </div>
+
+        <!-- Progressive Clues Container (For Quote, Ability, Emoji modes) -->
+        <div id="cluesContainer" class="clues-container"></div>
+
+        <!-- Non-intrusive Inline Victory Banner (Never blocks the screen automatically!) -->
+        <div id="inlineVictoryBanner" class="inline-victory-banner" style="display: none;">
+            <div class="banner-content">
+                <div class="banner-champ-avatar">
+                    <img id="bannerChampImg" src="" alt="">
+                </div>
+                <div class="banner-details">
+                    <div class="banner-headline">
+                        <span class="banner-badge">🏆 BİLDİN!</span>
+                        <span id="bannerChampName" class="banner-champ-name">Şampiyon</span>
+                    </div>
+                    <span id="bannerChampTitle" class="banner-champ-title">Unvan</span>
+                    <span id="bannerGuessInfo" class="banner-guess-info">4. tahminde buldun!</span>
+                </div>
+            </div>
+            <div class="banner-actions">
+                <button class="banner-btn share-btn" id="bannerOpenModalBtn" title="Detaylı Kartı ve Paylaşımı Aç">
+                    📊 Detayları Gör / Paylaş
+                </button>
+                <button class="banner-btn next-btn" id="bannerNextBtn">
+                    Sonraki Mod ➔
+                </button>
+            </div>
+        </div>
+
+        <!-- Universal Champion Search & Autocomplete (LoLdle Guessbox) -->
+        <section class="search-section">
+            <div class="guessbox-wrapper">
+                <div class="search-box-inner">
+                    <input 
+                        type="text" 
+                        id="champSearchInput" 
+                        class="search-box" 
+                        placeholder="Şampiyon adı yazın... (örn: Yasuo, Ahri, Jinx)" 
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div id="autocompleteDropdown" class="autocomplete-dropdown"></div>
+            </div>
+        </section>
+
+        <!-- Mode 1: Classic Table Display (LoLdle Net Square Grid) -->
+        <section id="classicPanel" class="classic-container">
+            <div class="classic-table-wrapper">
+                <div class="table-header">
+                    <div class="th-col">Şampiyon</div>
+                    <div class="th-col">Cinsiyet</div>
+                    <div class="th-col">Konum</div>
+                    <div class="th-col">Tür</div>
+                    <div class="th-col">Kaynak</div>
+                    <div class="th-col">Menzil</div>
+                    <div class="th-col">Bölge</div>
+                    <div class="th-col">Çıkış Yılı</div>
+                </div>
+                <div id="classicHistory" class="classic-answers-list"></div>
+            </div>
+        </section>
+
+        <!-- Simple History for Non-Classic modes -->
+        <section id="simpleHistory" class="simple-guess-history"></section>
+    </main>
+
+    <!-- Victory Modal -->
+    <div id="victoryModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="victory-banner">🎉 TEBRİKLER!</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="victory-splash-container">
+                    <img id="victorySplashImg" src="" alt="Zafer Şampiyonu">
+                    <div class="victory-champ-meta">
+                        <span id="victoryChampName" class="victory-champ-name">Aatrox</span>
+                        <span id="victoryChampTitle" class="victory-champ-title">Darkin Kılıcı</span>
+                    </div>
+                </div>
+
+                <div style="text-align: center; color: var(--text-gold); font-size: 1.1rem; margin: 4px 0;">
+                    🏆 Toplam <strong id="victoryTotalGuesses" style="color: var(--hextech-cyan);">1</strong> tahminde doğru bildin!
+                </div>
+
+                <p id="victoryLore" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; text-align: justify; max-height: 100px; overflow-y: auto; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 4px; margin-bottom: 10px;">
+                    <!-- Lore Blurb -->
+                </p>
+
+                <!-- Next Mode Navigation Button -->
+                <div class="victory-nav-wrapper">
+                    <button class="hex-btn hex-btn-next-mode" id="nextModeBtn">
+                        <span id="nextModeText">Sonraki Mod: 🎙️ Replik ➔</span>
+                    </button>
+                    <button class="hex-btn hex-btn-primary" id="nextRoundBtn" style="display: none;">
+                        🔄 Sıradaki Şampiyon ➔
+                    </button>
+                </div>
+
+                <div class="victory-actions" style="margin-top: 10px;">
+                    <button class="hex-btn hex-btn-secondary" id="playChampVoiceBtn">
+                        🎙️ Şampiyon Sesini Dinle
+                    </button>
+                    <button class="hex-btn hex-btn-secondary" id="shareVictoryBtn">
+                        📋 Sonucu Paylaş
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="statsModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>📊 Oyun İstatistikleri</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value" id="statPlayed">0</div>
+                        <div class="stat-label">Oynanan</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="statWinRate">0%</div>
+                        <div class="stat-label">Kazanma</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="statCurrentStreak">0</div>
+                        <div class="stat-label">Seri</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="statMaxStreak">0</div>
+                        <div class="stat-label">En İyi Seri</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 14px;">
+                    <h4 style="color: var(--border-gold); font-size: 0.95rem; margin-bottom: 10px; text-transform: uppercase;">Tahmin Dağılımı</h4>
+                    <div id="statsDistributionBars"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rules / Help Modal -->
+    <div id="rulesModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>❓ Nasıl Oynanır?</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-gold);">
+                <p><strong>LoLdle TR</strong>, League of Legends şampiyonlarını farklı ipuçlarıyla bulmaya çalıştığınız Türkçe tahmin oyunudur.</p>
+
+                <h4 style="color: var(--hextech-cyan); margin-top: 10px;">🎯 Klasik Mod</h4>
+                <p>Şampiyonun özelliklerine göre tahmin yapın. Renkler durumları gösterir:</p>
+                <ul style="margin-left: 20px; margin-top: 4px;">
+                    <li><strong style="color: #2ecc71;">🟩 Yeşil:</strong> Tam eşleşme</li>
+                    <li><strong style="color: #f39c12;">🟨 Turuncu:</strong> Kısmi eşleşme (örn. birden fazla koridor veya türden biri doğru)</li>
+                    <li><strong style="color: #e74c3c;">🟥 Kırmızı:</strong> Eşleşmiyor</li>
+                    <li><strong>⬆️ / ⬇️ Oklar:</strong> Çıkış yılı daha yeni (⬆️) veya daha eski (⬇️)</li>
+                </ul>
+
+                <h4 style="color: var(--hextech-cyan); margin-top: 12px;">🎙️ Replik Modu</h4>
+                <p>Şampiyonun Türkçe seçim repliğini dinleyin. Yanıldıkça replik metni, cinsiyet/bölge ve tema ipuçları açılır.</p>
+
+                <h4 style="color: var(--hextech-cyan); margin-top: 12px;">⚡ Yetenek Modu</h4>
+                <p>Şampiyonun Pasif veya Q, W, E, R yetenek ikonuna bakarak kime ait olduğunu tahmin edin.</p>
+
+                <h4 style="color: var(--hextech-cyan); margin-top: 12px;">✨ Emoji Modu</h4>
+                <p>Şampiyonun hikayesini, silahlarını ve karakterini anlatan 3-4 tematik emojiyi çözün.</p>
+
+                <h4 style="color: var(--hextech-cyan); margin-top: 12px;">🖼️ Splash Art Modu</h4>
+                <p>Şampiyonun orijinal çiziminden küçük bir kesit gösterilir. Her yanlış tahminde kamera uzaklaşır (zoom out) ve görsel genişler.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toastMsg" class="toast-msg"></div>
+
+    <!-- Scripts -->
+    <script src="/static/js/audio_sfx.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

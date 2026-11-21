@@ -1,0 +1,110 @@
+<!-- ======================================================================= -->
+<!-- TAB 3: YOUTUBE RAKİP & İÇERİK FIRSAT ANALİZİ -->
+<!-- ======================================================================= -->
+<section id="view-competitors" class="flex-1 flex flex-col p-5 overflow-hidden hidden">
+  <!-- Header -->
+  <header class="flex flex-col gap-3 pb-3 border-b border-hextech-borderSubtle shrink-0">
+    <div class="flex items-center justify-between">
+      <div>
+        <div class="flex items-center space-x-3">
+          <h1 class="text-xl font-extrabold text-hextech-goldBright flex items-center space-x-2.5">
+            <span>🎯 YouTube Rakip & İçerik Fırsat Analizi</span>
+          </h1>
+          <span id="competitor-channel-count-badge" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-950/80 text-red-400 border border-red-500/40">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+            <span id="active-channels-label">6 Kanal Seçilebilir</span>
+          </span>
+        </div>
+        <p class="text-xs text-gray-400 mt-0.5">
+          İstediğin YouTube kanallarını seçip hedef odaklı tarama yapabilir, rakiplerin henüz çekmediği tüm Efsanevi & PBE fırsatlarını anında yakalayabilirsin.
+        </p>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <button id="btn-scan-competitors" onclick="runCompetitorScan(true)" class="flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 text-white font-extrabold text-xs shadow-lg cursor-pointer transition-transform hover:scale-105 active:scale-95">
+          <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+          <span>Seçili Kanalları Canlı Tara</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Channel Filter Selector Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-2 p-2.5 bg-hextech-surface/80 rounded-lg border border-hextech-borderSubtle text-xs">
+      <div class="flex items-center space-x-2">
+        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1">
+          <i data-lucide="tv" class="w-3.5 h-3.5 text-red-400"></i>
+          Taranacak Kanallar:
+        </span>
+        <button onclick="toggleAllCompetitorChannels(true)" class="px-2 py-0.5 rounded text-[11px] bg-hextech-card text-gray-300 hover:text-white border border-hextech-borderSubtle hover:border-gray-500 cursor-pointer">Tümü</button>
+        <button onclick="toggleAllCompetitorChannels(false)" class="px-2 py-0.5 rounded text-[11px] bg-hextech-card text-gray-400 hover:text-white border border-hextech-borderSubtle hover:border-gray-500 cursor-pointer">Temizle</button>
+      </div>
+
+      <!-- Channel Selection Chips -->
+      <div id="channel-selection-chips" class="flex flex-wrap items-center gap-1.5">
+        <label class="channel-chip flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-xs text-gray-200 cursor-pointer transition-all">
+          <input type="checkbox" value="leaguevoices" checked onchange="updateSelectedChannelsUI()" class="rounded border-gray-600 text-red-600 focus:ring-0">
+          <span class="font-semibold text-red-300">@LeagueVoices</span>
+        </label>
+        <label class="channel-chip flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-xs text-gray-200 cursor-pointer transition-all">
+          <input type="checkbox" value="quaxanos" checked onchange="updateSelectedChannelsUI()" class="rounded border-gray-600 text-red-600 focus:ring-0">
+          <span class="font-semibold text-amber-300">@Quaxanos</span>
+        </label>
+        <label class="channel-chip flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-xs text-gray-200 cursor-pointer transition-all">
+          <input type="checkbox" value="pbetr" checked onchange="updateSelectedChannelsUI()" class="rounded border-gray-600 text-red-600 focus:ring-0">
+          <span class="font-semibold text-purple-300">@pbetr</span>
+        </label>
+        <label class="channel-chip flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-xs text-gray-200 cursor-pointer transition-all">
+          <input type="checkbox" value="leagueofvoice" checked onchange="updateSelectedChannelsUI()" class="rounded border-gray-600 text-red-600 focus:ring-0">
+          <span class="font-semibold text-cyan-300">@LeagueOfVoice</span>
+        </label>
+        <label class="channel-chip flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-xs text-gray-200 cursor-pointer transition-all">
+          <input type="checkbox" value="turkish_videogamevoice" checked onchange="updateSelectedChannelsUI()" class="rounded border-gray-600 text-red-600 focus:ring-0">
+          <span class="font-semibold text-rose-300">@turkish.videogamevoice</span>
+        </label>
+        <label class="channel-chip flex items-center space-x-1.5 px-2.5 py-1 rounded-md bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-xs text-gray-200 cursor-pointer transition-all">
+          <input type="checkbox" value="lolnewstr" checked onchange="updateSelectedChannelsUI()" class="rounded border-gray-600 text-red-600 focus:ring-0">
+          <span class="font-semibold text-emerald-300">@LoLNewsTr</span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Competitor Views Selector Pills -->
+  <div class="py-3 shrink-0 flex flex-wrap items-center justify-between gap-3 border-b border-hextech-borderSubtle/60">
+    <div class="flex items-center bg-hextech-surface rounded-lg p-0.5 border border-hextech-borderSubtle text-xs">
+      <button id="comp-tab-opps" onclick="setCompetitorSubTab('opps')" class="px-3.5 py-1.5 rounded-md font-bold text-gray-200 bg-hextech-cardSelected shadow text-xs flex items-center space-x-1.5">
+        <span>🔥 En İyi Fırsatlar (Çekilmemiş Efsanevi/PBE)</span>
+      </button>
+      <button id="comp-tab-uncovered" onclick="setCompetitorSubTab('uncovered')" class="px-3.5 py-1.5 rounded-md font-medium text-gray-400 hover:text-white text-xs flex items-center space-x-1.5">
+        <span>💎 Hiç Çekilmemiş Şampiyonlar</span>
+        <span id="badge-uncovered-count" class="text-[10px] px-1.5 py-0.2 rounded bg-amber-950 text-amber-300 font-mono ml-1">0</span>
+      </button>
+      <button id="comp-tab-covered" onclick="setCompetitorSubTab('covered')" class="px-3.5 py-1.5 rounded-md font-medium text-gray-400 hover:text-white text-xs flex items-center space-x-1.5">
+        <span>🎬 Rakiplerin Çektiği Videolar</span>
+        <span id="badge-covered-count" class="text-[10px] px-1.5 py-0.2 rounded bg-cyan-950 text-cyan-300 font-mono ml-1">0</span>
+      </button>
+    </div>
+
+    <!-- Search Box & Channel Filter inside Competitors -->
+    <div class="flex items-center space-x-2">
+      <select id="comp-filter-channel" onchange="filterCompetitorByChannel(this.value)" class="bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-cyan rounded-lg px-2.5 py-2 text-xs text-gray-300 outline-none">
+        <option value="ALL">Tüm Kanalları Göster</option>
+        <option value="LeagueVoices">@LeagueVoices</option>
+        <option value="Quaxanos">@Quaxanos</option>
+        <option value="PBE TR">@pbetr</option>
+        <option value="League of Voice">@LeagueOfVoice</option>
+        <option value="Turkish Video Game Voice">@turkish.videogamevoice</option>
+        <option value="LoL News TR">@LoLNewsTr</option>
+      </select>
+      <div class="relative w-64">
+        <i data-lucide="search" class="w-4 h-4 absolute left-3 top-2.5 text-gray-400"></i>
+        <input type="text" id="comp-search" oninput="filterCompetitorView(this.value)" placeholder="Şampiyon veya kostüm ara..." class="w-full bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-cyan rounded-lg pl-9 pr-3 py-2 text-xs text-gray-100 outline-none">
+      </div>
+    </div>
+  </div>
+
+  <!-- Container: Dynamic Competitor View Contents -->
+  <div id="competitors-content-container" class="flex-1 overflow-y-auto pt-3 pr-1 min-h-0">
+    <!-- Initial Welcome State / Dynamically rendered opportunity cards -->
+  </div>
+</section>

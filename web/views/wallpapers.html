@@ -1,0 +1,133 @@
+<!-- ======================================================================= -->
+<!-- TAB 5: CANLI DUVAR KAĞITLARI (LIVE WALLPAPERS 4K STUDIO) -->
+<!-- ======================================================================= -->
+<section id="view-wallpapers" class="flex-1 flex flex-col p-5 overflow-hidden hidden">
+  <!-- Header -->
+  <header class="flex flex-wrap items-center justify-between pb-4 border-b border-hextech-borderSubtle shrink-0 gap-3">
+    <div>
+      <h1 class="text-xl font-extrabold text-hextech-goldBright flex items-center space-x-2.5">
+        <i data-lucide="film" class="w-5 h-5 text-hextech-gold"></i>
+        <span>4K Canlı Duvar Kağıtları & Hareketli Splash Stüdyosu</span>
+      </h1>
+      <p class="text-xs text-gray-400 mt-0.5">DesktopHut, MotionBGS 4K ve YouTube Resmi Giriş Ekranlarından 4K 60FPS canlı duvar kağıdı arayın ve indirin.</p>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <button onclick="toggleWallpaperView('search')" id="btn-wp-tab-search" class="px-3.5 py-1.5 rounded-lg bg-hextech-gold text-gray-950 font-extrabold text-xs shadow-md flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="search" class="w-3.5 h-3.5"></i>
+        <span>Duvar Kağıdı Ara</span>
+      </button>
+      <button onclick="toggleWallpaperView('downloaded')" id="btn-wp-tab-downloaded" class="px-3.5 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 font-bold text-xs flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="hard-drive" class="w-3.5 h-3.5 text-hextech-cyan"></i>
+        <span>İndirilenlerim (<span id="wp-downloaded-count">0</span>)</span>
+      </button>
+      <button onclick="switchTab('static-wallpapers')" class="px-3.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 font-bold text-xs flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="image" class="w-3.5 h-3.5"></i>
+        <span>4K Normal Duvar Kağıtları</span>
+      </button>
+      <button onclick="openWallpapersFolder()" class="px-3.5 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-gold/50 text-hextech-goldBright font-bold text-xs flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="folder" class="w-3.5 h-3.5"></i>
+        <span>Klasörü Aç</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="flex-1 flex flex-col overflow-hidden pt-4 space-y-4">
+    
+    <!-- SEARCH & FILTER TOOLBAR (SEARCH VIEW) -->
+    <div id="wp-search-toolbar" class="glass-panel p-4 rounded-xl border border-hextech-borderSubtle flex flex-col space-y-3 shrink-0">
+      
+      <!-- Search Bar Row -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        <div class="relative flex-1 min-w-[240px]">
+          <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="wp-search-input" placeholder="Şampiyon veya kostüm ara (Örn: Yone, Gecegetiren Yasuo, Ahri Ruh Çiçeği, Jinx Arcane)..." 
+                 class="w-full bg-[#030914] border border-hextech-borderMedium focus:border-hextech-gold rounded-xl pl-10 pr-4 py-2 text-xs text-gray-100 placeholder-gray-500 outline-none transition shadow-inner">
+        </div>
+
+        <!-- Source Selector -->
+        <div class="flex items-center space-x-1.5 bg-[#030914] border border-hextech-borderSubtle p-1 rounded-xl text-xs">
+          <span class="text-[11px] text-gray-400 px-2 font-semibold">Kaynak:</span>
+          <button onclick="setWallpaperSource('all')" id="wp-src-all" class="px-2.5 py-1 rounded-lg bg-hextech-gold text-gray-950 font-extrabold text-[11px]">Tümü</button>
+          <button onclick="setWallpaperSource('desktophut')" id="wp-src-desktophut" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white text-[11px]">DesktopHut</button>
+          <button onclick="setWallpaperSource('motionbgs')" id="wp-src-motionbgs" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white text-[11px]">MotionBGS 4K</button>
+          <button onclick="setWallpaperSource('youtube')" id="wp-src-youtube" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white text-[11px]">YouTube / Riot</button>
+        </div>
+
+        <!-- Resolution Selector -->
+        <div class="flex items-center space-x-1.5 bg-[#030914] border border-hextech-borderSubtle p-1 rounded-xl text-xs">
+          <span class="text-[11px] text-gray-400 px-2 font-semibold">Kalite:</span>
+          <button onclick="setWallpaperResolution('all')" id="wp-res-all" class="px-2.5 py-1 rounded-lg bg-hextech-cyan text-gray-950 font-extrabold text-[11px]">Tümü</button>
+          <button onclick="setWallpaperResolution('4k')" id="wp-res-4k" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white text-[11px]">4K UHD</button>
+          <button onclick="setWallpaperResolution('1080p')" id="wp-res-1080p" class="px-2.5 py-1 rounded-lg text-gray-300 hover:text-white text-[11px]">1080p FHD</button>
+        </div>
+
+        <!-- Search Action Button -->
+        <button onclick="triggerWallpaperSearch()" id="btn-wp-search-action" class="lol-btn-gold px-5 py-2 rounded-xl text-xs font-extrabold flex items-center space-x-1.5 cursor-pointer shadow-lg">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Canlı Ara</span>
+        </button>
+      </div>
+
+      <!-- Quick Champion Badges -->
+      <div class="flex items-center space-x-1.5 overflow-x-auto pb-1 text-[11px]">
+        <span class="text-gray-500 font-bold uppercase tracking-wider text-[10px] shrink-0">Popüler Şampiyonlar:</span>
+        <button onclick="quickSearchWallpaper('Yone')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">⚔️ Yone</button>
+        <button onclick="quickSearchWallpaper('Yasuo')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🌪️ Yasuo</button>
+        <button onclick="quickSearchWallpaper('Ahri')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🦊 Ahri</button>
+        <button onclick="quickSearchWallpaper('Jinx')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">💣 Jinx</button>
+        <button onclick="quickSearchWallpaper('Aatrox')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🩸 Aatrox</button>
+        <button onclick="quickSearchWallpaper('Zed')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🥷 Zed</button>
+        <button onclick="quickSearchWallpaper('Katarina')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🗡️ Katarina</button>
+        <button onclick="quickSearchWallpaper('Akali')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🐉 Akali</button>
+        <button onclick="quickSearchWallpaper('Mordekaiser')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">👑 Mordekaiser</button>
+        <button onclick="quickSearchWallpaper('Viego')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🗡️ Viego</button>
+        <button onclick="quickSearchWallpaper('League of Legends')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-hextech-gold hover:border-hextech-gold transition shrink-0">🌟 Genel LoL</button>
+      </div>
+    </div>
+
+    <!-- DOWNLOAD PROGRESS BANNER (ACTIVE DOWNLOADS) -->
+    <div id="wp-active-downloads-container" class="space-y-2 hidden shrink-0"></div>
+
+    <!-- RESULTS / GRID VIEW AREA -->
+    <div id="wp-search-results-wrapper" class="flex-1 overflow-y-auto pr-1">
+      <!-- Loading Spinner -->
+      <div id="wp-loading-spinner" class="flex flex-col items-center justify-center p-16 space-y-3 hidden">
+        <div class="w-10 h-10 border-4 border-hextech-borderSubtle border-t-hextech-gold rounded-full animate-spin"></div>
+        <p class="text-xs text-hextech-gold font-bold">DesktopHut, MotionBGS 4K ve YouTube taranıyor...</p>
+      </div>
+
+      <!-- Empty State Initial -->
+      <div id="wp-empty-state" class="flex flex-col items-center justify-center p-16 text-center space-y-3">
+        <div class="w-16 h-16 rounded-2xl bg-hextech-card border border-hextech-borderSubtle flex items-center justify-center shadow-xl">
+          <i data-lucide="video" class="w-8 h-8 text-hextech-gold"></i>
+        </div>
+        <h3 class="text-base font-bold text-gray-200">Canlı 4K Duvar Kağıdı Aramaya Başlayın</h3>
+        <p class="text-xs text-gray-400 max-w-md">Yukarıdaki arama kutusuna şampiyon veya kostüm adı yazarak DesktopHut, MotionBGS ve YouTube'dan en kaliteli hareketli splash'leri bulun.</p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div id="wp-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hidden"></div>
+    </div>
+
+    <!-- DOWNLOADED LOCAL WALLPAPERS GALLERY VIEW -->
+    <div id="wp-downloaded-wrapper" class="flex-1 overflow-y-auto pr-1 hidden">
+      <div class="flex items-center justify-between pb-3 mb-3 border-b border-hextech-borderSubtle">
+        <div class="text-xs font-bold text-gray-300">Bilgisayarınızda İndirilmiş Canlı Duvar Kağıtları</div>
+        <button onclick="refreshDownloadedWallpapers()" class="text-xs text-hextech-cyan hover:underline flex items-center space-x-1 cursor-pointer">
+          <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+          <span>Yenile</span>
+        </button>
+      </div>
+
+      <div id="wp-downloaded-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      
+      <div id="wp-downloaded-empty" class="flex flex-col items-center justify-center p-16 text-center space-y-3 hidden">
+        <i data-lucide="folder-x" class="w-10 h-10 text-gray-600"></i>
+        <p class="text-xs text-gray-400">Henüz indirilmiş canlı duvar kağıdı bulunmuyor.</p>
+      </div>
+    </div>
+
+  </div>
+</section>

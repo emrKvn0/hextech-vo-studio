@@ -1,0 +1,142 @@
+<!-- ========================================================================= -->
+<!-- 3. MODALS: SKIN DETAILS MODAL -->
+<!-- ========================================================================= -->
+<div id="skin-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-4xl max-h-[90vh] rounded-2xl border border-hextech-borderMedium flex flex-col overflow-hidden shadow-2xl">
+    
+    <!-- Modal Header -->
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90 shrink-0">
+      <div class="flex items-center space-x-3">
+        <span id="modal-rarity-badge" class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-hextech-goldBorder text-hextech-goldBright border border-hextech-goldDim uppercase">
+          DESTANSI
+        </span>
+        <div>
+          <h2 id="modal-skin-name" class="text-base font-extrabold text-gray-100">Yüce Kral Garen</h2>
+          <div id="modal-champ-name" class="text-xs text-hextech-cyan">Garen • Demacia'nın Kudreti</div>
+        </div>
+      </div>
+
+      <button onclick="closeSkinModal()" class="p-2 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- Big 4K Splash Image Preview -->
+      <div class="relative rounded-xl overflow-hidden bg-black/60 border border-hextech-borderSubtle group aspect-video">
+        <img id="modal-splash-img" src="" alt="Splash Art" class="w-full h-full object-cover object-center transition-all duration-300">
+        
+        <!-- View Mode Toggle -->
+        <div class="absolute bottom-3 left-3 flex items-center space-x-1.5 bg-black/75 backdrop-blur-md p-1 rounded-lg border border-white/10 text-[11px]">
+          <button onclick="setModalSplashMode('centered')" id="splash-mode-centered" class="px-2.5 py-1 rounded bg-hextech-cyan text-gray-950 font-bold">Ortalanmış (Full HD)</button>
+          <button onclick="setModalSplashMode('uncentered')" id="splash-mode-uncentered" class="px-2.5 py-1 rounded text-gray-300 hover:text-white">4K Geniş Açı</button>
+          <button onclick="setModalSplashMode('loadscreen')" id="splash-mode-loadscreen" class="px-2.5 py-1 rounded text-gray-300 hover:text-white">Yükleme Ekranı</button>
+        </div>
+
+        <!-- Download Button -->
+        <div class="absolute top-3 right-3">
+          <button onclick="downloadCurrentModalSplash()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-hextech-gold hover:bg-hextech-goldHover text-gray-950 font-extrabold text-xs shadow-xl">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>4K Splash İndir</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Audio Player Section -->
+      <div class="glass-card rounded-xl p-4 border border-hextech-borderSubtle space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-bold text-hextech-goldBright flex items-center space-x-2">
+            <i data-lucide="volume-2" class="w-4 h-4 text-hextech-cyan"></i>
+            <span>Resmi CDN Seslendirme & Replikler</span>
+          </div>
+          <span id="modal-vo-status" class="text-[10px] text-gray-400 font-mono">CDN Yayını Hazır</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <!-- Choose VO -->
+          <div class="bg-hextech-surface rounded-lg p-2.5 border border-hextech-borderSubtle flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold text-gray-200">⚔️ Şampiyon Seçim Sesi</div>
+              <div class="text-[10px] text-gray-500">Pick Voice Line (CDN OGG)</div>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <button id="btn-play-choose" onclick="playModalAudio('choose')" class="px-2.5 py-1 rounded bg-hextech-cyan hover:bg-hextech-cyanNeon text-gray-950 text-xs font-bold flex items-center space-x-1">
+                <i data-lucide="play" class="w-3 h-3"></i>
+                <span>Dinle</span>
+              </button>
+              <button onclick="downloadModalAudio('choose')" class="p-1.5 hover:bg-hextech-cardHover rounded text-gray-400 hover:text-white" title="İndir">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Ban VO -->
+          <div class="bg-hextech-surface rounded-lg p-2.5 border border-hextech-borderSubtle flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold text-gray-200">🚫 Şampiyon Yasaklama Sesi</div>
+              <div class="text-[10px] text-gray-500">Ban Voice Line (CDN OGG)</div>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <button id="btn-play-ban" onclick="playModalAudio('ban')" class="px-2.5 py-1 rounded bg-hextech-cyan hover:bg-hextech-cyanNeon text-gray-950 text-xs font-bold flex items-center space-x-1">
+                <i data-lucide="play" class="w-3 h-3"></i>
+                <span>Dinle</span>
+              </button>
+              <button onclick="downloadModalAudio('ban')" class="p-1.5 hover:bg-hextech-cardHover rounded text-gray-400 hover:text-white" title="İndir">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lore / Story & Metadata -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="md:col-span-2 glass-card rounded-xl p-3.5 border border-hextech-borderSubtle">
+          <div class="text-[11px] font-bold text-hextech-gold uppercase tracking-wider mb-1">📖 Kostüm Hikayesi & Açıklama</div>
+          <p id="modal-lore" class="text-xs text-gray-300 leading-relaxed italic">Açıklama mevcut değil.</p>
+        </div>
+
+        <div class="glass-card rounded-xl p-3.5 border border-hextech-borderSubtle space-y-2 text-xs">
+          <div class="text-[11px] font-bold text-hextech-gold uppercase tracking-wider mb-1">ℹ️ Detay Bilgileri</div>
+          <div class="flex justify-between text-gray-400">
+            <span>Kostüm ID:</span>
+            <span id="modal-meta-id" class="font-mono text-gray-200">86013</span>
+          </div>
+          <div class="flex justify-between text-gray-400">
+            <span>Çıkış Tarihi:</span>
+            <span id="modal-meta-date" class="text-hextech-gold font-semibold">2018-06-27</span>
+          </div>
+          <div class="flex justify-between text-gray-400">
+            <span>Özel Dublaj (VO):</span>
+            <span id="modal-meta-vo" class="text-emerald-400 font-bold">Özel Dublaj: VAR</span>
+          </div>
+          <div class="flex justify-between text-gray-400">
+            <span>Durum:</span>
+            <span id="modal-meta-status" class="text-emerald-400 font-bold">Canlı Sunucuda</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="p-4 border-t border-hextech-borderSubtle bg-hextech-surface/90 flex flex-wrap items-center justify-between gap-2 shrink-0">
+      <div class="flex items-center space-x-2">
+        <button onclick="jumpToVoiceExtractorFromModal()" class="flex items-center space-x-2 px-4 py-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-cyanBorder text-hextech-cyanNeon text-xs font-bold cursor-pointer">
+          <i data-lucide="mic" class="w-3.5 h-3.5"></i>
+          <span>Seslerini Çıkar</span>
+        </button>
+        <button onclick="jumpToWallpaperSearchFromModal()" class="flex items-center space-x-2 px-4 py-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-gold/50 text-hextech-goldBright text-xs font-bold cursor-pointer">
+          <i data-lucide="film" class="w-3.5 h-3.5"></i>
+          <span>🎬 4K Canlı Duvar Kağıdını Ara</span>
+        </button>
+      </div>
+
+      <button onclick="closeSkinModal()" class="px-5 py-2 rounded-lg bg-hextech-borderMedium hover:bg-gray-700 text-gray-200 text-xs font-semibold cursor-pointer">
+        Kapat
+      </button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,131 @@
+<!-- ======================================================================= -->
+<!-- TAB 6: 4K NORMAL DUVAR KAĞITLARI & KOSTÜM SPLASH STÜDYOSU -->
+<!-- ======================================================================= -->
+<section id="view-static-wallpapers" class="flex-1 flex flex-col p-5 overflow-hidden hidden">
+  <!-- Header -->
+  <header class="flex flex-wrap items-center justify-between pb-4 border-b border-hextech-borderSubtle shrink-0 gap-3">
+    <div>
+      <h1 class="text-xl font-extrabold text-hextech-goldBright flex items-center space-x-2.5">
+        <i data-lucide="image" class="w-5 h-5 text-emerald-400"></i>
+        <span>4K Normal Duvar Kağıtları & Orijinal Kostüm Splash Stüdyosu</span>
+      </h1>
+      <p class="text-xs text-gray-400 mt-0.5">LoL Fandom HD Master, UHD Paper 4K ve Resmi Riot Games arşivinden 4K, 5K ve 6K orijinal kostüm fotoğraflarını tek tıkla indirin veya Windows masaüstü arka planı yapın.</p>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <button onclick="toggleStaticWallpaperView('search')" id="btn-static-wp-tab-search" class="px-3.5 py-1.5 rounded-lg bg-emerald-500 text-gray-950 font-extrabold text-xs shadow-md flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span>Kostüm & Duvar Kağıdı Bul</span>
+      </button>
+      <button onclick="toggleStaticWallpaperView('downloaded')" id="btn-static-wp-tab-downloaded" class="px-3.5 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 font-bold text-xs flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="hard-drive" class="w-3.5 h-3.5 text-hextech-cyan"></i>
+        <span>İndirilenlerim (<span id="static-wp-downloaded-count">0</span>)</span>
+      </button>
+      <button onclick="switchTab('wallpapers')" class="px-3.5 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/50 text-amber-300 font-bold text-xs flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="film" class="w-3.5 h-3.5"></i>
+        <span>4K Canlı Videolar</span>
+      </button>
+      <button onclick="openStaticWallpapersFolder()" class="px-3.5 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-gold/50 text-hextech-goldBright font-bold text-xs flex items-center space-x-1.5 cursor-pointer">
+        <i data-lucide="folder" class="w-3.5 h-3.5"></i>
+        <span>Klasörü Aç</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="flex-1 flex flex-col overflow-hidden pt-4 space-y-4">
+
+    <!-- SEARCH & FILTER TOOLBAR (SEARCH VIEW) -->
+    <div id="static-wp-search-toolbar" class="glass-panel p-4 rounded-xl border border-hextech-borderSubtle flex flex-col space-y-3 shrink-0">
+      
+      <!-- Search & Selector Row -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        <!-- Champion Dropdown Selector -->
+        <div class="relative min-w-[200px]">
+          <select id="static-wp-champ-select" onchange="onStaticWpChampionSelect(this.value)"
+                  class="w-full bg-[#030914] border border-hextech-borderMedium focus:border-hextech-gold rounded-xl px-3 py-2 text-xs text-gray-100 outline-none transition cursor-pointer shadow-inner">
+            <option value="">🏆 Tüm Şampiyonlar (A-Z)</option>
+          </select>
+        </div>
+
+        <!-- Search Bar Input -->
+        <div class="relative flex-1 min-w-[260px]">
+          <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input type="text" id="static-wp-search-input" placeholder="Şampiyon veya kostüm adı ara (Örn: Ruh Çiçeği Yone, Gecegetiren Yasuo, Arcane, Prestij, KDA)..." 
+                 class="w-full bg-[#030914] border border-hextech-borderMedium focus:border-hextech-gold rounded-xl pl-10 pr-4 py-2 text-xs text-gray-100 placeholder-gray-500 outline-none transition shadow-inner">
+        </div>
+
+        <!-- 4K UHD Optimization Checkbox -->
+        <div class="flex items-center space-x-2 bg-[#030914] border border-hextech-borderSubtle px-3 py-2 rounded-xl text-xs select-none">
+          <input type="checkbox" id="static-wp-force-4k" checked class="w-3.5 h-3.5 rounded text-emerald-500 focus:ring-emerald-400 bg-gray-900 border-gray-700 cursor-pointer">
+          <label for="static-wp-force-4k" class="text-[11px] text-gray-300 font-semibold cursor-pointer">
+            <span class="text-emerald-400 font-bold">4K UHD</span> Lanczos Keskinleştirme
+          </label>
+        </div>
+
+        <!-- Search Action Button -->
+        <button onclick="triggerStaticWpSearch()" id="btn-static-wp-search-action" class="px-5 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-gray-950 flex items-center space-x-1.5 cursor-pointer shadow-lg transition">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i>
+          <span>Filtrele</span>
+        </button>
+      </div>
+
+      <!-- Quick Champion Badges -->
+      <div class="flex items-center space-x-1.5 overflow-x-auto pb-1 text-[11px]">
+        <span class="text-gray-500 font-bold uppercase tracking-wider text-[10px] shrink-0">Hızlı Şampiyonlar:</span>
+        <button onclick="quickSelectStaticWpChamp('Yone')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">⚔️ Yone</button>
+        <button onclick="quickSelectStaticWpChamp('Yasuo')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🌪️ Yasuo</button>
+        <button onclick="quickSelectStaticWpChamp('Ahri')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🦊 Ahri</button>
+        <button onclick="quickSelectStaticWpChamp('Jinx')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">💣 Jinx</button>
+        <button onclick="quickSelectStaticWpChamp('Aatrox')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🩸 Aatrox</button>
+        <button onclick="quickSelectStaticWpChamp('Zed')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🥷 Zed</button>
+        <button onclick="quickSelectStaticWpChamp('Katarina')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🗡️ Katarina</button>
+        <button onclick="quickSelectStaticWpChamp('Akali')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🐉 Akali</button>
+        <button onclick="quickSelectStaticWpChamp('Mordekaiser')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">👑 Mordekaiser</button>
+        <button onclick="quickSelectStaticWpChamp('Viego')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🗡️ Viego</button>
+        <button onclick="quickSelectStaticWpChamp('Diana')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🌙 Diana</button>
+        <button onclick="quickSelectStaticWpChamp('Ashe')" class="px-2.5 py-0.5 rounded-full bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-emerald-400 hover:border-emerald-500 transition shrink-0 cursor-pointer">🏹 Ashe</button>
+      </div>
+    </div>
+
+    <!-- RESULTS / GRID VIEW AREA -->
+    <div id="static-wp-results-wrapper" class="flex-1 overflow-y-auto pr-1">
+      <!-- Loading Spinner -->
+      <div id="static-wp-loading-spinner" class="flex flex-col items-center justify-center p-16 space-y-3 hidden">
+        <div class="w-10 h-10 border-4 border-hextech-borderSubtle border-t-emerald-400 rounded-full animate-spin"></div>
+        <p class="text-xs text-emerald-400 font-bold">Kostümler ve 4K Master dosyalar taranıyor...</p>
+      </div>
+
+      <!-- Empty State Initial -->
+      <div id="static-wp-empty-state" class="flex flex-col items-center justify-center p-16 text-center space-y-3">
+        <div class="w-16 h-16 rounded-2xl bg-hextech-card border border-hextech-borderSubtle flex items-center justify-center shadow-xl">
+          <i data-lucide="image" class="w-8 h-8 text-emerald-400"></i>
+        </div>
+        <h3 class="text-base font-bold text-gray-200">4K Orijinal Duvar Kağıdı Aramaya Başlayın</h3>
+        <p class="text-xs text-gray-400 max-w-md">Bir şampiyon seçin veya arama çubuğuna kostüm adı yazarak 4K, 5K ve 6K Master Splash Art koleksiyonunu keşfedin.</p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div id="static-wp-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 hidden"></div>
+    </div>
+
+    <!-- DOWNLOADED LOCAL WALLPAPERS GALLERY VIEW -->
+    <div id="static-wp-downloaded-wrapper" class="flex-1 overflow-y-auto pr-1 hidden">
+      <div class="flex items-center justify-between pb-3 mb-3 border-b border-hextech-borderSubtle">
+        <div class="text-xs font-bold text-gray-300">Bilgisayarınızda İndirilmiş 4K Duvar Kağıtları</div>
+        <button onclick="refreshDownloadedStaticWallpapers()" class="text-xs text-emerald-400 hover:underline flex items-center space-x-1 cursor-pointer">
+          <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+          <span>Yenile</span>
+        </button>
+      </div>
+
+      <div id="static-wp-downloaded-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+      
+      <div id="static-wp-downloaded-empty" class="flex flex-col items-center justify-center p-16 text-center space-y-3 hidden">
+        <i data-lucide="folder-x" class="w-10 h-10 text-gray-600"></i>
+        <p class="text-xs text-gray-400">Henüz indirilmiş statik 4K duvar kağıdı bulunmuyor.</p>
+      </div>
+    </div>
+
+  </div>
+</section>

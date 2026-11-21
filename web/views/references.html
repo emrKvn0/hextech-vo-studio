@@ -1,0 +1,331 @@
+<!-- ======================================================================= -->
+<!-- TAB 4: TERSİNE ATIF ANALİZ MERKEZİ & DEDEKTÖRÜ (REFERENCES ANALYTICS) -->
+<!-- ======================================================================= -->
+<section id="view-references" class="flex-1 flex flex-col p-4 overflow-hidden hidden">
+  <!-- Top Navigation & Mode Switcher -->
+  <header class="flex items-center justify-between pb-3 border-b border-hextech-borderSubtle shrink-0">
+    <div class="flex items-center space-x-3">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-hextech-cyan to-hextech-cyanDark p-[1px] shadow-lg flex items-center justify-center">
+        <div class="w-full h-full bg-hextech-base rounded-[7px] flex items-center justify-center">
+          <i data-lucide="crosshair" class="w-5 h-5 text-hextech-cyan"></i>
+        </div>
+      </div>
+      <div>
+        <h1 class="text-lg font-extrabold text-hextech-goldBright flex items-center space-x-2">
+          <span>🎯 Tersine Atıf & İlişki Analiz Merkezi</span>
+        </h1>
+        <p class="text-[11px] text-gray-400">174 şampiyon arasındaki tüm kanon ve kostümlü karşılaşma, katletme ve özel diyalog matrisi.</p>
+      </div>
+    </div>
+
+    <!-- Sub-tab Switcher -->
+    <div class="flex items-center space-x-2">
+      <div class="inline-flex rounded-lg bg-hextech-input p-0.5 border border-hextech-borderSubtle">
+        <button id="btn-subtab-analytics" onclick="switchRefSubTab('analytics')" class="px-3.5 py-1.5 text-xs font-extrabold rounded-md transition-all cursor-pointer bg-hextech-cardSelected text-hextech-cyanNeon border border-hextech-cyan/60 shadow flex items-center space-x-1.5">
+          <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i>
+          <span>İstatistik & Matris Hub</span>
+        </button>
+        <button id="btn-subtab-classic" onclick="switchRefSubTab('classic')" class="px-3.5 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer text-gray-400 hover:text-white border border-transparent flex items-center space-x-1.5">
+          <i data-lucide="list-tree" class="w-3.5 h-3.5"></i>
+          <span>Klasik Ağaç & Dışa Aktar</span>
+        </button>
+      </div>
+
+      <button id="btn-scan-references" onclick="scanTargetReferences()" class="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-hextech-gold to-hextech-goldDim hover:from-hextech-goldHover hover:to-hextech-gold text-gray-950 font-extrabold text-xs border border-hextech-goldBright shadow-md cursor-pointer disabled:opacity-50">
+        <i data-lucide="scan" class="w-3.5 h-3.5"></i>
+        <span id="btn-scan-ref-label">Seçili Şampiyonu Tara</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- SUB-VIEW 1: MODERN STATS & RELATIONSHIP MATRIX DASHBOARD (YENİ)       -->
+  <!-- ===================================================================== -->
+  <div id="ref-subview-analytics" class="flex-1 grid grid-cols-12 gap-3.5 mt-3 overflow-hidden min-h-0">
+    
+    <!-- LEFT: 174 Champions Portrait Icon Grid (Col 1-4) -->
+    <div class="col-span-4 glass-panel rounded-xl p-3 flex flex-col overflow-hidden border border-hextech-borderSubtle bg-hextech-surface/80">
+      
+      <!-- Search & Filters -->
+      <div class="relative mb-2">
+        <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-gray-400"></i>
+        <input type="text" id="ref-grid-search" oninput="filterGridChampions(this.value)" placeholder="Şampiyon ara (Yasuo, Ahri, Yone...)" class="w-full bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-cyan rounded-lg pl-8 pr-2.5 py-1.5 text-xs text-gray-200 outline-none">
+      </div>
+
+      <div class="flex items-center justify-between pb-2 mb-2 border-b border-hextech-borderSubtle/60 text-[11px]">
+        <div class="flex items-center space-x-1">
+          <button id="grid-filter-all" onclick="setGridFilter('all')" class="px-2 py-0.5 rounded text-[10px] font-bold bg-hextech-cardSelected text-hextech-goldBright border border-hextech-gold/40">Tümü (174)</button>
+          <button id="grid-filter-extracted" onclick="setGridFilter('extracted')" class="px-2 py-0.5 rounded text-[10px] font-bold text-gray-400 hover:text-white border border-transparent">Tarananlar</button>
+          <button id="grid-filter-unextracted" onclick="setGridFilter('unextracted')" class="px-2 py-0.5 rounded text-[10px] font-bold text-gray-400 hover:text-white border border-transparent">Taranmayanlar</button>
+        </div>
+        <span id="grid-visible-count" class="text-gray-400 font-mono text-[10px]">174 Şampiyon</span>
+      </div>
+
+      <!-- Icon Cards Grid Scrollable -->
+      <div id="ref-champions-grid" class="flex-1 overflow-y-auto grid grid-cols-3 sm:grid-cols-4 gap-2 pr-1 content-start select-none">
+        <!-- JS renders icon cards here -->
+      </div>
+    </div>
+
+    <!-- RIGHT: Deep Analytics & Matrix Dashboard (Col 5-12) -->
+    <div id="ref-analytics-dashboard" class="col-span-8 flex flex-col space-y-3 overflow-hidden min-h-0">
+      
+      <!-- Target Hero Banner & Summary Stats -->
+      <div class="glass-panel rounded-xl p-3.5 border border-hextech-borderSubtle bg-gradient-to-r from-hextech-card/90 via-hextech-surface/90 to-hextech-base/90 shrink-0 shadow-lg flex items-center justify-between">
+        <div class="flex items-center space-x-3.5">
+          <div class="relative w-14 h-14 rounded-xl overflow-hidden border-2 border-hextech-gold shadow-lg shrink-0">
+            <img id="analytics-target-icon" src="" alt="Champion" class="w-full h-full object-cover">
+            <div id="analytics-extracted-badge" class="absolute bottom-0 inset-x-0 bg-emerald-950/90 text-emerald-300 text-[8px] font-bold font-mono text-center py-0.5 border-t border-emerald-500/50">
+              TARANDI
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <h2 id="analytics-target-name" class="text-xl font-display font-extrabold text-hextech-goldBright tracking-wide">Şampiyon Seçiniz</h2>
+              <span id="analytics-target-total-badge" class="px-2 py-0.5 rounded-full bg-hextech-cyan/20 text-hextech-cyanNeon text-[11px] font-bold font-mono border border-hextech-cyan/40">0 Atıf</span>
+            </div>
+            <p id="analytics-target-subtitle" class="text-xs text-gray-400 mt-0.5">Bu şampiyona yapılan özel karşılaşma, katletme ve kostüm replikleri analizi.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4 pr-2">
+          <div class="text-center">
+            <div id="stat-total-quotes" class="text-2xl font-mono font-extrabold text-hextech-goldBright">0</div>
+            <div class="text-[9px] uppercase font-bold text-gray-400 tracking-wider">Toplam Replik</div>
+          </div>
+          <div class="h-8 w-px bg-hextech-borderSubtle"></div>
+          <div class="text-center">
+            <div id="stat-unique-speakers" class="text-2xl font-mono font-extrabold text-hextech-cyanNeon">0</div>
+            <div class="text-[9px] uppercase font-bold text-gray-400 tracking-wider">Farklı Konuşan</div>
+          </div>
+          <div class="h-8 w-px bg-hextech-borderSubtle"></div>
+          <div class="text-center">
+            <div id="stat-target-skins" class="text-2xl font-mono font-extrabold text-amber-400">0</div>
+            <div class="text-[9px] uppercase font-bold text-gray-400 tracking-wider">Hedef Kostüm</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Core Matrix Cards (Tıklanabilir Filtreler) -->
+      <div class="grid grid-cols-4 gap-2.5 shrink-0">
+        <!-- 1. Base to Base -->
+        <button id="card-matrix-base-base" onclick="filterByMatrixType('base_to_base')" class="matrix-card glass-panel rounded-xl p-3 border border-hextech-borderSubtle hover:border-emerald-500/60 transition-all text-left cursor-pointer group bg-hextech-surface/60">
+          <div class="flex items-center justify-between text-xs text-gray-400 font-semibold mb-1">
+            <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-emerald-400"></i> Kanon (Varsayılan)</span>
+            <span class="text-[10px] text-emerald-400 font-mono">B ➔ B</span>
+          </div>
+          <div class="flex items-baseline justify-between">
+            <div id="count-base-base" class="text-xl font-mono font-extrabold text-emerald-300">0</div>
+            <div class="text-[10px] text-gray-500 group-hover:text-emerald-300 transition">Atıf</div>
+          </div>
+          <div class="text-[10px] text-gray-400 truncate mt-1">Varsayılan ➔ Varsayılan</div>
+        </button>
+
+        <!-- 2. Skin to Base -->
+        <button id="card-matrix-skin-base" onclick="filterByMatrixType('skin_to_base')" class="matrix-card glass-panel rounded-xl p-3 border border-hextech-borderSubtle hover:border-hextech-cyan/60 transition-all text-left cursor-pointer group bg-hextech-surface/60">
+          <div class="flex items-center justify-between text-xs text-gray-400 font-semibold mb-1">
+            <span class="flex items-center gap-1.5"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-hextech-cyan"></i> Kostümlü ➔ Hedef</span>
+            <span class="text-[10px] text-hextech-cyan font-mono">S ➔ B</span>
+          </div>
+          <div class="flex items-baseline justify-between">
+            <div id="count-skin-base" class="text-xl font-mono font-extrabold text-hextech-cyanNeon">0</div>
+            <div class="text-[10px] text-gray-500 group-hover:text-hextech-cyan transition">Atıf</div>
+          </div>
+          <div class="text-[10px] text-gray-400 truncate mt-1">Kostümlü Şampiyon ➔ Orijinal</div>
+        </button>
+
+        <!-- 3. Base to Skin -->
+        <button id="card-matrix-base-skin" onclick="filterByMatrixType('base_to_skin')" class="matrix-card glass-panel rounded-xl p-3 border border-hextech-borderSubtle hover:border-amber-500/60 transition-all text-left cursor-pointer group bg-hextech-surface/60">
+          <div class="flex items-center justify-between text-xs text-gray-400 font-semibold mb-1">
+            <span class="flex items-center gap-1.5"><i data-lucide="shirt" class="w-3.5 h-3.5 text-amber-400"></i> Hedef Kostüm Tepkisi</span>
+            <span class="text-[10px] text-amber-400 font-mono">B ➔ S</span>
+          </div>
+          <div class="flex items-baseline justify-between">
+            <div id="count-base-skin" class="text-xl font-mono font-extrabold text-amber-300">0</div>
+            <div class="text-[10px] text-gray-500 group-hover:text-amber-300 transition">Atıf</div>
+          </div>
+          <div class="text-[10px] text-gray-400 truncate mt-1">Orijinal ➔ Hedefin Kostümüne</div>
+        </button>
+
+        <!-- 4. Skin to Skin -->
+        <button id="card-matrix-skin-skin" onclick="filterByMatrixType('skin_to_skin')" class="matrix-card glass-panel rounded-xl p-3 border border-hextech-borderSubtle hover:border-purple-500/60 transition-all text-left cursor-pointer group bg-hextech-surface/60">
+          <div class="flex items-center justify-between text-xs text-gray-400 font-semibold mb-1">
+            <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-3.5 h-3.5 text-purple-400"></i> Alternatif Evren</span>
+            <span class="text-[10px] text-purple-400 font-mono">S ➔ S</span>
+          </div>
+          <div class="flex items-baseline justify-between">
+            <div id="count-skin-skin" class="text-xl font-mono font-extrabold text-purple-300">0</div>
+            <div class="text-[10px] text-gray-500 group-hover:text-purple-300 transition">Atıf</div>
+          </div>
+          <div class="text-[10px] text-gray-400 truncate mt-1">Kostümlü ➔ Kostümlü</div>
+        </button>
+      </div>
+
+      <!-- Action Type Breakdown & Top Speakers Bar -->
+      <div class="grid grid-cols-12 gap-3 shrink-0">
+        <!-- Action Types Badges -->
+        <div class="col-span-5 glass-panel rounded-xl p-3 border border-hextech-borderSubtle flex flex-col justify-between">
+          <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+            <span>🎭 Eylem Türleri Dağılımı</span>
+            <button onclick="filterByActionType('all')" class="text-[10px] text-hextech-cyan hover:underline">Sıfırla</button>
+          </div>
+          <div id="analytics-action-badges" class="flex flex-wrap gap-1.5">
+            <!-- Dynamic Badges -->
+          </div>
+        </div>
+
+        <!-- Top Speakers Horizontal Scroll -->
+        <div class="col-span-7 glass-panel rounded-xl p-3 border border-hextech-borderSubtle flex flex-col justify-between">
+          <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+            <span>👑 En Çok Atıfta Bulunan Şampiyonlar</span>
+            <span id="analytics-speakers-count-label" class="text-[10px] text-hextech-gold font-mono">0 Şampiyon</span>
+          </div>
+          <div id="analytics-top-speakers" class="flex items-center space-x-2 overflow-x-auto pb-1">
+            <!-- Dynamic Top Speaker avatars -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Interactive Quotes Table with Audio Player -->
+      <div class="flex-1 glass-panel rounded-xl p-3 border border-hextech-borderSubtle flex flex-col overflow-hidden min-h-0">
+        <div class="flex items-center justify-between pb-2 mb-2 border-b border-hextech-borderSubtle shrink-0">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="volume-2" class="w-4 h-4 text-hextech-cyan"></i>
+            <span class="text-xs font-bold text-hextech-goldBright">Detaylı Replik Listesi & Dinleme Tablosu</span>
+            <span id="analytics-table-count-badge" class="px-2 py-0.5 rounded bg-hextech-cardSelected text-hextech-cyanNeon text-[10px] font-mono border border-hextech-cyanBorder">0 Ses</span>
+            <span id="analytics-active-matrix-tag" class="hidden px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-bold border border-amber-500/40"></span>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <input type="text" id="analytics-table-search" oninput="filterAnalyticsTable(this.value)" placeholder="Konuşan veya replik ara..." class="w-48 bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-cyan rounded-lg px-2.5 py-1 text-[11px] text-gray-200 outline-none">
+            
+            <button onclick="resetAnalyticsFilters()" class="px-2.5 py-1 rounded bg-hextech-card hover:bg-hextech-cardHover text-[11px] text-gray-300 border border-hextech-borderSubtle flex items-center gap-1 cursor-pointer">
+              <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+              <span>Filtreleri Temizle</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Table Container -->
+        <div class="flex-1 overflow-y-auto pr-1">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="sticky top-0 bg-[#06101D] text-gray-400 text-[10px] uppercase font-mono border-b border-hextech-borderSubtle z-10">
+              <tr>
+                <th class="py-2 px-2.5 w-10 text-center">Çal</th>
+                <th class="py-2 px-2.5">Konuşan Şampiyon</th>
+                <th class="py-2 px-2.5">Konuşan Kostüm</th>
+                <th class="py-2 px-2.5">Hedef Hali</th>
+                <th class="py-2 px-2.5">Matris Tipi</th>
+                <th class="py-2 px-2.5">Eylem</th>
+                <th class="py-2 px-2.5">Replik Metni / Dosya</th>
+              </tr>
+            </thead>
+            <tbody id="analytics-quotes-tbody" class="divide-y divide-hextech-borderSubtle/50 font-sans">
+              <!-- Dynamic Rows -->
+            </tbody>
+          </table>
+          <div id="analytics-empty-state" class="hidden text-center py-16 text-gray-500 text-xs">
+            Filtreye uygun ses bulunamadı.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SUB-VIEW 2: CLASSIC TREE & EXPORT EXPLORER (MEVCUT YAPI KORUNDU)     -->
+  <!-- ===================================================================== -->
+  <div id="ref-subview-classic" class="flex-1 grid grid-cols-12 gap-4 mt-3 overflow-hidden min-h-0 hidden">
+    <!-- Target Selection (Col 1) -->
+    <div class="col-span-3 glass-panel rounded-xl p-3.5 flex flex-col overflow-hidden border border-hextech-borderSubtle">
+      <div class="relative mb-3">
+        <i data-lucide="search" class="w-4 h-4 absolute left-3 top-2.5 text-gray-400"></i>
+        <input type="text" id="ref-search" oninput="filterRefChampions(this.value)" placeholder="Hedef şampiyon ara (Gangplank, Garen)..." class="w-full bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-cyan rounded-lg pl-9 pr-3 py-2 text-xs text-gray-200 outline-none">
+      </div>
+
+      <div class="text-[11px] font-bold text-hextech-gold uppercase tracking-wider mb-1.5 flex items-center justify-between">
+        <span>1. Hedef Şampiyon</span>
+        <span id="ref-champ-count" class="text-[10px] text-gray-400 font-mono">170</span>
+      </div>
+      <div id="ref-champions-list" class="flex-1 overflow-y-auto space-y-1 pr-1"></div>
+    </div>
+
+    <!-- Target Skin Selection (Col 2) & References Tree (Col 3) -->
+    <div class="col-span-9 flex flex-col space-y-2.5 overflow-hidden">
+      
+      <!-- Dual Filter Bar (Target Skin & Speaker Type) -->
+      <div class="glass-panel rounded-xl p-3 border border-hextech-borderSubtle shrink-0 space-y-2.5">
+        <!-- Row 1: Target Skin Selection -->
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center space-x-2 text-xs font-bold text-hextech-goldBright">
+              <span>🎯 2. Hedef Kostüm:</span>
+              <span id="ref-selected-champ-badge" class="px-2 py-0.5 rounded bg-hextech-cardSelected text-hextech-cyanNeon text-[11px] font-mono border border-hextech-cyanBorder">Şampiyon Seçilmedi</span>
+            </div>
+            <div class="text-[10px] text-gray-400">Hedef şampiyonun hangi haline yapılan atıfları listelemek istiyorsunuz?</div>
+          </div>
+          <div id="ref-skins-bar" class="flex items-center space-x-2 overflow-x-auto pb-1"></div>
+        </div>
+
+        <!-- Row 2: Speaker Type Filter (Varsayılan vs Kostümlü Konuşanlar) -->
+        <div class="pt-2 border-t border-hextech-borderSubtle/60 flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center space-x-2">
+            <span class="text-xs font-bold text-hextech-cyanNeon">🎙️ 3. Konuşan Şampiyon Türü:</span>
+            <div class="inline-flex rounded-lg bg-hextech-input p-0.5 border border-hextech-borderSubtle">
+              <button id="ref-speaker-filter-all" onclick="setRefSpeakerType('all')" class="px-2.5 py-1 text-[11px] font-bold rounded-md transition-all cursor-pointer bg-hextech-cardSelected text-hextech-goldBright border border-hextech-gold/60 shadow">
+                🌟 Tümü (Varsayılan + Kostümler)
+              </button>
+              <button id="ref-speaker-filter-base" onclick="setRefSpeakerType('base_only')" class="px-2.5 py-1 text-[11px] font-bold rounded-md transition-all cursor-pointer text-gray-400 hover:text-white border border-transparent">
+                🛡️ Yalnızca Varsayılan Şampiyonlar (Kanon)
+              </button>
+              <button id="ref-speaker-filter-skins" onclick="setRefSpeakerType('skins_only')" class="px-2.5 py-1 text-[11px] font-bold rounded-md transition-all cursor-pointer text-gray-400 hover:text-white border border-transparent">
+                🎭 Yalnızca Kostümlü Şampiyonlar (AU)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-Select & DaVinci Action Toolbar -->
+      <div id="ref-selection-toolbar" class="glass-panel rounded-xl px-3.5 py-2 border border-hextech-borderSubtle bg-[#040C18]/90 flex items-center justify-between shrink-0 shadow-md">
+        <div class="flex items-center space-x-3">
+          <label class="flex items-center space-x-2 cursor-pointer text-xs font-bold text-gray-200 select-none">
+            <input type="checkbox" id="ref-select-all-checkbox" onchange="toggleSelectAllRefAudio(this.checked)" class="w-4 h-4 rounded accent-hextech-cyan cursor-pointer">
+            <span>Tümünü Seç</span>
+          </label>
+          <div class="h-4 w-px bg-hextech-borderSubtle"></div>
+          <span id="ref-selected-count-badge" class="px-2.5 py-0.5 rounded-full bg-hextech-cyan/20 text-hextech-cyanNeon text-[11px] font-mono font-bold border border-hextech-cyan/40">
+            0 ses seçildi
+          </span>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <div class="flex items-center space-x-1.5 text-xs text-gray-300 mr-1 bg-hextech-input px-2 py-1 rounded-lg border border-hextech-borderSubtle">
+            <span class="text-[11px] text-gray-400 font-semibold">Aralık:</span>
+            <input type="number" id="ref-davinci-gap" value="0.8" step="0.1" min="0" max="5.0" class="w-12 bg-transparent border-0 text-xs font-mono text-hextech-gold font-bold text-center outline-none">
+            <span class="text-[10px] text-gray-500 font-mono">sn</span>
+          </div>
+
+          <button id="btn-ref-export-folder" onclick="exportRefSelectedToFolder()" disabled class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover text-hextech-goldBright border border-hextech-gold/60 font-bold text-xs shadow-md cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed transition">
+            <i data-lucide="folder-down" class="w-3.5 h-3.5 text-hextech-gold"></i>
+            <span>Klasöre Aktar</span>
+          </button>
+
+          <button id="btn-ref-export-davinci" onclick="exportRefSelectedToDaVinci()" disabled class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-400 hover:to-amber-600 text-gray-950 font-extrabold text-xs shadow-md cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed transition">
+            <i data-lucide="clapperboard" class="w-3.5 h-3.5"></i>
+            <span>DaVinci Timeline Üret</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Detected References Explorer Tree -->
+      <div class="flex-1 glass-panel rounded-xl p-3.5 flex flex-col overflow-hidden border border-hextech-borderSubtle min-h-0">
+        <div id="references-tree" class="flex-1 overflow-y-auto pr-1 space-y-2 select-none">
+          <div class="text-center py-10 text-gray-500 text-xs">Hedef seçip taramayı başlatın.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

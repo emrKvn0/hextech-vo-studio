@@ -1,0 +1,20 @@
+{
+  "Wukong": [
+    {
+      "text": "Ben hallederim.",
+      "audio_url": "https://audio-i18n.loldle.net/TR/audios/monkeyking_base_vo_audio/397444613.wav",
+      "english_original": "Wuju style.",
+      "game_numero": 1519,
+      "source": "loldle_verified_i18n"
+    }
+  ],
+  "Kalista": [
+    {
+      "text": "İhanetin açtığı yaralar asla kapanmaz.",
+      "audio_url": "https://audio-i18n.loldle.net/TR/audios/kalista_base_vo_audio/39295076.wav",
+      "english_original": "The wounds of betrayal never heal.",
+      "game_numero": 1520,
+      "source": "loldle_verified_i18n"
+    }
+  ]
+}

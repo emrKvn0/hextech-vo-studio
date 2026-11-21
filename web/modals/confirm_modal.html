@@ -1,0 +1,53 @@
+<!-- ========================================================================= -->
+<!-- 6. VOICE EXTRACTION CONFIRMATION MODAL -->
+<!-- ========================================================================= -->
+<div id="extract-confirm-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-md rounded-2xl border border-hextech-gold/60 flex flex-col overflow-hidden shadow-2xl">
+    <!-- Modal Header -->
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-lg bg-hextech-gold/10 border border-hextech-gold/30 flex items-center justify-center">
+          <i data-lucide="help-circle" class="w-4 h-4 text-hextech-goldBright"></i>
+        </div>
+        <div>
+          <h2 class="text-sm font-heading font-extrabold text-gray-100">Ses Çıkarma Onayı</h2>
+          <div class="text-[11px] text-gray-400 font-medium">İşlemi başlatmak istiyor musunuz?</div>
+        </div>
+      </div>
+      <button onclick="closeExtractConfirmModal()" class="p-1.5 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white transition cursor-pointer">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-5 space-y-4">
+      <div class="glass-card rounded-xl p-4 border border-hextech-borderSubtle flex items-start space-x-3.5 bg-[#01060D]/80">
+        <div class="p-2.5 rounded-lg bg-amber-950/60 border border-hextech-gold/40 text-hextech-goldBright shrink-0 mt-0.5 shadow">
+          <i data-lucide="mic" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <div id="confirm-modal-target-title" class="text-sm font-heading font-bold text-gray-100">Şampiyon / Kostüm</div>
+          <div id="confirm-modal-target-desc" class="text-xs text-gray-300 leading-relaxed font-sans">
+            Bu kostüme ait tüm Türkçe replikler ve ses efektleri Wwise motoruyla doğrudan çıkarılacaktır.
+          </div>
+        </div>
+      </div>
+
+      <div class="text-[11px] text-gray-400 bg-hextech-surface/60 p-2.5 rounded-lg border border-hextech-borderSubtle flex items-center space-x-2 font-sans">
+        <i data-lucide="info" class="w-4 h-4 text-hextech-gold shrink-0"></i>
+        <span>İşlem arka planda Canlı Konsol üzerinden anlık olarak akacaktır. Sayfadan ayrılmanıza gerek yoktur.</span>
+      </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="p-3.5 border-t border-hextech-borderSubtle bg-hextech-surface/90 flex items-center justify-end space-x-2.5">
+      <button onclick="closeExtractConfirmModal()" class="px-4 py-2 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle text-gray-300 hover:text-white text-xs font-semibold transition cursor-pointer">
+        Hayır, Vazgeç
+      </button>
+      <button id="btn-confirm-extract-action" onclick="executeConfirmedVoiceExtraction()" class="lol-btn-gold flex items-center space-x-1.5 px-5 py-2 rounded-lg text-xs cursor-pointer shadow-lg">
+        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+        <span>Evet, Başlat</span>
+      </button>
+    </div>
+  </div>
+</div>

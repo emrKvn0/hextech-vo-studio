@@ -1,0 +1,118 @@
+<!-- ========================================================================= -->
+<!-- 8. BASE CHAMPIONS A-Z HUB & MASTER DAVINCI XML MODAL -->
+<!-- ========================================================================= -->
+<div id="base-hub-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+  <div class="glass-panel w-full max-w-xl rounded-2xl border border-hextech-gold flex flex-col overflow-hidden shadow-2xl">
+    <!-- Modal Header -->
+    <div class="p-4 border-b border-hextech-borderSubtle flex items-center justify-between bg-hextech-surface/90">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-hextech-gold to-amber-600 p-0.5 shadow-md">
+          <div class="w-full h-full bg-[#050B14] rounded-[7px] flex items-center justify-center">
+            <i data-lucide="package" class="w-5 h-5 text-hextech-goldBright"></i>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-base font-heading font-extrabold text-hextech-goldBright">A'dan Z'ye Tüm Varsayılan Şampiyonlar Hub'ı</h2>
+          <div class="text-[11px] text-gray-400 font-medium">DaVinci Resolve Media Pool için Tek Klasör A-Z Koleksiyonu</div>
+        </div>
+      </div>
+      <button onclick="closeBaseHubModal()" class="p-1.5 hover:bg-hextech-cardHover rounded-lg text-gray-400 hover:text-white transition cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-5 space-y-4 max-h-[75vh] overflow-y-auto">
+      <!-- Stats Summary Card -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="glass-card rounded-xl p-3 border border-hextech-borderSubtle bg-[#01060D]/80">
+          <div class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Senkronize Şampiyonlar</div>
+          <div class="flex items-baseline space-x-1.5">
+            <span id="hub-synced-champs" class="text-xl font-heading font-extrabold text-hextech-goldBright">0</span>
+            <span class="text-xs text-gray-500 font-mono">/ 170 şampiyon</span>
+          </div>
+        </div>
+        <div class="glass-card rounded-xl p-3 border border-hextech-borderSubtle bg-[#01060D]/80">
+          <div class="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-0.5">Toplam A-Z Repliği</div>
+          <div class="flex items-baseline space-x-1.5">
+            <span id="hub-synced-voices" class="text-xl font-heading font-extrabold text-hextech-cyanNeon font-mono">0</span>
+            <span class="text-xs text-gray-500">adet .wav</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Directory Path Banner -->
+      <div class="glass-card rounded-xl p-3 border border-hextech-borderSubtle bg-hextech-surface/60 flex items-center justify-between text-xs">
+        <div class="truncate mr-2">
+          <span class="text-gray-400 block text-[10px]">Hub Dizin Yolu:</span>
+          <span class="font-mono text-gray-200 text-[11px] truncate">Champions/_Tum_Varsayilan_Sampiyonlar_A_dan_Z_ye/</span>
+        </div>
+        <button onclick="openBaseHubFolder()" class="px-3 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-gold/50 text-hextech-goldBright font-bold text-xs shrink-0 flex items-center space-x-1 cursor-pointer">
+          <i data-lucide="folder" class="w-3.5 h-3.5"></i>
+          <span>Klasörü Aç</span>
+        </button>
+      </div>
+
+      <!-- Master DaVinci Timeline Card -->
+      <div class="glass-card rounded-xl p-4 border border-amber-500/40 bg-gradient-to-br from-amber-950/20 to-transparent space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="clapperboard" class="w-4 h-4 text-amber-400"></i>
+            <span class="text-xs font-bold text-amber-300 uppercase tracking-wide">Master DaVinci Resolve Timeline (A-Z)</span>
+          </div>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-amber-900/50 text-amber-200 border border-amber-600/40 font-mono">Tek Tıkla Hazır</span>
+        </div>
+        <p class="text-[11px] text-gray-300 leading-relaxed">
+          A'dan Z'ye tüm şampiyonların varsayılan repliklerini sırayla (Aatrox, Ahri, Akali... Zyra) içeren ve belirleyeceğiniz boşlukla dizilmiş Master DaVinci Resolve Timeline XML'ini üretir.
+        </p>
+
+        <div class="flex items-center justify-between pt-1">
+          <div class="flex items-center space-x-2">
+            <span class="text-xs text-gray-400">Aralık (Gap):</span>
+            <input type="number" id="hub-davinci-gap" value="0.2" step="0.05" min="0" max="5.0" class="w-16 bg-hextech-input border border-hextech-borderSubtle rounded px-2 py-1 text-xs font-mono text-hextech-gold text-center outline-none focus:border-hextech-gold">
+            <span class="text-xs text-gray-500">sn</span>
+          </div>
+
+          <button id="btn-export-hub-davinci" onclick="exportBaseHubMasterDaVinci()" class="lol-btn-gold px-4 py-2 rounded-lg text-xs font-bold flex items-center space-x-1.5 cursor-pointer shadow-md">
+            <i data-lucide="film" class="w-3.5 h-3.5"></i>
+            <span>Master DaVinci XML Üret</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Actions List -->
+      <div class="space-y-2">
+        <div class="text-[11px] font-bold text-hextech-gold uppercase tracking-wider">Hızlı İşlemler</div>
+        
+        <button onclick="syncBaseHubAction()" class="w-full flex items-center justify-between p-3 rounded-xl bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle hover:border-hextech-cyan text-left cursor-pointer transition group">
+          <div class="flex items-center space-x-2.5">
+            <i data-lucide="refresh-cw" class="w-4 h-4 text-hextech-cyan group-hover:rotate-180 transition-transform duration-300"></i>
+            <div>
+              <div class="text-xs font-bold text-gray-100">Mevcut Çıkarılanları A-Z Hub'ına Senkronize Et</div>
+              <div class="text-[10px] text-gray-400">Champions klasöründe zaten çıkarılmış olan varsayılan sesleri Hub'a toplar</div>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
+        </button>
+
+        <button onclick="extractAllBaseChampionsAction()" class="w-full flex items-center justify-between p-3 rounded-xl bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderSubtle hover:border-hextech-gold text-left cursor-pointer transition group">
+          <div class="flex items-center space-x-2.5">
+            <i data-lucide="sparkles" class="w-4 h-4 text-hextech-gold"></i>
+            <div>
+              <div class="text-xs font-bold text-gray-100">170+ Şampiyonun Tüm Varsayılan Seslerini Çıkar</div>
+              <div class="text-[10px] text-gray-400">Oyundaki tüm şampiyonları sırayla 16 iş parçacığıyla çıkarıp Hub'a depolar</div>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-500"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal Footer -->
+    <div class="p-3.5 border-t border-hextech-borderSubtle bg-hextech-surface/90 flex items-center justify-end">
+      <button onclick="closeBaseHubModal()" class="px-5 py-2 rounded-lg bg-hextech-borderMedium hover:bg-gray-700 text-gray-200 text-xs font-semibold cursor-pointer">
+        Kapat
+      </button>
+    </div>
+  </div>
+</div>

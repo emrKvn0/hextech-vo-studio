@@ -1,0 +1,135 @@
+<!-- ======================================================================= -->
+<!-- TAB 2: DİNAMİK KOSTÜM & PBE HUB (SELF-UPDATING CDN GRID) -->
+<!-- ======================================================================= -->
+<section id="view-skinhub" class="flex-1 flex flex-col p-5 overflow-hidden hidden">
+  <!-- Top Header -->
+  <header class="flex items-center justify-between pb-3.5 border-b border-hextech-borderSubtle shrink-0">
+    <div>
+      <h1 class="text-xl font-display font-black text-hextech-goldBright flex items-center space-x-2.5 tracking-wider">
+        <span>✨ Dinamik Kostüm & PBE Hub</span>
+      </h1>
+      <p class="text-xs text-gray-400 mt-0.5 font-sans">Topluluk CDN'inden otomatik güncellenen 1600+ kostüm görseli ve çıkarma merkezi.</p>
+    </div>
+
+    <div class="flex items-center space-x-2.5">
+      <!-- CDN Health Indicator Badge -->
+      <div id="cdn-health-badge" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-hextech-surface border border-hextech-borderSubtle text-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-gray-300 font-mono text-[11px]">Riot CDN Aktif</span>
+      </div>
+
+      <button onclick="reloadSkinHubData()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-hextech-card hover:bg-hextech-cardHover border border-hextech-borderMedium text-xs font-semibold text-gray-200 cursor-pointer">
+        <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-hextech-gold"></i>
+        <span>Yenile</span>
+      </button>
+      <button onclick="openDownloadsDir()" class="lol-btn-gold flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs cursor-pointer shadow-md">
+        <i data-lucide="folder-down" class="w-3.5 h-3.5"></i>
+        <span>İndirilenler</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Advanced Filters & Search Bar -->
+  <div class="py-3 shrink-0 flex flex-wrap items-center justify-between gap-3 border-b border-hextech-borderSubtle/60">
+    
+    <!-- Left: Search & Source Pill Buttons -->
+    <div class="flex flex-wrap items-center gap-2.5">
+      <!-- Search input -->
+      <div class="relative w-64">
+        <i data-lucide="search" class="w-4 h-4 absolute left-3 top-2.5 text-gray-400"></i>
+        <input type="text" id="skinhub-search" oninput="onSkinHubFilterChange()" placeholder="Kostüm veya Şampiyon ara..." class="w-full bg-hextech-input border border-hextech-borderSubtle focus:border-hextech-gold rounded-lg pl-9 pr-3 py-2 text-xs text-gray-100 outline-none placeholder-gray-500 font-sans">
+      </div>
+
+      <!-- Source Selector (All / PBE Only / Live Only) -->
+      <div class="flex items-center bg-hextech-surface rounded-lg p-0.5 border border-hextech-borderSubtle text-xs">
+        <button id="src-all" onclick="setSkinSourceFilter('all')" class="px-3 py-1.5 rounded-md font-bold text-gray-200 bg-hextech-cardSelected shadow text-xs cursor-pointer">
+          🌟 Tümü
+        </button>
+        <button id="src-pbe" onclick="setSkinSourceFilter('pbe')" class="px-3 py-1.5 rounded-md font-medium text-gray-400 hover:text-purple-300 text-xs flex items-center space-x-1 cursor-pointer">
+          <span>🧪 Çıkmamış (PBE)</span>
+        </button>
+        <button id="src-live" onclick="setSkinSourceFilter('live')" class="px-3 py-1.5 rounded-md font-medium text-gray-400 hover:text-cyan-300 text-xs cursor-pointer">
+          ⚡ Canlı
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: VO Type, Rarity & Sort Selectors -->
+    <div class="flex flex-wrap items-center gap-2.5">
+      <!-- Voice Dubbing Filter -->
+      <div class="flex items-center space-x-1.5 text-xs text-gray-400 font-sans">
+        <span>Dublaj:</span>
+        <select id="skinhub-vo-filter" onchange="onSkinHubFilterChange()" class="bg-hextech-surface border border-hextech-borderSubtle rounded-lg px-2.5 py-1.5 text-xs text-gray-200 focus:border-hextech-gold outline-none cursor-pointer font-semibold">
+          <option value="all">🎙️ Tümü (Dublaj Filtresi Yok)</option>
+          <option value="unique_vo">👑 Özel Dublajlı (Özgün Yeni Replikler)</option>
+          <option value="filtered_vo">🎛️ Vokal Filtreli (Ses Efektli)</option>
+          <option value="partial_vo">⚡ Kısmi Dublajlı</option>
+          <option value="no_custom_vo">❌ Özel Dublajsız (Temel Ses)</option>
+        </select>
+      </div>
+
+      <!-- Rarity Filter -->
+      <div class="flex items-center space-x-1.5 text-xs text-gray-400 font-sans">
+        <span>Nadirlik:</span>
+        <select id="skinhub-rarity" onchange="onSkinHubFilterChange()" class="bg-hextech-surface border border-hextech-borderSubtle rounded-lg px-2.5 py-1.5 text-xs text-gray-200 focus:border-hextech-gold outline-none cursor-pointer">
+          <option value="all">💎 Tümü</option>
+          <option value="Exalted">✨ Haşmetli (Exalted / Sanctum)</option>
+          <option value="Transcendent">👑 Ulu (Transcendent / Hall of Legends)</option>
+          <option value="Ultimate">🌟 Ebedi (Ultimate)</option>
+          <option value="Mythic">🟣 İhtişamlı / Prestij (Mythic)</option>
+          <option value="Legendary">🔥 Efsanevi (Legendary)</option>
+          <option value="Epic">⚔️ Epik (Epic / 1350 RP)</option>
+          <option value="Exclusive">🎁 Özel / Sandık</option>
+          <option value="Standart">🛡️ Standart / Klasik</option>
+        </select>
+      </div>
+
+      <!-- Sort Selector with REAL Chronological Date & VO Sorting -->
+      <div class="flex items-center space-x-1.5 text-xs text-gray-400 font-sans">
+        <span>Sırala:</span>
+        <select id="skinhub-sort" onchange="onSkinHubFilterChange()" class="bg-hextech-surface border border-hextech-borderSubtle rounded-lg px-2.5 py-1.5 text-xs text-gray-200 focus:border-hextech-gold outline-none cursor-pointer">
+          <option value="date-desc">⏱️ Çıkış Tarihi: En Yeniler En Üstte</option>
+          <option value="recommended">🔥 Tavsiye Edilen (Özel Dublajlılar Önce)</option>
+          <option value="vo-desc">🎙️ Replik Sayısı: En Zenginler En Üstte</option>
+          <option value="date-asc">⏳ Çıkış Tarihi: En Eskiler En Üstte</option>
+          <option value="rarity-desc">💎 Nadirliğe Göre (En Değerli)</option>
+          <option value="name-asc">🔤 Kostüm Adı (A - Z)</option>
+          <option value="name-desc">🔤 Kostüm Adı (Z - A)</option>
+          <option value="champ-asc">🛡️ Şampiyon Adı (A - Z)</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Quick Year Filter & Results Count -->
+  <div class="py-2 shrink-0 flex items-center justify-between text-xs text-gray-400 border-b border-hextech-borderSubtle/30 font-sans">
+    <div class="flex items-center space-x-1.5">
+      <span class="text-[11px] font-bold text-gray-500 uppercase">Yıl:</span>
+      <button onclick="setYearFilter('all')" class="year-filter-btn px-2 py-0.5 rounded text-[11px] font-semibold bg-hextech-cardSelected text-hextech-goldBright border border-hextech-gold/60 cursor-pointer" data-year="all">Tümü</button>
+      <button onclick="setYearFilter('2026')" class="year-filter-btn px-2 py-0.5 rounded text-[11px] text-gray-400 hover:text-white cursor-pointer" data-year="2026">2026</button>
+      <button onclick="setYearFilter('2025')" class="year-filter-btn px-2 py-0.5 rounded text-[11px] text-gray-400 hover:text-white cursor-pointer" data-year="2025">2025</button>
+      <button onclick="setYearFilter('2024')" class="year-filter-btn px-2 py-0.5 rounded text-[11px] text-gray-400 hover:text-white cursor-pointer" data-year="2024">2024</button>
+      <button onclick="setYearFilter('2023')" class="year-filter-btn px-2 py-0.5 rounded text-[11px] text-gray-400 hover:text-white cursor-pointer" data-year="2023">2023</button>
+      <button onclick="setYearFilter('older')" class="year-filter-btn px-2 py-0.5 rounded text-[11px] text-gray-400 hover:text-white cursor-pointer" data-year="older">Daha Eski</button>
+    </div>
+
+    <div id="skinhub-count-badge" class="text-xs font-mono text-hextech-gold font-bold">
+      Yükleniyor...
+    </div>
+  </div>
+
+  <!-- Main Skins Responsive Grid -->
+  <div id="skinhub-grid-container" class="flex-1 overflow-y-auto pt-3 pr-1 min-h-0">
+    <div id="skinhub-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 pb-8">
+      <!-- Dynamically populated skin cards -->
+    </div>
+
+    <!-- Empty state -->
+    <div id="skinhub-empty" class="hidden text-center py-20">
+      <i data-lucide="package-search" class="w-12 h-12 text-gray-600 mx-auto mb-3"></i>
+      <div class="text-sm font-bold text-gray-400">Aramanıza veya filtrenize uygun kostüm bulunamadı.</div>
+      <div class="text-xs text-gray-600 mt-1">Filtreleri sıfırlayarak tekrar deneyin.</div>
+    </div>
+  </div>
+</section>
